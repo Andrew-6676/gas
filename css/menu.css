@@ -1,0 +1,142 @@
+@font-face {
+    font-family: gothic;
+    src: url(fonts/GOTHIC.TTF);
+}
+@font-face {
+    font-family: Verdana;
+    src: url(fonts/verdana.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+/*@font-face {
+    font-family: poiret;
+    src: @import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin);
+}*/
+/*@import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin);*/
+/*-----------------------------------------------*/
+/** ------------ MAIN MENU --------------------*/
+nav {text-align: left;}
+#main_menu {
+        /*font-family: gothic, sans-serif;*/
+        /*font-family: 'Poiret One', gothic, sans-serif;*/
+        font-family:  Verdana;
+        font-size: 17px;
+        /*border: 1px solid yellow;*/
+        /*background:white url(bg.gif) repeat-x left top;*/
+        background:#4d4d4d;
+        position: absolute;
+        left: 205px;
+        right: 0;
+        top: 120px;
+        height: 60px;
+        /*z-index: 10;*/
+}
+.login_href {
+        float:right;
+        display: inline-block;
+        height: 100%;
+        width: 60px;
+        background: url(../images/man.png) no-repeat center #da2538;
+        cursor: pointer;
+}
+.login_href:hover {
+        /*background: url(../images/man2.png) no-repeat center #da2538;*/
+        box-shadow: 0px 0px 5px 1px #222;
+}
+/*-------------------------------------------------------*/
+#main_menu>ul
+{
+        display: inline;
+        float:left;
+        vertical-align: middle;
+        /*padding: 6px 20px 5px 20px;*/
+        /*margin: 0px;*/
+}
+#main_menu>ul>li
+{
+        position: relative;
+        /*top: 1px;*/
+        display: inline-block;
+        line-height: 60px;
+}
+
+#main_menu>ul>li>a
+{
+        /*font-family: 'Didact Gothic', sans-serif;*/
+        color: #fff;
+        background-color: transparent;
+        /*font-size: 16px;*/
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0px 10px;
+        /*margin: 0 -3px;*/
+        display: block;
+}
+
+#main_menu>ul>li>a:hover, #main_menu>ul>li.active a, .with_sub, #main_menu>ul>li:hover>a  {
+        color: #000;
+        background-color: #fff;
+        text-decoration: none;
+        /*box-shadow: 10px 5px 10px 0px black;*/
+}
+#main_menu>ul>li:hover, .with_sub {
+        box-shadow: 8px 8px 10px -2px black;
+}
+/*-----------------------sub menu----------------***/
+.sub_menu {
+        z-index: 888;
+        margin: 20px;
+        /*padding-top: 60px;*/
+        /*display: block;*/
+        /*margin: 0 -3px;*/
+        list-style: disc inside none;
+        padding: 5px 15px 5px 10px;
+        /*display: none;*/
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        /*top: 35px;*/
+        background: #fff;
+        min-width: 150%;
+        box-shadow: 8px 8px 10px -2px black;
+        transition: all .2s ease-in-out;
+}
+#main_menu>ul>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+.sub_menu li {
+        /*display: block;*/
+        line-height: 20px;
+        width: 95%;
+        white-space: nowrap;
+        padding: 0 0 0 10px;
+}
+.sub_menu li a {
+        display: inline-block;
+        /*width: 100%;*/
+        color: #000;
+        background-color: transparent;
+        /*font-size: 14px;*/
+        line-height: 20px;
+        padding: 7px 10px;
+        font-weight: bold;
+        text-decoration: none;
+        /*padding: 21px 10px;*/
+}
+/*---------------*/
+.sub_menu li:hover{
+        text-decoration: none;
+        /*padding-left: 3px;*/
+        /*box-shadow: 10px 5px 10px 0px black;*/
+}
+.sub_menu li:hover {
+    transition: 0.2s;
+    padding-left: 20px;
+    background-color: #4d4d4d;
+}
+.sub_menu li:hover a {
+    color: #fff;
+}

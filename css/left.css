@@ -1,0 +1,13 @@
+#left {
+        background: transparent;
+        border: 2px solid ;
+        width: 180px;
+        height: 100%;
+        float: left;
+
+}
+
+#left ul {
+	margin-left: 30px;
+
+}
