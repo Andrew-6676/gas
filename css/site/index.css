@@ -124,7 +124,7 @@
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	transition: all 2s ease 0s;
+	transition: all .2s ease 0s;
 }
 .item div {
 	position: relative;
