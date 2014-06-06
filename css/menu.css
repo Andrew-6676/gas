@@ -116,7 +116,7 @@ nav {text-align: left;}
 }
 .sub_menu li a {
         display: inline-block;
-        /*width: 100%;*/
+        width: 100%;
         color: #000;
         background-color: transparent;
         /*font-size: 14px;*/
