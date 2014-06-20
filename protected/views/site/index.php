@@ -1,37 +1,69 @@
 <?php
 	$this->pageTitle='Главная ПУ "Витебскгаз"';
 	$this->addCSS('site/index.css');
-	$this->addCSS('slide/slide.css');
-	$this->addJS('slide/jmpress.min.js');
-	$this->addJS('slide/jquery.jmslideshow.js');
+	$this->addCSS('slide/style.css');
+	// $this->addJS('slide/jmpress.min.js');
+	// $this->addJS('slide/jquery.jmslideshow.js');
 ?>
 
-<section id="jms-slideshow" class="jms-slideshow">
-	<div class="step" data-color="color-3"  data-x="3000">
-		<div class="jms-content">
-			<h3></h3>
-			<p></p>
-			<a class="jms-link" href="http://192.168.152.250/gas/">Read moreere 1</a>
-		</div>
-		<img src="/gas/images/slide/slide_11.png" />
+<div id="wowslider-container1">
+
+	<div class="ws_images">
+		<ul>
+
+			<li>
+				<a href="ya.by">
+					<img src="./images/slide/slide_11.png" alt="slide_11" title="slide_11" id="wows1_0"/>
+				</a>
+				go to ya.ru! dfasdf asdf asdfa fasdf asdf ads!
+				adfasd asdf asdf asdf sdf.
+			</li>
+
+			<li>
+				<a href="yandex.tut.by">
+					<img src="./images/slide/slide_3.png" alt="slide_33" title="slide_33" id="wows1_1"/>
+				</a>
+				go to xy! 23435 wrw sgtw3413452 df351 r!<br>
+				adfasd asdf asdf asdf sdf.
+			</li>
+
+			<li>
+				<a href="google.ru">
+					<img src="./images/slide/slide_2.png" alt="slide_2" title="slide_2" id="wows1_2"/>
+				</a>
+				goggl rulit
+			</li>
+
+			<li>
+				<img src="./images/slide/slide_3.png" alt="slide_3" title="slide_3" id="wows1_3"/>
+			</li>
+
+		</ul>
 	</div>
-	<div class="step" data-color="color-1"  data-x="5000">
-		<div class="jms-content">
-			<h3></h3>
-			<p></p>
-			<a class="jms-link" href="http://192.168.152.250/gas/">Read moreere 2</a>
+
+	<div class="ws_bullets">
+		<div>
+
+			<a href="#" title="slide_11">1</a>
+			<a href="#" title="slide_33">33</a>
+			<a href="#" title="slide_2">2</a>
+			<!-- <a href="#" title="slide_3">3</a> -->
+
 		</div>
-			<img src="/gas/images/slide/slide_2.png" />
+		<script type="text/javascript">
+			$('.ws_bullets div').append('<a href="#" title="'+'slide_3'+'">3</a>');
+		</script>
 	</div>
-	<div class="step" data-color="color-5"  data-x="7000">
-		<div class="jms-content">
-			<h3></h3>
-			<p></p>
-			<a class="jms-link" href="http://192.168.152.250/gas/">Read moreere 3</a>
-		</div>
-				<img src="/gas/images/slide/slide_3.png" />
-	</div>
-</section>
+
+	<div class="ws_shadow"></div>
+</div>
+
+	<script type="text/javascript" src="./js/slide/wowslider.js"></script>
+	<script type="text/javascript" src="./js/slide/script.js"></script>
+
+
+<!-- *********************************************************************************************** -->
+
 
 <div class='c_wrapper'>
 	<div class='c_left'>
@@ -94,58 +126,8 @@
 
 
 	<script type="text/javascript">
-			// $(function() {
-			// 	$('#jms-slideshow').jmslideshow();
-			// });
 
-			$(function() {
-
-				var jmpressOpts	= {
-					animation		: { transitionDuration : '0.8s' }
-				};
-
-				$( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
-					autoplay	: true,
-					bgColorSpeed: '0.8s',
-					arrows		: true
-				}));
-
-				// $( '#jms-slideshow' ).jmslideshow();
-			});
 	</script>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
