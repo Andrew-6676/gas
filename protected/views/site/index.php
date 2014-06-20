@@ -7,7 +7,7 @@
 ?>
 
 <section id="jms-slideshow" class="jms-slideshow">
-	<div class="step" data-color="color-3" data-y="3000" data-scale="2">
+	<div class="step" data-color="color-3"  data-x="3000">
 		<div class="jms-content">
 			<h3></h3>
 			<p></p>
@@ -15,7 +15,7 @@
 		</div>
 		<img src="/gas/images/slide/slide_11.png" />
 	</div>
-	<div class="step" data-color="color-1">
+	<div class="step" data-color="color-1"  data-x="5000">
 		<div class="jms-content">
 			<h3></h3>
 			<p></p>
@@ -23,7 +23,7 @@
 		</div>
 			<img src="/gas/images/slide/slide_2.png" />
 	</div>
-	<div class="step" data-color="color-5"  data-x="3000">
+	<div class="step" data-color="color-5"  data-x="7000">
 		<div class="jms-content">
 			<h3></h3>
 			<p></p>
@@ -100,17 +100,17 @@
 
 			$(function() {
 
-				// var jmpressOpts	= {
-				// 	animation		: { transitionDuration : '0.8s' }
-				// };
+				var jmpressOpts	= {
+					animation		: { transitionDuration : '0.8s' }
+				};
 
-				// $( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
-				// 	autoplay	: true,
-				// 	bgColorSpeed: '0.8s',
-				// 	arrows		: true
-				// }));
+				$( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
+					autoplay	: true,
+					bgColorSpeed: '0.8s',
+					arrows		: true
+				}));
 
-				$( '#jms-slideshow' ).jmslideshow();
+				// $( '#jms-slideshow' ).jmslideshow();
 			});
 	</script>
 

@@ -25,17 +25,17 @@ nav {text-align: left;}
         /*background:white url(bg.gif) repeat-x left top;*/
         background:#4d4d4d;
         position: absolute;
-        left: 205px;
+        left: 155px;
         right: 0;
-        top: 120px;
-        height: 60px;
+        top: 100px;
+        height: 40px;
         /*z-index: 10;*/
 }
 .login_href {
         float:right;
         display: inline-block;
         height: 100%;
-        width: 60px;
+        width: 40px;
         background: url(../images/man.png) no-repeat center #da2538;
         cursor: pointer;
 }
@@ -57,7 +57,7 @@ nav {text-align: left;}
         position: relative;
         /*top: 1px;*/
         display: inline-block;
-        line-height: 60px;
+        line-height: 40px;
 }
 
 #main_menu>ul>li>a

@@ -19,7 +19,7 @@
 			// set the viewport
 			viewPort 		: {
 				height	: 400,
-				width	: 1000,
+				width	: 1100,
 				maxScale: 1
 			},
 			fullscreen		: false,
@@ -34,11 +34,11 @@
 		// shows/hides navigation dots/pages
 		dots		: true,
 		// each step's bgcolor transition speed
-		bgColorSpeed: '1s',
+		bgColorSpeed: '6s',
 		// slideshow on / off
 		autoplay	: true,
 		// time between transitions for the slideshow
-		interval	: 5000
+		interval	: 9000
     };
 
 	$.JMSlideshow.prototype 	= {
@@ -239,7 +239,6 @@
 
 					//_self._stopSlideshow();
 
-					_self._stopSlideshow();
 					// setTimeout(function(){
 					// 				_self._restartSlideshow();
 					// 			}, 7000);
