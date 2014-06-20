@@ -76,7 +76,7 @@ jQuery("#wowslider-container1").wowSlider({
 	next:"",
 	duration:20*100,
 	delay:70*100,
-	width:900,
+	width:1300,
 	height:375,
 	autoPlay:true,
 	playPause:false,

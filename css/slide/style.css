@@ -144,7 +144,7 @@
 }
 
 #wowslider-container1 .ws_pause {
-    background-image: url(./pause.png);
+    background-image: url(../../images/slide/pause.png);
 }
 
 #wowslider-container1 .ws_play {
@@ -195,7 +195,7 @@
 @-webkit-keyframes wsBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
 
 #wowslider-container1 .ws_shadow{
-	background: url(./shadow.png) left 100%;
+	background: url(../../images/slide/shadow.png) left 100%;
 	background-repeat: no-repeat;
 	background-size:100% 100%;
 	width:100%;
@@ -204,12 +204,4 @@
 	left:0;
 	bottom:-9px;
 	z-index:-1;
-}
-* html #wowslider-container1 .ws_shadow{/*ie6*/
-	background:none;
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='engine1/shadow.png', sizingMethod='scale');
-}
-*+html #wowslider-container1 .ws_shadow{/*ie7*/
-	background:none;
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='engine1/shadow.png', sizingMethod='scale');
 }
