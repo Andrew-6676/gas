@@ -94,6 +94,24 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
 					<a href="#"><img src="./images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
 				</li>
+				<li>
+					<h3><a href='ya.ry' target='_blank'>Babah</a></h3>
+					<span>./images/slide/ohr/ohr5.jpg</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
+					<a href="#"><img src="./images/slide/ohr/thumbs/ohr5.jpg" alt="Babah" /></a>
+				</li>
+				<li>
+					<h3><a href='yaadf.ry' target='_blank'>Bla-bla-bla</a></h3>
+					<span>./images/slide/ohr/ohr4.jpg</span>
+					<p>sdfgassf</p>
+					<a href="#"><img src="./images/slide/ohr/thumbs/ohr4.jpg" alt="Bla-bla-bla" /></a>
+				</li>
+				<li>
+					<h3><a href='yaadf.ry' target='_blank'>Bla-bla-bla</a></h3>
+					<span>./images/slide/ohr/ohr6.jpg</span>
+					<p>sdfgassf</p>
+					<a href="#"><img src="./images/slide/ohr/thumbs/ohr6.jpg" alt="Bla-bla-bla" /></a>
+				</li>
 			</ul>
 
 		<div id="wrapper">
@@ -124,7 +142,7 @@
 			var slideshow=new TINY.slideshow("slideshow");
 			window.onload=function(){
 				slideshow.auto=true;
-				slideshow.speed=5;
+				slideshow.speed=10;
 				slideshow.link="linkhover";
 				slideshow.info="information";
 				slideshow.thumbs="slider";

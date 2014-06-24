@@ -30,7 +30,7 @@
 }
 #information h3 {padding:4px 8px 3px; font-size:14px}
 #information p {
-	display:none;
+	/*display:none;*/
 	padding:0 8px 8px
 }
 #information a {
@@ -83,7 +83,7 @@
 #slidearea {
 	float:left;
 	position:relative;
-	width: calc(100% - 50px);
+	width: calc(100% - 48px);
 	margin-left:5px;
 	height:81px;
 	overflow:hidden

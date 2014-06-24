@@ -1,3 +1,16 @@
+// window.onload=function(){
+// 				slideshow.auto=true;
+// 				slideshow.speed=5;
+// 				slideshow.link="linkhover";
+// 				slideshow.info="information";
+// 				slideshow.thumbs="slider";
+// 				slideshow.left="slideleft";
+// 				slideshow.right="slideright";
+// 				slideshow.scrollSpeed=4;
+// 				slideshow.spacing=5;
+// 				slideshow.active="#f00";
+// 				slideshow.init("slideshow","image","imgprev","imgnext", "imglink");
+
 var TINY={};
 
 function $$(i){return document.getElementById(i)}
@@ -45,12 +58,14 @@ TINY.slideshow.prototype={
 					g.style.marginRight=this.spacing+'px';
 					w+=this.spacing
 				}
-				this.p.style.width=w+'px';
+					// andrew-6676
+				this.p.style.width=(w+2)+'px';
 				g.style.opacity=this.thumbOpacity/100;
 				g.style.filter='alpha(opacity='+this.thumbOpacity+')';
 				g.onmouseover=new Function('TINY.alpha.set(this,100,5)');
 				g.onmouseout=new Function('TINY.alpha.set(this,'+this.thumbOpacity+',5)');
-				g.onclick=new Function(this.n+'.pr('+i+',1)')
+					// andrew-6676
+				g.onclick=new Function(this.n+'.pr('+i+',1); //alert("клик по миниатюре")')
 			}
 		}
 		if(b&&f){
@@ -71,9 +86,13 @@ TINY.slideshow.prototype={
 		this.pr(t,c)
 	},
 	pr:function(t,c){
+		// alert('сразу перед сменой слайда 1');
 		clearTimeout(this.lt);
 		if(c){
-			clearTimeout(this.at)
+			// alert('сразу перед сменой слайда 2');
+			// здесь прерывается автопоказ, после клика по миниатюре или стрелке
+			// andrew-6676
+			//clearTimeout(this.at)
 		}
 		this.c=t;
 		this.is(t,c)
