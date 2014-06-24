@@ -161,14 +161,14 @@
 }
 .l_content {
 	/*float: right;*/
-	background: #fff;
-	background: url(../../images/ohr2.png) no-repeat bottom #fff;
+	/*background: #fff;*/
+	/*background: url(../../images/ohr2.png) no-repeat bottom #fff;*/
 }
 #slide {
 	margin-top: 17px;
-	height: 380px;
+	/*height: 380px;*/
 	width: 100%;
-	background: url(../../images/ohr.png) no-repeat center #009966;
+	/*background: url(../../images/ohr.png) no-repeat center #009966;*/
 }
 /*-------------------------------------------------------------*/
 

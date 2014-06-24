@@ -137,8 +137,7 @@
 		</div>
 
 		<a href="#header">
-			<div id="to_top">
-			</div>
+			<div id="to_top"></div>
 		</a>
 	</div>
 </body>

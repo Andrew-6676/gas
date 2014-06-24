@@ -24,7 +24,8 @@ body {
 }
 #body {
     position:relative;
-    background-color: #d5d6d6;
+    background-color: #CCF7FD;
+    box-shadow: 0 0 100px 10px silver;
     /*margin: 0 27px 0 27px;*/
 }
 /**------------------------ HEADER -------------------*/

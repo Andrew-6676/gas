@@ -6,6 +6,7 @@ $(document).ready(function(){
     // fade in #back-top
     $(function () {
         $(window).scroll(function () {
+            //alert('sdf');
             if ($(this).scrollTop() > 200) {
                 $('#to_top').fadeIn();
             } else {

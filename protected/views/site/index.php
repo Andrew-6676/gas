@@ -1,11 +1,11 @@
 <?php
 	$this->pageTitle='Главная ПУ "Витебскгаз"';
 	$this->addCSS('site/index.css');
-	$this->addCSS('slide/style.css');
-	// $this->addJS('slide/jmpress.min.js');
-	// $this->addJS('slide/jquery.jmslideshow.js');
+	$this->addCSS('slide/style_banner.css');
+	$this->addCSS('slide/style_tinyslide.css');
+	$this->addJS('slide/TinySlide.js');
 ?>
-
+<!-- слайдшоу вверху страницы -->
 <div id="wowslider-container1">
 
 	<div class="ws_images">
@@ -13,15 +13,15 @@
 
 			<li>
 				<a href="ya.by">
-					<img src="./images/slide/slide_11.png" alt="slide_11" title="slide_11" id="wows1_0"/>
+					<img src="./images/slide/top/slide_11.png" alt="slide_11" title="slide_11" id="wows1_0"/>
 				</a>
-				go to ya.ru! dfasdf asdf asdfa fasdf asdf ads!
+				go to ya.ru! dfasdf asdf asdfa fasdf asdf ads!<br>
 				adfasd asdf asdf asdf sdf.
 			</li>
 
 			<li>
 				<a href="yandex.tut.by">
-					<img src="./images/slide/slide_3.png" alt="slide_33" title="slide_33" id="wows1_1"/>
+					<img src="./images/slide/top/slide_3.png" alt="slide_33" title="slide_33" id="wows1_1"/>
 				</a>
 				go to xy! 23435 wrw sgtw3413452 df351 r!<br>
 				adfasd asdf asdf asdf sdf.
@@ -29,13 +29,13 @@
 
 			<li>
 				<a href="google.ru">
-					<img src="./images/slide/slide_2.png" alt="slide_2" title="slide_2" id="wows1_2"/>
+					<img src="./images/slide/top/slide_2.png" alt="slide_2" title="slide_2" id="wows1_2"/>
 				</a>
 				goggl rulit
 			</li>
 
 			<li>
-				<img src="./images/slide/slide_3.png" alt="slide_3" title="slide_3" id="wows1_3"/>
+				<img src="./images/slide/top/slide_3.png" alt="slide_3" title="slide_3" id="wows1_3"/>
 			</li>
 
 		</ul>
@@ -43,26 +43,20 @@
 
 	<div class="ws_bullets">
 		<div>
-
-			<a href="#" title="slide_11">1</a>
-			<a href="#" title="slide_33">33</a>
-			<a href="#" title="slide_2">2</a>
-			<!-- <a href="#" title="slide_3">3</a> -->
-
 		</div>
 		<script type="text/javascript">
-			$('.ws_bullets div').append('<a href="#" title="'+'slide_3'+'">3</a>');
+			var aa = $('.ws_images img');
+			aa.each(function(i, el) {
+				// $('.ws_bullets div').append('<a href="#" title="'+el.attr('title')+'">.</a>');
+				$('.ws_bullets div').append('<a href="#">.</a>');
+			})
 		</script>
 	</div>
 
 	<div class="ws_shadow"></div>
 </div>
 
-	<script type="text/javascript" src="./js/slide/wowslider.js"></script>
-	<script type="text/javascript" src="./js/slide/script.js"></script>
-
-
-<!-- *********************************************************************************************** -->
+<!-- **конец слайдшоу вверху страницы*************************************************************** -->
 
 
 <div class='c_wrapper'>
@@ -76,6 +70,76 @@
 		АБОНЕНТАМ
 	</div>
 
+<!-- ************************************************************** -->
+	<!-- слайдшоу по безопасности-->
+	<div class='l_content'>
+		<div id='slide'>
+
+			<ul id="slideshow">
+				<li>
+					<h3>TinySlideshow v1</h3>
+					<span>./images/slide/ohr/ohr1.png</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
+					<a href="#"><img src="./images/slide/ohr/thumbs/ohr1.png" alt="Orange Fish" /></a>
+				</li>
+				<li>
+					<h3>Sea Turtle</h3>
+					<span>./images/slide/ohr/ohr2.jpg</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
+					<img src="./images/slide/ohr/thumbs/ohr2.jpg" alt="Sea Turtle" />
+				</li>
+				<li>
+					<h3><a href='ya.ry' target='_blank'>Red Coral</a></h3>
+					<span>./images/slide/ohr/ohr3.jpg</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
+					<a href="#"><img src="./images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
+				</li>
+			</ul>
+
+		<div id="wrapper">
+				<div id="fullsize">
+					<div id="imgprev" class="imgnav" title="Previous Image"></div>
+					<div id="imglink"></div>
+					<div id="imgnext" class="imgnav" title="Next Image"></div>
+					<div id="image"></div>
+					<div id="information">
+						<h3></h3>
+						<p></p>
+					</div>
+				</div>
+
+				<div id="thumbnails">
+					<div id="slideleft" title="Slide Left"></div>
+					<div id="slidearea">
+						<div id="slider"></div>
+					</div>
+					<div id="slideright" title="Slide Right"></div>
+				</div>
+		</div>
+
+		<!-- script type="text/javascript" src="compressed.js"></script -->
+		<script type="text/javascript">
+			$$('slideshow').style.display='none';
+			$$('wrapper').style.display='block';
+			var slideshow=new TINY.slideshow("slideshow");
+			window.onload=function(){
+				slideshow.auto=true;
+				slideshow.speed=5;
+				slideshow.link="linkhover";
+				slideshow.info="information";
+				slideshow.thumbs="slider";
+				slideshow.left="slideleft";
+				slideshow.right="slideright";
+				slideshow.scrollSpeed=4;
+				slideshow.spacing=5;
+				slideshow.active="#f00";
+				slideshow.init("slideshow","image","imgprev","imgnext", "imglink");
+			}
+		</script>
+		</div>
+	</div>  <!-- l_content -->
+
+<!-- ************************************************************** -->
 
 	<div class='r_content'>
 		<div class='l_menu'>
@@ -117,17 +181,14 @@
 				</div>
 			</a>
 		</div>
-	</div>  <!-- l_content -->
-
-	<div class='l_content'>
-		<div id='slide'></div>
 	</div>  <!-- r_content -->
+
+<!-- ************************************************************** -->
+
 </div>
 
-
-	<script type="text/javascript">
-
-	</script>
+<script type="text/javascript" src="./js/slide/wowslider.js"></script>
+<script type="text/javascript" src="./js/slide/script_banner.js"></script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
