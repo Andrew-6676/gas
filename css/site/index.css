@@ -31,11 +31,11 @@
 }
 .c_left {
 	float: left;
-	box-shadow: 3px 7px 10px 5px #404040;
+	box-shadow: 3px 7px 30px 3px #404040;
 }
 .c_right {
 	float: right;
-	box-shadow: -3px 7px 10px 5px #404040;
+	box-shadow: -3px 7px 30px 3px #404040;
 }
 /*--------------------------*/
 .c_left_ear, .c_right_ear {
