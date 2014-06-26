@@ -86,7 +86,9 @@
 	width: calc(100% - 48px);
 	margin-left:5px;
 	height:81px;
-	overflow:hidden
+	overflow:hidden;
+	/*width: calc(100% - 50px);*/
+	width: 91%;
 }
 #slider {
 	position:absolute;
