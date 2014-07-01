@@ -95,24 +95,6 @@ body {
     background: url(../images/search.png) no-repeat 98% #fff;
     box-shadow: 2px 2px 2px 0 #050505;
 }
-/*-----------------------breadcrumbs----------------***/
-#breadcrumbs a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #005;
-}
-#breadcrumbs a:hover {
-    color: #a00;
-    text-decoration: underline;
-}
-#breadcrumbs {
-    position: absolute;
-    top: 145px;
-    left: 155px;
-}
-#breadcrumbs span:before {
-    content: '>';
-}
 /**--------------------------------------CONTENT------------------------------------------**/
 .content {
     /*background-color: #d5d6d6;*/
