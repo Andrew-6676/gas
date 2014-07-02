@@ -13,7 +13,7 @@
 
 			<li>
 				<a href="ya.by">
-					<img src="./images/slide/top/slide_11.png" alt="slide_11" title="slide_11" id="wows1_0"/>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_11.png" alt="slide_11" title="slide_11" id="wows1_0"/>
 				</a>
 				go to ya.ru! dfasdf asdf asdfa fasdf asdf ads!<br>
 				adfasd asdf asdf asdf sdf.
@@ -21,7 +21,7 @@
 
 			<li>
 				<a href="yandex.tut.by">
-					<img src="./images/slide/top/slide_3.png" alt="slide_33" title="slide_33" id="wows1_1"/>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_3.png" alt="slide_33" title="slide_33" id="wows1_1"/>
 				</a>
 				go to xy! 23435 wrw sgtw3413452 df351 r!<br>
 				adfasd asdf asdf asdf sdf.
@@ -29,13 +29,13 @@
 
 			<li>
 				<a href="google.ru">
-					<img src="./images/slide/top/slide_2.png" alt="slide_2" title="slide_2" id="wows1_2"/>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_2.png" alt="slide_2" title="slide_2" id="wows1_2"/>
 				</a>
 				goggl rulit
 			</li>
 
 			<li>
-				<img src="./images/slide/top/slide_3.png" alt="slide_3" title="slide_3" id="wows1_3"/>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_3.png" alt="slide_3" title="slide_3" id="wows1_3"/>
 			</li>
 
 		</ul>
@@ -78,39 +78,39 @@
 			<ul id="slideshow">
 				<li>
 					<h3>TinySlideshow v1</h3>
-					<span>./images/slide/ohr/ohr1.png</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr1.png</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
-					<a href="#"><img src="./images/slide/ohr/thumbs/ohr1.png" alt="Orange Fish" /></a>
+					<a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr1.png" alt="Orange Fish" /></a>
 				</li>
 				<li>
 					<h3>Sea Turtle</h3>
-					<span>./images/slide/ohr/ohr2.jpg</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr2.jpg</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
-					<img src="./images/slide/ohr/thumbs/ohr2.jpg" alt="Sea Turtle" />
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr2.jpg" alt="Sea Turtle" />
 				</li>
 				<li>
 					<h3><a href='ya.ry' target='_blank'>Red Coral</a></h3>
-					<span>./images/slide/ohr/ohr3.jpg</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr3.jpg</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
-					<a href="#"><img src="./images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
+					<a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
 				</li>
 				<li>
 					<h3><a href='ya.ry' target='_blank'>Babah</a></h3>
-					<span>./images/slide/ohr/ohr5.jpg</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr5.jpg</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut urna. Mauris nulla. Donec nec mauris. Proin nulla dolor, bibendum et, dapibus in, euismod ut, felis.</p>
-					<a href="#"><img src="./images/slide/ohr/thumbs/ohr5.jpg" alt="Babah" /></a>
+					<a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr5.jpg" alt="Babah" /></a>
 				</li>
 				<li>
 					<h3><a href='yaadf.ry' target='_blank'>Bla-bla-bla</a></h3>
-					<span>./images/slide/ohr/ohr4.jpg</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr4.jpg</span>
 					<p>sdfgassf</p>
-					<a href="#"><img src="./images/slide/ohr/thumbs/ohr4.jpg" alt="Bla-bla-bla" /></a>
+					<a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr4.jpg" alt="Bla-bla-bla" /></a>
 				</li>
 				<li>
 					<h3><a href='yaadf.ry' target='_blank'>Bla-bla-bla</a></h3>
-					<span>./images/slide/ohr/ohr6.jpg</span>
+					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr6.jpg</span>
 					<p>sdfgassf</p>
-					<a href="#"><img src="./images/slide/ohr/thumbs/ohr6.jpg" alt="Bla-bla-bla" /></a>
+					<a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr6.jpg" alt="Bla-bla-bla" /></a>
 				</li>
 			</ul>
 
@@ -205,8 +205,8 @@
 
 </div>
 
-<script type="text/javascript" src="./js/slide/wowslider.js"></script>
-<script type="text/javascript" src="./js/slide/script_banner.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/slide/wowslider.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/slide/script_banner.js"></script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

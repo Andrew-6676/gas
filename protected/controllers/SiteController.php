@@ -6,7 +6,7 @@ class SiteController extends Controller
     {
         return array(
             'index'=>'application.controllers.site.indexAction',
-            //'info'=>'application.controllers.test.InfoAction',
+            'page'=>'application.controllers.test.pageAction',
             //'db'=>'application.controllers.test.DbAction',
         );
     }
