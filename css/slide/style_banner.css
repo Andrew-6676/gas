@@ -6,7 +6,7 @@
 #wowslider-container1 {
 	zoom: 1;
 	position: relative;
-	height:375px;
+	/*height:375px;*/
 	max-width:1300px;
 	width: 100%;
 	margin:0px auto 0px;
@@ -172,7 +172,7 @@
 /* default */
 #wowslider-container1 .ws-title{
 	position: absolute;
-	top:28.5em;
+	bottom:15px;
 	left: 0;
 	/*margin-right:0.5em;*/
 	z-index: 50;

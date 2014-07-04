@@ -164,7 +164,7 @@
 			<a href='sdfd'>
 				<div class='item i1'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
-					<div>Нормативно - правовые<br> акты</div>
+					<div>Нормативно-<br>правовые<br> акты</div>
 				</div></a>
 			<a href='sdfd'>
 					<div class='item i2'>
@@ -175,7 +175,7 @@
 			<a href='sdfd'>
 				<div class='item i3'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
-					<div>Это должен знать каждый</div>
+					<div>Это должен<br>знать<br>каждый</div>
 				</div>
 			</a>
 		</div>
@@ -195,7 +195,7 @@
 			<a href='asdf'>
 				<div class='item i3'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
-					<div>Бла-бла-бла</div>
+					<div>Структура</div>
 				</div>
 			</a>
 		</div>

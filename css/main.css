@@ -8,8 +8,14 @@ article, aside, figure, figcaption, footer, header, hgroup, nav, section, summar
 html {
     height:100%;
     /*overflow-y: scroll;*/
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background: url(../images/back.png) fixed no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
 }
+
 body {
         /*text-align: center;*/
         /*border: 2px solid black;*/
@@ -24,8 +30,9 @@ body {
 }
 #body {
     position:relative;
-    background-color: #CCF7FD;
-    box-shadow: 0 0 100px 10px silver;
+    /*background-color: #CCF7FD;*/
+    background: url(../images/back_2.png);
+    box-shadow: 0 0 100px 10px #646464;
     /*margin: 0 27px 0 27px;*/
 }
 /**------------------------ HEADER -------------------*/
@@ -34,23 +41,23 @@ body {
     width: 100%;
     /*border: 1px green solid;*/
     box-shadow: 0px 5px 10px 10px gray;
-    background: #0075ba;
+    background: #91D4FC; /*#0075ba;*/
 }
 .left_ear, .right_ear {
-    background: #fff;
+    /*background: #fff;*/
     /*border: 1px solid black;*/
-    height: 197px;
+    height: 157px;
     width: 27px;
     position: absolute;
-    top: -40px;
+    /*top: 17px;*/
 }
 .left_ear {
     left:-27px;
-    background: url(../images/left_ear.png) no-repeat;
+    background: url(../images/top_ear_140x54.png) no-repeat;
 }
 .right_ear {
     right: -27px;
-    background: url(../images/right_ear.png) no-repeat;
+    background: url(../images/top_ear_140x54.png) no-repeat 100% 0%;
 }
 
 /*-------------------------------*/
@@ -78,17 +85,18 @@ body {
 }
 .slogan {
     position: absolute;
-    background: #da2538;
+    /*background: #da2538;*/
     bottom: 55px;
     /*float:right;*/
-    right: 0;
+    right: 10px;
+    color: #000;
 }
 #search_input {
     /*float: right;*/
     padding: 3px;
     border: none;
     position: absolute;
-    right: 3px;
+    right: 10px;
     height: 20px;
     width: 200px;
     bottom: 7px;
@@ -144,19 +152,19 @@ body {
     width: 14px;
     height: 92px;
     /*border: 1px solid lime;*/
+    background: url(../images/footer_ear.png) no-repeat;
 }
 .f_left_ear {
     left: -14px;
     top: -10px;
     float: left;
-
-    background: url(../images/f_left_ear.png) no-repeat;
+    background-position: 0% 0%;
 }
 .f_right_ear {
     float: right;
     top: -10px;
     left: 14px;
-    background: url(../images/f_right_ear.png) no-repeat;
+    background-position: 100% 0%;
 }
 /*----------------------- footer ------------------*/
 .ff {
