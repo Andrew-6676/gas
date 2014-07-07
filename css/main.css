@@ -7,6 +7,8 @@ article, aside, figure, figcaption, footer, header, hgroup, nav, section, summar
 }
 html {
     height:100%;
+    padding-left: 27px;
+    padding-right: 27px;
     /*overflow-y: scroll;*/
     /*background-color: #fff;*/
     background: url(../images/back.png) fixed no-repeat;
@@ -17,23 +19,21 @@ html {
 }
 
 body {
+        position:relative;
         /*text-align: center;*/
         /*border: 2px solid black;*/
         /*background: #d5d6d6;*/
         margin: auto;
-        padding-left: 27px;
         min-height: 100%;
-        position:relative;
         max-width: 1300px;
         width: 90%;
         min-width: 1120px;
 }
-#body {
-    position:relative;
-    /*background-color: #CCF7FD;*/
+body {
     background: url(../images/back_2.png);
-    box-shadow: 0 0 100px 10px #646464;
+    box-shadow: 0 0 10px 10px #D1D1D1;
     /*margin: 0 27px 0 27px;*/
+    /*padding-bottom: 70px;*/
 }
 /**------------------------ HEADER -------------------*/
 #header {
@@ -107,6 +107,8 @@ body {
 .content {
     /*background-color: #d5d6d6;*/
     margin-top: 30px;
+    height: 100%;
+    padding-bottom: 80px;
     /*border: 1px solid blue;*/
 }
 /**-------------------------------------------------------**/
@@ -130,7 +132,7 @@ body {
 }
 .links a {
     display: inline-block;
-    margin: 2px -2px 2px 2px;
+    margin: 2px -2px 0px 2px;
 }
 .links img {
     /*max-width: 20%;*/
@@ -150,26 +152,26 @@ body {
 .f_left_ear, .f_right_ear {
     position: relative;
     width: 14px;
-    height: 92px;
+    height: 80px;
+    top: -10px;
     /*border: 1px solid lime;*/
     background: url(../images/footer_ear.png) no-repeat;
 }
 .f_left_ear {
     left: -14px;
-    top: -10px;
     float: left;
     background-position: 0% 0%;
 }
 .f_right_ear {
     float: right;
-    top: -10px;
     left: 14px;
     background-position: 100% 0%;
 }
 /*----------------------- footer ------------------*/
 .ff {
-    position: relative;
-    top: 16px;
+    width: 100%;
+    position: absolute;
+    bottom: -13px;
     text-align: center;
 }
 .ff small {

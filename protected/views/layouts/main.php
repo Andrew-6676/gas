@@ -21,7 +21,7 @@
 	?>
 </head>
 <body>
-	<div id='body'>
+	<!-- <div id='body'> -->
 		<header id="header">
 	 		<div class="left_ear">		</div>
 			<div class="right_ear">		</div>
@@ -39,8 +39,6 @@
 				</div>
 			</div>    <!-- end logo_wrapper -->
 
-
-
 			<div class='menu_wrapper'>
 				<nav id="main_menu">
 					<?php
@@ -48,7 +46,6 @@
 					?>
 					<div class='login_href'></div>
 				</nav>  <!-- #main menu  -->
-
 			</div>
 			<div id='breadcrumbs'>
 				<a href='#'>Главная</a> <span></span>
@@ -94,7 +91,7 @@
 						<img src="/gas/images/ncpi.png"/>
 					</a>
 				</div>
-			</div>
+			</div>		<!-- links -->
 
 			<!-- <div class="f_right">
 			    <small><p>Copyright (c) 2015</p></small>
@@ -117,7 +114,6 @@
 		<a href="#header">
 			<div id="to_top"></div>
 		</a>
-	</div>
+	<!-- </div> -->    <!-- #body  -->
 </body>
 </html>
-

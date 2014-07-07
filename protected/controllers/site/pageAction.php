@@ -1,10 +1,11 @@
 <?php
 
-class IndexAction extends CAction /* GuestBookController */
+class pageAction extends CAction /* GuestBookController */
 {
 
     public function run()
 	{
-		$this->controller->render('index');
+		//Utils::print_r($_GET);
+		$this->controller->render('page');
 	}
 }

@@ -61,6 +61,9 @@
 	/*background: url(../../images/c_right_ear.png) no-repeat;*/
 }
 /*-------------------------------------------------------------*/
+.l_r_wrapper {
+	height: 500px;
+}
 .l_content, .r_content {
 	z-index: 5;
 	position: relative;
