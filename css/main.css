@@ -2,6 +2,7 @@ article, aside, figure, figcaption, footer, header, hgroup, nav, section, summar
    display: block;
 }
 * {
+        font-family: Liberation Serif;
         margin: 0;
         padding: 0;
 }
@@ -198,3 +199,30 @@ body {
     /*box-shadow: 2px 2px 5px 0px gray;*/
 }
 
+/**------------------------------------------------------------------------**/
+/**------------------------------------------------------------------------**/
+#login_form {
+    display: none;
+    position: absolute;
+    right: 3px;
+    top: 43px;
+    border-top: 1px solid #fcfcfc;
+    border-top: 1px solid #fcfcfc;
+    border-right: 1px solid #7c7c7c;
+    border-right: 1px solid #7c7c7c;
+    border-radius: 5px;
+    background-color: #E7FCFF;
+    width: 170px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px 0px gray;
+}
+#login_form input {
+    border-radius: 3px;
+    width: 165px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+#login_form button {
+    float: right;
+    /*margin-top: 5px;*/
+}

@@ -1,0 +1,132 @@
+.page {
+	/*border: 1px solid black;*/
+}
+.page h1 {
+	color: #f00;
+	text-align: center;
+	padding: 1px 30px 30px 30px;
+}
+/*------------------------------------------------------------*/
+
+.second_line {
+
+}
+.page div {
+	/*border: 1px solid blue;*/
+}
+.div-table {
+	display: table;
+	width: 100%;
+}
+.div-row {
+	display: table-row;
+}
+.div-cell {
+	display: table-cell;
+}
+/*------------------------------------------------------------*/
+.first_line .man {
+	height: 180px;
+	width: 380px;
+}
+.first_line .man img {
+	height: 150px;
+}
+.first_line .post {
+	height: 30px;
+	font-size: 2em;
+
+}
+.first_line .fio {
+	left: 140px;
+	width: 230px;
+	padding-top: 25px;
+	font-size: 1.7em;
+	text-align: center;
+}
+/*------------------------------------------------------------*/
+.sub_table {
+	width: 100%;
+}
+.second_line .man {
+	height: 150px;
+	width: 280px;
+}
+.second_line .man img {
+	height: 110px;
+}
+.second_line .post {
+	height: 30px;
+	font-size: 1em;
+
+}
+.second_line .fio {
+	left: 110px;
+	width: 140px;
+	padding-top: 20px;
+	font-size: 1.2em;
+}
+/*------------------------------------------------------------*/
+.man {
+	font-family: Liberation Serif;
+	position: relative;
+	width: 220px;
+	height: 140px;
+	margin: auto;
+	margin-bottom: 30px;
+	border: 1px solid gray;
+	/*background-color: #6DE2F2;*/
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #FFFFFF),
+		color-stop(0.5, #FFFFFF),
+		color-stop(1, #6DE2F2)
+	);
+	background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: linear-gradient(to bottom,  #6DE2F2 0%, #FFFFFF 50%);
+	border-radius: 3px;
+}
+.man img {
+	z-index: 1;
+	height: 90px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+}
+.post {
+	position: relative;
+	z-index: 6;
+	text-align: center;
+	height: 30px;
+	font-size: 0.9em;
+	margin-top: 5px;
+	/*font-weight: bold;*/
+
+}
+.fio {
+	position: relative;
+	left: 80px;
+	width: 140px;
+	/*height: 90px;*/
+	text-align: left;
+	padding-top: 35px;
+	font-weight: bold;
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/

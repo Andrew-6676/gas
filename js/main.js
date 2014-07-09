@@ -1,9 +1,27 @@
 $(document).ready(function(){
 
-    // hide #back-top first
+    /*------------------------------------------------------------------*/
+        // клик по блоку - показать форму авторизации
+    $('.login_href').click(function(){
+        var f = $('#login_form');
+        if (f.css('display') == 'none') {
+            f.show();
+        } else {
+            f.hide();
+        }
+    })
+        // спрятать форму авторизации по клику в не формы
+    $(document).click(function(event) {
+        if ($(event.target).closest('.login_href, #login_form').length) return;
+        $('#login_form').hide();
+        event.stopPropagation();
+    });
+
+    /*------------------------------------------------------------------*/
+    // спрятать #back-top
     $("#to_top").hide();
 
-    // fade in #back-top
+    // показать #back-top
     $(function () {
         $(window).scroll(function () {
             //alert('sdf');
@@ -22,6 +40,9 @@ $(document).ready(function(){
         //     return false;
         // });
     });
+    /*------------------------------------------------------------------*/
+    /*------------------------------------------------------------------*/
+    /*------------------------------------------------------------------*/
 
 });
 //////

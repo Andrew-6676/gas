@@ -75,14 +75,7 @@ return array(
 			'charset' => 'utf8',
 		),
 		*/
-		'db'=>array(
-			//'class'=>'CDbConnection',
-			'connectionString'=>'mysql:host=localhost;dbname=vitebskgas',
-            'username'=>'root',
-            'password'=>'root',
-            'charset'=>'utf8'
-			//'tablePrefix' => 'vgs_',
-		),
+		'db'=>require(dirname(__FILE__).'/db.php'),
 
 		/*'errorHandler'=>array(
 			// use 'site/error' action to display errors

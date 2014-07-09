@@ -93,7 +93,7 @@
                     		  'submenuOptions'=>array('id'=>'sub_2', 'class'=>'sub_menu'),
 							  'items'=>$sub_2,
                     	),
-                    	array('label'=>'Магазин "Метан"', 'url'=>array('/test/test'),
+                    	array('label'=>'Магазин "Метан"', 'url'=>array('site/page/metan'),
 							  'itemOptions'=>array('id'=>'m_3'),
 							  'submenuOptions'=>array('id'=>'sub_3', 'class'=>'sub_menu'),
 							  'items'=>$sub_3,
@@ -105,5 +105,5 @@
 						 	  //'items'=>$sub_4,
 						),
        					array('label'=>'АГЗС','url'=>array('/test/db')),
-       					array('label'=>'Вопрос-ответ',   'url'=>array('/printer/index')),
+       					array('label'=>'Вопрос-ответ',   'url'=>array('site/page/quest')),
     )));

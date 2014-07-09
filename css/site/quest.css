@@ -1,0 +1,33 @@
+.page h1 {
+	color: #f00;
+	text-align: center;
+	padding: 1px 30px 30px 30px;
+}
+/*----------------------------------------------------------------*/
+.q_wrapper {
+	padding: 10px;
+}
+.item {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.item:hover {
+	background: #fff;
+}
+.question {
+	width: 70%;
+	font-weight: bold;
+	margin-bottom: 10px;
+	/*background: */
+}
+.answer {
+	padding-left: 15px;
+	text-align: justify;
+}

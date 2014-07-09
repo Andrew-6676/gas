@@ -45,13 +45,24 @@
 						include('main_menu.php');
 					?>
 					<div class='login_href'></div>
+					<div id='login_form'>
+						<input type='text' placeholder='имя'>
+						<input type='password' placeholder='пароль'>
+						<button type='button'>Войти</button>
+					</div>
 				</nav>  <!-- #main menu  -->
 			</div>
 			<div id='breadcrumbs'>
-				<a href='#'>Главная</a> <span></span>
-				<a href='#'>Услуги</a> <span></span>
-				<a href='#'>Подключение</a> <span></span>
-			</div>
+				<?
+					$this->widget('zii.widgets.CBreadcrumbs',
+									array(
+										'homeLink' => CHtml::link('Главная', Yii::app()->homeUrl),
+										'separator' => '<b> » </b>',
+										'links'=>$this->breadcrumbs,
+									)
+					);
+				?>
+			</div>		<!-- breadcrumbs -->
 		</header>
 
 
