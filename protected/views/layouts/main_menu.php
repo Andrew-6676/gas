@@ -31,7 +31,7 @@
 					  'items'=>$sub_sub_1_2,
 				),
 				array('label'=>'Контакты', 'url'=>array('site/index')),
-				array('label'=>'История', 'url'=>array('site/index')),
+				array('label'=>'История', 'url'=>array('site/page/history')),
 				array('label'=>'Галерея', 'url'=>array('site/index')),
 	);
 
@@ -104,6 +104,6 @@
 							  'itemOptions'=>array('id'=>'m_4'),
 						 	  //'items'=>$sub_4,
 						),
-       					array('label'=>'АГЗС','url'=>array('/test/db')),
+       					array('label'=>'АГЗС','url'=>array('/site/page/agzs')),
        					array('label'=>'Вопрос-ответ',   'url'=>array('site/page/quest')),
     )));

@@ -7,15 +7,9 @@
 	padding: 1px 30px 30px 30px;
 }
 /*------------------------------------------------------------*/
-
-.second_line {
-
-}
-.page div {
-	/*border: 1px solid blue;*/
-}
 .div-table {
 	display: table;
+	border-collapse: collapse;
 	width: 100%;
 }
 .div-row {
@@ -23,8 +17,73 @@
 }
 .div-cell {
 	display: table-cell;
+	overflow: hidden;
 }
-/*------------------------------------------------------------*/
+/*---------------------Стрелки на схеме----------------------------------------------------------*/
+
+.line .div-cell:nth-child(odd) .man:before {
+	content: ' ';
+	position: absolute;
+	left: -104px;
+	float: left;
+	display: inline-block;
+	background: url(../../images/strukt/left_arr_long.png) no-repeat 100% 50%;
+	width: 100px;
+	height: 100%;
+
+	/*background: yellow;*/
+}
+.line .div-cell:nth-child(even) .man:after {
+	content: ' ';
+	position: absolute;
+	right: -104px;
+	top: 0;
+	float: right;
+	display: inline-block;
+	background: url(../../images/strukt/right_arr_long.png) no-repeat 0% 50%;
+	width: 100px;
+	height: 100%;
+
+	/*background: yellow;*/
+}
+
+/*--------первая и последняя колонки ---------*/
+.line .div-cell:nth-child(1), .line .div-cell:nth-child(4) {
+	/*background: green;*/
+	background: url(../../images/strukt/ver_line.png) no-repeat;
+	/*border-right: 2px solid black;*/
+}
+.line .div-cell:nth-child(2), .line .div-cell:nth-child(3) {
+	/*background: green;*/
+	background: url(../../images/strukt/ver_line_thin.png) no-repeat;
+	/*border-right: 2px solid black;*/
+}
+/*------ чётные и нечётные колонки ----*/
+.line .div-cell:nth-child(odd) {
+	/*background: lime;*/
+	background-position: 0% 0%;
+}
+.line .div-cell:nth-child(even) {
+	/*background: lime;*/
+	background-position: 100% 0%;
+}
+/*----- нижний левый угол --*/
+.line:last-child>.div-cell:nth-child(1), .line:last-child>.div-cell:nth-child(3) {
+	/*background: blue;*/
+	background-position: 0% -150px;  /* 140/20 - 220*/
+}
+/*----- нижний правый угол ----*/
+.line:last-child>.div-cell:nth-child(2), .line:last-child>.div-cell:nth-child(4) {
+	/*background: red;*/
+	background-position: 100% -150px;
+}
+
+/*--------------------Первая линия (директор) --------------------------------------------------*/
+.first_line {
+	border-bottom: 2px solid black;
+	background: url(../../images/strukt/ver_arr_long.png) no-repeat 50% 100%;
+}
+
 .first_line .man {
 	height: 180px;
 	width: 380px;
@@ -44,11 +103,32 @@
 	font-size: 1.7em;
 	text-align: center;
 }
-/*------------------------------------------------------------*/
+/*-----------------Вторая линия---------------------------------------------------------------*/
 .sub_table {
 	width: 100%;
+	border-collapse: collapse;
 }
+.second_line  {
+	background: url(../../images/strukt/ver_line.png) no-repeat 0% 100%,
+			    url(../../images/strukt/ver_line.png) no-repeat 100% 100%,
+			    url(../../images/strukt/ver_line.png) no-repeat 50% -1000%;
+	/*order-left: 2px solid black;*/
+	/*border-right: 2px solid black;*/
+}
+
+.second_line .man:before {
+	content: ' ';
+	display: block;
+	/*background: yellow;*/
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: -154px;
+	background: url(../../images/strukt/ver_arr_long.png) no-repeat 50% 100%;
+}
+
 .second_line .man {
+	margin-top: 30px;
 	height: 150px;
 	width: 280px;
 }
@@ -66,7 +146,7 @@
 	padding-top: 20px;
 	font-size: 1.2em;
 }
-/*------------------------------------------------------------*/
+/*---------------------Все остальные начальники---------------*/
 .man {
 	font-family: Liberation Serif;
 	position: relative;
@@ -91,6 +171,9 @@
 	background-image: linear-gradient(to bottom,  #6DE2F2 0%, #FFFFFF 50%);
 	border-radius: 3px;
 }
+.man:hover {
+	box-shadow: 1px 1px 10px -3px #555;
+}
 .man img {
 	z-index: 1;
 	height: 90px;
@@ -98,6 +181,22 @@
 	bottom: 0;
 	left: 0;
 	cursor: pointer;
+}
+.line .man img:hover {
+	height: 170px;
+	bottom: -30px;
+}
+.first_line .man img:hover {
+	height: 210px;
+	bottom: -30px;
+}
+.second_line .man img:hover {
+	height: 180px;
+	bottom: -30px;
+}
+.man img:hover {
+	z-index: 99;
+	box-shadow: 0px 0px 10px 5px gray;
 }
 .post {
 	position: relative;

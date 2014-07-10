@@ -19,13 +19,20 @@ class pageAction extends CAction /* GuestBookController */
 				case 'strukt':
 					$data = $this->getStrukt();
 					$css = 'site/strukt.css';
-					$js = '';
+					$js = 'site/strukt.js';
 
 					break;
 				case 'quest':
 					$data = $this->getQuest();
 					$css = 'site/quest.css';
 					$js = 'site/quest.js';
+					break;
+				case 'agzs':
+				case 'history':
+					$data = $this->getPageFromDB(key($_GET));
+					$css = 'site/page.css';
+					//$css = 'site/quest.css';
+					//$js = 'site/quest.js';
 					break;
 				default:
 					$data = 'Страница-заглушка. Когда-нибудь здесь появится контент. Наберитесь терпения :)';
@@ -77,6 +84,7 @@ class pageAction extends CAction /* GuestBookController */
 			// $data .= $man['fio'].'<br>';
 			$j++;
 			$colspan = '';
+			$class_td = '';
 
 				// если первый выводимый человек - его в отдельную строку (директор)
 			if ($j == 0) {
@@ -90,18 +98,19 @@ class pageAction extends CAction /* GuestBookController */
 			}
 				// всех остальных выводим одинаково
 			if ($j > 7) {
-				$class = '';
+				$class = ' line';
 			}
 				// начинаем новую строку таблицы, если выводимый номер кратен 4
 			if (($j%4) == 0) {
 				$data .='<tr class="div-row'.$class.'">';
+				//$class_td = ' left';
 			}
 				// если начало второй строки - вставляем в неё подтаблицу
 			if ($j == 4) {
 				$data .=  '<td colspan="4"><table class="sub_table"><tr>';
 			}
 
-			$data .= 		'<td class="div-cell" '.$colspan.'>';
+			$data .= 		'<td class="div-cell'.$class_td.'" '.$colspan.'>';
 			$data .= 			'<div class="man">';
 			$data .= 				'<img src="'.Yii::app()->request->baseUrl.'/images'.$man['img'].'">';
 			$data .= 				'<div class="post">'.$man['post'].'</div>';
@@ -172,4 +181,28 @@ class pageAction extends CAction /* GuestBookController */
 		$data .= '</div> 	<!-- q_wrapper -->';
 		return $data;
 	}
+
+	private function getPageFromDB($page='empty') {
+		if ($page=='empty') {
+			return '<h2>Неверный запрос</h2>';
+		}
+		$this->controller->breadcrumbs = array(
+				//'Djghjc'=>array('site/page/'),
+				'История',
+		);
+
+		//$data = $page;
+
+		$connection = Yii::app()->db;
+		$sql = 'SELECT * FROM `page` where name="'.$page.'"';
+		$res = $connection->createCommand($sql)->queryRow();
+		if ($res) {
+			$data = $res['html'];
+			$data .= '<style>'.$res['css'].'</style>';
+			return $data;
+		} else {
+			return '<h2>Содержимое страницы не создано</h2>';
+		}
+	}
 }
+
