@@ -186,10 +186,6 @@ class pageAction extends CAction /* GuestBookController */
 		if ($page=='empty') {
 			return '<h2>Неверный запрос</h2>';
 		}
-		$this->controller->breadcrumbs = array(
-				//'Djghjc'=>array('site/page/'),
-				'История',
-		);
 
 		//$data = $page;
 
@@ -197,6 +193,10 @@ class pageAction extends CAction /* GuestBookController */
 		$sql = 'SELECT * FROM `page` where name="'.$page.'"';
 		$res = $connection->createCommand($sql)->queryRow();
 		if ($res) {
+			$this->controller->breadcrumbs = array(
+				//'Djghjc'=>array('site/page/'),
+				$res['name_ru'],
+			);
 			$data = $res['html'];
 			$data .= '<style>'.$res['css'].'</style>';
 			return $data;

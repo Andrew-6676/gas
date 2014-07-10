@@ -53,7 +53,7 @@
 				</nav>  <!-- #main menu  -->
 			</div>
 			<div id='breadcrumbs'>
-				<?
+				<?php
 					$this->widget('zii.widgets.CBreadcrumbs',
 									array(
 										'homeLink' => CHtml::link('Главная', Yii::app()->homeUrl),

@@ -12,7 +12,7 @@
 
 ?>
 <div class='page'>
-	<?
+	<?php
 		echo $data;
 	?>
 </div>		<!-- page -->
