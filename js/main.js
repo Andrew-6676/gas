@@ -18,31 +18,63 @@ $(document).ready(function(){
     });
 
     /*------------------------------------------------------------------*/
-    // спрятать #back-top
+    // спрятать #to_top
     $("#to_top").hide();
-
-    // показать #back-top
-    $(function () {
+        // если документ не больше окна браузера
+    if ($(window).innerHeight()-$(document).innerHeight()>-100) {
+        $("#to_bottom").hide();
+    }
+            // событие прокрутки документа
         $(window).scroll(function () {
             //alert('sdf');
-            if ($(this).scrollTop() > 200) {
+                // если прокрутили вниз на 150 и более пикселей от верха
+            if ($(this).scrollTop() > 150) {
                 $('#to_top').fadeIn();
             } else {
                 $('#to_top').fadeOut();
             }
+                // если прокрутили вниз на 100 и более пикселей от низа
+            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-100) {
+                $("#to_bottom").fadeOut();
+            } else {
+                $("#to_bottom").fadeIn();
+            }
         });
 
-        // // scroll body to 0px on click
-        // $('#back-top a').click(function () {
-        //     $('body,html').animate({
-        //         scrollTop: 0
-        //     }, 800);
-        //     return false;
-        // });
-    });
+        // при изменениии высоты документа во время просмотра
+    OnResizeElement(document, function(el){
+            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-100) {
+                $("#to_bottom").fadeOut();
+            } else {
+                $("#to_bottom").fadeIn();
+            }
+    }, 300);
+
     /*------------------------------------------------------------------*/
     /*------------------------------------------------------------------*/
     /*------------------------------------------------------------------*/
 
 });
 //////
+/*--------------------------------------------------------------------------*/
+
+function OnResizeElement(element, handler, time){
+    var id = null;
+    var _constructor = function(){
+        var WIDTH = $(element).outerWidth(),
+            HEIGHT = $(element).outerHeight();
+        id = setInterval(function(){
+            if(WIDTH != $(element).outerWidth() || HEIGHT != $(element).outerHeight()){
+                WIDTH = $(element).outerWidth(), HEIGHT = $(element).outerHeight();
+                handler(element);
+            };
+        }, time);
+    };
+    var _destructor = function(){
+        clearInterval(id);
+    };
+    this.Destroy = function(){
+        _destructor();
+    };
+    _constructor();
+};

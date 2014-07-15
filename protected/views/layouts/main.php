@@ -122,9 +122,14 @@
 			<small> <?php echo Yii::powered(); ?> </small>
 		</div>
 
-		<a href="#header">
-			<div id="to_top"></div>
-		</a>
+	<a id="to_bottom" href='#footer'>
+		<div>
+		</div>
+	</a>
+	<a id="to_top" href='#header'>
+		<div>
+		</div>
+	</a>
 	<!-- </div> -->    <!-- #body  -->
 </body>
 </html>

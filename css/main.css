@@ -180,25 +180,37 @@ body {
     font-size: 10px;
 }
 /**------------------------------------------------------------------------**/
-#to_top {
-    z-index: 100;
+#to_top div, #to_bottom div {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
-    display: block;
-    background: url(../images/up.png) no-repeat center #ddd;
-    border-radius: 30px;
-    border: 2px solid #dadada;
-    box-shadow: 1px 1px 2px 0px gray;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px 5px #5e5e5e;
 }
-#to_top:hover {
-    cursor: pointer;
-    background:  url(../images/up.png) no-repeat center #ccc;
-    /*box-shadow: 2px 2px 5px 0px gray;*/
+#to_top div:hover, #to_bottom div:hover {
+    border: 2px solid #0f0;
+    box-shadow: 0 0 20px 5px #292929;
+}
+/*------------*/
+#to_top div{
+    top: 20px;
+    background: url(../images/arrows.png) 0% 0% no-repeat #000;
 }
 
+#to_top div:hover {
+    background: url(../images/arrows.png) 100% 0% no-repeat #000;
+}
+/*-----*/
+#to_bottom div{
+    bottom: 20px;
+    background: url(../images/arrows.png) 0% 100% no-repeat #000;
+}
+
+#to_bottom div:hover {
+    background: url(../images/arrows.png) 100% 100% no-repeat #000;
+}
 /**------------------------------------------------------------------------**/
 /**------------------------------------------------------------------------**/
 #login_form {
