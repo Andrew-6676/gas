@@ -2,48 +2,39 @@
 
 class pageAction extends CAction /* GuestBookController */
 {
-
+	private $css = '';
+	private $js = '';
 /*------------------------------------------------------------------------------------*/
     public function run()
 	{
 		//Utils::print_r(key($_GET));
 
 		$data ='';
-		$css = '';
-		$js = '';
-
+			// проверяем, запрашивается ли страница
 		if (sizeof($_GET)==0) {
 			$data = 'Страница-заглушка. Когда-нибудь здесь появится контент. Наберитесь терпения :)';
 		} else {
-			switch (key($_GET)) {
-				case 'strukt':
-					$data = $this->getStrukt();
-					$css = 'site/strukt.css';
-					$js = 'site/strukt.js';
-
-					break;
-				case 'quest':
-					$data = $this->getQuest();
-					$css = 'site/quest.css';
-					$js = 'site/quest.js';
-					break;
-				case 'agzs':
-				case 'history':
-					$data = $this->getPageFromDB(key($_GET));
-					$css = 'site/page.css';
-					//$css = 'site/quest.css';
-					//$js = 'site/quest.js';
-					break;
-				default:
-					$data = 'Страница-заглушка. Когда-нибудь здесь появится контент. Наберитесь терпения :)';
-					break;
+				// ищем в базе запрашиваемую страницу
+			$connection = Yii::app()->db;
+			$sql_c = 'SELECT count(id) FROM `page` where name="'.key($_GET).'"';
+			$c = $connection->createCommand($sql_c)->queryScalar();
+				// если нашлось - загружаем из БД
+			if ($c > 0) {
+				$css = 'site/page.css';
+				$js = 'site/page.js';
+				$data = $this->getPageFromDB(key($_GET));
+			} else {	// если не нашлось - выполняем функцию
+				$func = 'get'.key($_GET);
+				$data = $this->$func();
+				// $css = 'site/'.key($_GET).'.css';
+				// $js = 'site/'.key($_GET).'.js';
 			}
 		}
 		$this->controller->render('page',
 								   array(
 								   		'data'=>$data,
-								   		'css'=>$css,
-								   		'js'=>$js
+								   		'css'=>$this->css,
+								   		'js'=>$this->js
 								   )
 		);
 	}
@@ -64,7 +55,10 @@ class pageAction extends CAction /* GuestBookController */
 	// 		</div>
 	// 	</div>
 	// </div>
+
 		$this->controller->breadcrumbs=array('Структура');
+		$this->css = 'site/strukt.css';
+		$this->js = 'site/strukt.js';
 
 		$data = '<h1>Организационная структура производственного управления “Витебскгаз”</h1>';
 
@@ -149,7 +143,8 @@ class pageAction extends CAction /* GuestBookController */
 				//'Djghjc'=>array('site/page/'),
 				'Вопрос-ответ',
 			);
-
+		$this->css = 'site/quest.css';
+		$this->js = 'site/quest.js';
 
 		$data = '<h1>Вопрос-ответ</h1>';
 

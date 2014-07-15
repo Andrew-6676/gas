@@ -170,13 +170,13 @@
 					<div>Нормативно-<br>правовые<br> акты</div>
 				</div>
 			</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('site/page/gasprice'); ?>'>
 					<div class='item i2'>
 						<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 						<div>Цены на<br> газ</div>
 					</div>
 				</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('site/page/mustknow'); ?>'>
 				<div class='item i3'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Это должен<br>знать<br>каждый</div>

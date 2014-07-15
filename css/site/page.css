@@ -17,3 +17,7 @@ ul, ol {
     list-style: disc inside none;
     margin-left: 50px;
 }
+h1 {
+    text-align: center;
+    color: #f00;
+}
