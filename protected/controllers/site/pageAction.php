@@ -23,13 +23,20 @@ class pageAction extends CAction /* GuestBookController */
 				$css = 'site/page.css';
 				$js = 'site/page.js';
 				$data = $this->getPageFromDB(key($_GET));
-			} else {	// если не нашлось - выполняем функцию
+			} else {	// если не нашлось - пытаемся выполнить функцию
 				$func = 'get'.key($_GET);
-				$data = $this->$func();
-				// $css = 'site/'.key($_GET).'.css';
-				// $js = 'site/'.key($_GET).'.js';
+					// если нужная функция существуует
+				if (method_exists('pageAction', $func)) {
+					$data = $this->$func();
+					// $css = 'site/'.key($_GET).'.css';
+					// $js = 'site/'.key($_GET).'.js';
+				} else {
+						// генерируем исключение, если нету запрашиваемой страницы
+ 					throw new CHttpException(404);
+				}
 			}
 		}
+			// рендерим страницу
 		$this->controller->render('page',
 								   array(
 								   		'data'=>$data,

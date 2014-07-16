@@ -61,7 +61,9 @@
 										'links'=>$this->breadcrumbs,
 									)
 					);
+					//echo Utils::GetUserlIp();
 				?>
+
 			</div>		<!-- breadcrumbs -->
 		</header>
 
