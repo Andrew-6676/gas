@@ -21,7 +21,7 @@ return array(
 
 	// автозагрузка моделей и компонентов -------------------------------------------------------------
 	'import'=>array(
-	//	'application.models.*',
+		'application.models.*',
 		'application.components.*',
 		//'application.models.*',
 		//'application.extensions.pdf.mpdf.mpdf',  //для печати в PDF

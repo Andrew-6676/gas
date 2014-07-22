@@ -40,15 +40,17 @@
 
 		// Услуги - Газификация одноквартирного жилого дома
 	$sub_sub_2_1 = array(
-				array('label'=>'Документы', 'url'=>array('site/index')),
-				array('label'=>'ТУ', 'url'=>array('site/index')),
-				array('label'=>'Проект', 'url'=>array('site/index')),
-				array('label'=>'СМР', 'url'=>array('site/index')),
-				array('label'=>'Договор', 'url'=>array('site/index')),
+				array('label'=>'Природным газом', 'url'=>array('site/page/gazific_metan')),
+				array('label'=>'От индивидуальной балонной установки', 'url'=>array('site/page/gazific_ballon')),
+				// array('label'=>'Документы', 'url'=>array('site/index')),
+				// array('label'=>'ТУ', 'url'=>array('site/index')),
+				// array('label'=>'Проект', 'url'=>array('site/index')),
+				// array('label'=>'СМР', 'url'=>array('site/index')),
+				// array('label'=>'Договор', 'url'=>array('site/index')),
 	);
 		// выпадающее меню для пункта УСЛУГИ
 	$sub_2 = array(
-				array('label'=>'Газификация одноквартирного жилого дома', 'url'=>array('site/index'),
+				array('label'=>'Газификация одноквартирного жилого дома', 'url'=>array('site/page/gazific'),
 					  'itemOptions'=>array('class'=>'has_child'),
 					  'submenuOptions'=>array('id'=>'sub_sub_2_1', 'class'=>'sub_sub_menu'),
 					  'items'=>$sub_sub_2_1,
@@ -57,7 +59,7 @@
 				array('label'=>'Строительство газопроводов', 'url'=>array('site/index')),
 				array('label'=>'Монтаж (перемонтаж, ремонт) газового оборудования', 'url'=>array('site/index')),
 				array('label'=>'Техниеское обслуживание газового оборудования', 'url'=>array('site/index')),
-				array('label'=>'Установка приборов учёта расхода газа', 'url'=>array('site/index')),
+				array('label'=>'Установка приборов учёта расхода газа', 'url'=>array('site/page/pribor_uchet')),
 				array('label'=>'Установка газового оборудования на а/м', 'url'=>array('site/index')),
 				array('label'=>'Диагностика а/м', 'url'=>array('site/index')),
 			);
@@ -88,15 +90,15 @@
                     		  	'submenuOptions'=>array('id'=>'sub_1', 'class'=>'sub_menu'),
 								'items'=>$sub_1,
                     	),
-                    	array('label'=>'Услуги', 'url'=>array('/site/info'),
+                    	array('label'=>'Услуги', 'url'=>array('/site/page/uslugi'),
 							  'itemOptions'=>array('id'=>'m_2'),
                     		  'submenuOptions'=>array('id'=>'sub_2', 'class'=>'sub_menu'),
 							  'items'=>$sub_2,
                     	),
-                    	array('label'=>'Магазин "Метан"', 'url'=>array('site/page/metan'),
+                    	array('label'=>'Магазин "Метан"', 'url'=>array('site/page/metanstore'),
 							  'itemOptions'=>array('id'=>'m_3'),
 							  'submenuOptions'=>array('id'=>'sub_3', 'class'=>'sub_menu'),
-							  'items'=>$sub_3,
+							//  'items'=>$sub_3,
 						),
 						array('label'=>'Кафе "Метан"', 'url'=>'http://metan.gas.by/',
 							  'linkOptions'=>array('target'=>'_blank'),

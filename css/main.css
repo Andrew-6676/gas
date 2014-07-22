@@ -1,3 +1,13 @@
+#print_r {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(255,255,255, 0.8);
+    border: rgba(128,128,128, 0.8);
+    padding: 10px;
+    z-index: 9999;
+}
+/*--------------------------------------------------------------------------------------------*/
 article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {
    display: block;
 }
@@ -215,15 +225,16 @@ body {
 /**------------------------------------------------------------------------**/
 #login_form {
     display: none;
+    z-index: 100;
     position: absolute;
     right: 3px;
     top: 43px;
-    border-top: 1px solid #fcfcfc;
-    border-top: 1px solid #fcfcfc;
+    border-left: 1px solid #E0F3FF;
+    border-top: 1px solid #E0F3FF;
     border-right: 1px solid #7c7c7c;
-    border-right: 1px solid #7c7c7c;
+    border-bottom: 1px solid #7c7c7c;
     border-radius: 5px;
-    background-color: #E7FCFF;
+    background-color: #BAE3FF;
     width: 170px;
     padding: 10px;
     box-shadow: 3px 3px 5px 0px gray;
@@ -233,8 +244,30 @@ body {
     width: 165px;
     height: 20px;
     margin-bottom: 5px;
+    padding: 0px 2px;
 }
-#login_form button {
+#login_form .button {
     float: right;
+    padding: 0px 2px;
+    width: 50px;
     /*margin-top: 5px;*/
+}
+#login_form span {
+    font-size: 0.8em;
+}
+#login_form span a {
+    color: #888;
+}
+#login_form span a:hover {
+    color: #00f;
+}
+
+#login_form #result {
+    display: block;
+    display: none;
+    /* position: absolute; */
+    bottom: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    color: red;
 }

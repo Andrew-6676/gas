@@ -6,14 +6,21 @@ $(document).ready(function(){
         var f = $('#login_form');
         if (f.css('display') == 'none') {
             f.show();
+            $(this).addClass('open');
         } else {
             f.hide();
+            $(this).removeClass('open');
         }
     })
         // спрятать форму авторизации по клику в не формы
     $(document).click(function(event) {
-        if ($(event.target).closest('.login_href, #login_form').length) return;
+        if ($(event.target).closest('.login_href, #login_form').length) {
+            return;
+        }
+
         $('#login_form').hide();
+        $('.login_href').removeClass('open');
+
         event.stopPropagation();
     });
 

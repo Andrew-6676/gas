@@ -196,10 +196,10 @@
 					<div>Вакансии</div>
 				</div>
 			</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page/strukt'); ?>'>
+			<a target='_blank' href='http://e.gas.by/'>
 				<div class='item i3'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
-					<div>Структура</div>
+					<div>Заказ баллона</div>
 				</div>
 			</a>
 		</div>		<!-- r_menu -->

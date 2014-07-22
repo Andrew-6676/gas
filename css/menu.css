@@ -44,7 +44,7 @@ nav {text-align: left;}
         font-size: 1.1em;
         /*border: 1px solid yellow;*/
         /*background:white url(bg.gif) repeat-x left top;*/
-        background:#4d4d4d;
+        background: #4d4d4d;
         position: absolute;
         left: 155px;
         right: 0;
@@ -52,17 +52,29 @@ nav {text-align: left;}
         height: 40px;
         /*z-index: 10;*/
 }
+/*-----------------------------------------*/
 .login_href {
         float:right;
         display: inline-block;
-        height: 100%;
+        height: 40px;
         width: 40px;
-        background: url(../images/man.png) no-repeat center #da2538;
+        background: url(../images/man.png) no-repeat 0% 0% #da2538;
         cursor: pointer;
+        transition: all 0.2s;
 }
-.login_href:hover {
-        /*background: url(../images/man2.png) no-repeat center #da2538;*/
-        box-shadow: 0px 0px 5px 1px #222;
+.login_href:hover, .login_href.open {
+    background-position: 100% 0%;
+        /*background: url(../images/man.png) no-repeat 100% 0% #da2538;*/
+        /*box-shadow: 0px 0px 5px 1px #222;*/
+}
+.login_href.login {
+    background-position: 0% 100%;
+    background-color: #58FF0B;
+    /*background: url(../images/man.png) no-repeat 0% 100% #58FF0B;*/
+}
+.login_href.login:hover, .login_href.login.open {
+    background-position: 100% 100%;
+     /*100% 100% #58FF0B;*/
 }
 /*-------------------------------------------------------*/
 #main_menu>ul

@@ -4,6 +4,8 @@
 <!--[if lt IE9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+	<meta name="description" content="<?php echo $this->description; ?>" />
+	<meta name="keywords" content="<?php echo $this->keywords; ?>"/>
 	<meta charset="utf-8">
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	<script src='/gas/js/jquery.js'></script>
@@ -42,14 +44,79 @@
 			<div class='menu_wrapper'>
 				<nav id="main_menu">
 					<?php
-						include('main_menu.php');
+						//подключаем главное меню
+					include('main_menu.php');
+
+						// если пользователь авторизован
+					if (!Yii::app()->user->isGuest):
 					?>
-					<div class='login_href'></div>
-					<div id='login_form'>
-						<input type='text' placeholder='имя'>
-						<input type='password' placeholder='пароль'>
-						<button type='button'>Войти</button>
-					</div>
+						<div class='login_href login'></div>
+						<div id='login_form' class='logout'>
+						<?php
+							echo 'Вы вошли как ';
+							echo '<span class="name">'.Yii::app()->user->name.'</span> [id=';
+								$user = User::model()->findByPk(Yii::app()->session['id_user']);
+							echo Yii::app()->session['id_user'].', gr=';
+							echo implode(',',$user->getGroups()).']';
+							echo CHtml::ajaxSubmitButton('Выход', Yii::app()->createURL('site/logout'),
+											array(
+										        'type' => 'POST',
+										        'success'=>'js:function(data){
+										        		//alert("="+data.trim()+"=");
+										                if (data.trim()=="1"){
+										                        //document.location.search="site/index"
+										                		location.reload();
+										                }else{
+										                      $("#result").html(data);
+										                      $("#result").show();
+										                }
+										        }'
+										    ),
+									        array('class'=>'button')
+							        );
+							// 	//	echo "id_user = <b>".intval(Yii::app()->user->id)."</b>=>";
+							// 	//	echo User::model()->findByPk(Yii::app()->session['id_user'])->fname.'<br>';
+						?>
+						</div>
+
+					<?php
+						// если НЕ авторизован
+					else:
+					?>
+						<div class='login_href'></div>
+						<div id='login_form'>
+							<span id='result'></span>
+							<form action='<?php echo Yii::app()->createURL('site/login') ?>' method='POST'>
+								<?php
+									$model = new LoginForm();
+									$form = $this->beginWidget('CActiveForm');
+										//echo '<div class="row">';
+								       // echo $form->label($model,'login');
+								    	echo $form->textField($model,'login', array('placeholder'=>'Логин'));
+										echo $form->passwordField($model,'pass', array('placeholder'=>'Пароль')) ;
+							    ?>
+									<span><a href='<?php echo Yii::app()->createURL('site/register') ?>' >[Регистрация]</a></span>
+								<?php
+									echo CHtml::ajaxSubmitButton('Вход', Yii::app()->createURL('site/login'),
+											array(
+										        'type' => 'POST',
+										        'success'=>'js:function(data){
+										        		//alert("="+data.trim()+"=");
+										                if (data.trim()=="1"){
+										                        //document.location.search="site/index"
+										                		location.reload();
+										                }else{
+										                      $("#result").html(data);
+										                      $("#result").show();
+										                }
+										        }'
+										    ),
+									        array('class'=>'button')
+							        );
+							    $this->endWidget();
+						        ?>
+						</div>	<!-- login_form -->
+					<?php endif; ?>
 				</nav>  <!-- #main menu  -->
 			</div>
 			<div id='breadcrumbs'>

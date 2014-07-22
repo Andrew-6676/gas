@@ -102,6 +102,7 @@
 	margin-top: 17px;
 	overflow: hidden;
 	border-radius: 5px;
+	box-shadow: 2px 2px 15px 0px gray;
 }
 .item:hover {
 	/*top: -2px;
@@ -109,7 +110,7 @@
 	/*text-decoration: underline;*/
 	color: #fff;
 	cursor: pointer;
-	box-shadow: 2px 2px 15px 0px gray;
+	/*box-shadow: 2px 2px 15px 0px gray;*/
 }
 /*---------------------*/
 .item .wr_animation_bg {
@@ -172,7 +173,7 @@
 	background: url(../../images/vacan.png) no-repeat 100% 100% #fff;
 }
 .r_menu .i3 {
-	background: url(../../images/struct.png) no-repeat 100% 100% #fff;
+	background: url(../../images/egas.png) no-repeat 100% 100% #fff;
 }
 
 /*-------------------------------------------------------------*/

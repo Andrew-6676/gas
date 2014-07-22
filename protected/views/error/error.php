@@ -1,17 +1,18 @@
 <?php
 	/* ErrorController->ErrorAction->Error_view*/
 ?>
-<div class="errcaption">
-	<!-- Ошибка  --><span class="errnum"><?php echo $error['code'] ?></span>
-</div>
+<div class='error_page'>
+	<div class="errcaption">
+		<!-- Ошибка  --><span class="errnum"><?php echo $error['code'] ?></span>
+	</div>
 
-<div class="errmess">
-	<?php
-		$mess = preg_replace('/<user>/i', Yii::app()->user->name, $this->mess[$error['code']]);
-		echo $mess;
-	?>
+	<div class="errmess">
+		<?php
+			$mess = preg_replace('/<user>/i', Yii::app()->user->name, $this->mess[$error['code']]);
+			echo $mess;
+		?>
+	</div>
 </div>
-
 
 <details class="detail">
 	<summary>Детали ошибки</summary>
@@ -27,7 +28,7 @@
 		<details>
 			<summary>переменная $error</summary>
 			<div class="errvar">
-				<?php print_r($error); ?>
+				<?php Utils::print_r($error, false); ?>
 			</div>
 		</details>
 	</div>

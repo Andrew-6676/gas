@@ -195,12 +195,29 @@ class pageAction extends CAction /* GuestBookController */
 		$sql = 'SELECT * FROM `page` where name="'.$page.'"';
 		$res = $connection->createCommand($sql)->queryRow();
 		if ($res) {
-			$this->controller->breadcrumbs = array(
-				//'Djghjc'=>array('site/page/'),
-				$res['name_ru'],
-			);
-			$data = $res['html'];
-			$data .= '<style>'.$res['css'].'</style>';
+			$this->controller->description = $res['description'];
+			$this->controller->keywords = $res['keywords'];
+
+				// формирование breadcrumbs
+			$bc = array();
+				// наименование текущей страницы
+			$bc[] = $res['name_ru'];
+				// ищем все родительские страницы
+			$p = $res;
+				// пока не дойдём до записи, у которой нет родительской
+			while ($p['parent'] > 0) {
+					// выбираем родительскую запись
+				$sql = 'SELECT * FROM `page` where id='.$p['parent'];
+				$p = $connection->createCommand($sql)->queryRow();
+					// добавляем в начало breadcrumbs
+				$bc = array_merge(array($p['name_ru']=>$p['url']), $bc);
+				//Utils::print_r($p);
+			}
+
+			$this->controller->breadcrumbs = $bc;
+
+			$data = '<style>'.$res['css'].'</style>';
+			$data .= $res['html'];
 			return $data;
 		} else {
 			return '<h2>Содержимое страницы не создано</h2>';

@@ -1,3 +1,11 @@
+.error_page {
+	border: 1px solid #A8D4E5;
+	margin: 30px;
+	border-radius: 10px;
+	padding: 0 30px 50px 30px;
+	background: rgba(192, 226, 248, 0.7);
+}
+/*----------------------------------------*/
 .uname {
 	color: red;
 }

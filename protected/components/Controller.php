@@ -10,7 +10,8 @@ class Controller extends CController
 	public $layout='//layouts/c1';	// представление по умолчанию (с1 - одноколоночный вид)
 	public $menu= array();	// меню
 	public $breadcrumbs=array();
-
+	public $description = '';
+	public $keywords = '';
 
 	public function init() {
 			// определяем путь к контроллеру

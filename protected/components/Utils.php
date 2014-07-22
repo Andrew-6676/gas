@@ -25,11 +25,17 @@ class Utils{
 		return self::$ru_month;
 	}
 /*------------------------------------------------------------------------*/
-	public static function print_r($var)
+	public static function print_r($var, $debug=true)
 	{
-		echo '<pre>'."\n";
-		print_r($var);
-		echo '</pre>';
+		if ($debug) {
+			echo '<div id="print_r">';
+		}
+			echo '<pre>'."\n";
+			echo htmlspecialchars(print_r($var, true));
+			echo '</pre>';
+		if ($debug) {
+			echo '</div>';
+		}
 	}
 /*------------------------------------------------------------------------*/
 	function GetUserlIp() {
