@@ -11,18 +11,18 @@ class LoginForm extends CFormModel
     public function rules()
     {
         return array(
-            array('login, pass', 'required'),
+            array('login, pass', 'required', 'message'=>'Заполните все поля!'),
             array('pass', 'authenticate'),
         );
     }
 
 /*---------------------------------------------------------------------*/
-   public function required($attribute, $params) {
-   		if ($this->login=='' || $this->pass=='') {
-   			$this->addError('pass', 'Заполните все поля!');
-   		}
+   // public function required($attribute, $params) {
+   // 		if ($this->login=='' || $this->pass=='') {
+   // 			$this->addError('pass', 'Заполните все поля!');
+   // 		}
 
-   }
+   // }
 /*---------------------------------------------------------------------*/
     public function authenticate($attribute, $params)
     {

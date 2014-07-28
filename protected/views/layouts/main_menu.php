@@ -1,38 +1,38 @@
 <?php
 		// подменю для пункта подменю ГЛАВНАЯ>ПРОИЗВОДИСТВЕННЫЕ БАЗЫ
 	$sub_sub_1_1 = array(
-				array('label'=>'Руководство', 'url'=>array('site/index')),
-				array('label'=>'Приёмная', 'url'=>array('site/index')),
-				array('label'=>'ПТО', 'url'=>array('site/index')),
-				array('label'=>'ГНС', 'url'=>array('site/index')),
-				array('label'=>'Бухгалтерия', 'url'=>array('site/index')),
-				array('label'=>'Экономисты', 'url'=>array('site/index')),
+				array('label'=>'Руководство', 'url'=>array('/page')),
+				array('label'=>'Приёмная', 'url'=>array('/page')),
+				array('label'=>'ПТО', 'url'=>array('/page')),
+				array('label'=>'ГНС', 'url'=>array('/page')),
+				array('label'=>'Бухгалтерия', 'url'=>array('/page')),
+				array('label'=>'Экономисты', 'url'=>array('/page')),
 	);
 		// Главная - Структура
 	$sub_sub_1_2 = array(
-				array('label'=>'Терешковой', 'url'=>array('site/index')),
-				array('label'=>'Новка', 'url'=>array('site/index')),
-				array('label'=>'Панковой', 'url'=>array('site/index')),
-				array('label'=>'Бровки', 'url'=>array('site/index')),
-				array('label'=>'Мазолово', 'url'=>array('site/index')),
+				array('label'=>'Терешковой', 'url'=>array('/page?bazi_teresh')),
+				array('label'=>'Новка', 'url'=>array('/page?bazi_novka')),
+				array('label'=>'Панковой', 'url'=>array('/page?bazi_pank')),
+				array('label'=>'Бровки', 'url'=>array('/page?bazi_brovki')),
+				array('label'=>'Мазолово', 'url'=>array('/page?bazi_mazolovo')),
 	);
 
 
 		// выпадающее меню для пункта ГЛАВНАЯ
 	$sub_1 = array(
-				array('label'=>'Структура', 'url'=>array('site/page/strukt'),
+				array('label'=>'Структура', 'url'=>array('/page/strukt'),
 					  // 'itemOptions'=>array('class'=>'has_child'),
 					  // 'submenuOptions'=>array('id'=>'sub_sub_1_1', 'class'=>'sub_sub_menu'),
 					  // 'items'=>$sub_sub_1_1,
 				),
-				array('label'=>'Производственные базы', 'url'=>array('site/index'),
+				array('label'=>'Производственные базы', 'url'=>array('/page?bazi'),
 					  'itemOptions'=>array('class'=>'has_child'),
 					  'submenuOptions'=>array('id'=>'sub_sub_1_2', 'class'=>'sub_sub_menu'),
 					  'items'=>$sub_sub_1_2,
 				),
-				array('label'=>'Контакты', 'url'=>array('site/index')),
-				array('label'=>'История', 'url'=>array('site/page/history')),
-				array('label'=>'Галерея', 'url'=>array('site/index')),
+				array('label'=>'Контакты', 'url'=>array('/page?contact')),
+				array('label'=>'История', 'url'=>array('/page?history')),
+				array('label'=>'Галерея', 'url'=>array('/page/galery')),
 	);
 
 /*---------------------------------------------------------------------------------------------*/
@@ -40,8 +40,8 @@
 
 		// Услуги - Газификация одноквартирного жилого дома
 	$sub_sub_2_1 = array(
-				array('label'=>'Природным газом', 'url'=>array('site/page/gazific_metan')),
-				array('label'=>'От индивидуальной балонной установки', 'url'=>array('site/page/gazific_ballon')),
+				array('label'=>'Природным газом', 'url'=>array('/page?gazific_metan')),
+				array('label'=>'От индивидуальной балонной установки', 'url'=>array('/page?gazific_ballon')),
 				// array('label'=>'Документы', 'url'=>array('site/index')),
 				// array('label'=>'ТУ', 'url'=>array('site/index')),
 				// array('label'=>'Проект', 'url'=>array('site/index')),
@@ -50,33 +50,33 @@
 	);
 		// выпадающее меню для пункта УСЛУГИ
 	$sub_2 = array(
-				array('label'=>'Газификация одноквартирного жилого дома', 'url'=>array('site/page/gazific'),
+				array('label'=>'Газификация одноквартирного жилого дома', 'url'=>array('/page?gazific'),
 					  'itemOptions'=>array('class'=>'has_child'),
 					  'submenuOptions'=>array('id'=>'sub_sub_2_1', 'class'=>'sub_sub_menu'),
 					  'items'=>$sub_sub_2_1,
 				),
-				array('label'=>'Газификация промышленных и с/х потребителей', 'url'=>array('site/index')),
-				array('label'=>'Строительство газопроводов', 'url'=>array('site/index')),
-				array('label'=>'Монтаж (перемонтаж, ремонт) газового оборудования', 'url'=>array('site/index')),
-				array('label'=>'Техниеское обслуживание газового оборудования', 'url'=>array('site/index')),
-				array('label'=>'Установка приборов учёта расхода газа', 'url'=>array('site/page/pribor_uchet')),
-				array('label'=>'Установка газового оборудования на а/м', 'url'=>array('site/index')),
-				array('label'=>'Диагностика а/м', 'url'=>array('site/index')),
+				array('label'=>'Газификация промышленных и с/х потребителей', 'url'=>array('/page?sh')),
+				array('label'=>'Строительство газопроводов', 'url'=>array('/page?gazoprovod')),
+				array('label'=>'Монтаж (перемонтаж, ремонт) газового оборудования', 'url'=>array('/page?montaz')),
+				array('label'=>'Техниеское обслуживание газового оборудования', 'url'=>array('/page?to_gas')),
+				array('label'=>'Установка приборов учёта расхода газа', 'url'=>array('/page?pribor_uchet')),
+				array('label'=>'Установка газового оборудования на а/м', 'url'=>array('/page?am_gas')),
+				array('label'=>'Диагностика а/м', 'url'=>array('/page?am_diagnostika')),
 			);
 
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 
 		// выпадающее меню для пункта МАГАЗИН МЕТАН
-	$sub_3 = array(array('label'=>'Купить', 'url'=>array('site/index')),
-	 			 array('label'=>'Посмотреть', 'url'=>array('site/index')),
-				 array('label'=>'Прайс', 'url'=>array('site/index')),
+	$sub_3 = array(array('label'=>'Купить', 'url'=>array('/page')),
+	 			 array('label'=>'Посмотреть', 'url'=>array('/page')),
+				 array('label'=>'Прайс', 'url'=>array('/page')),
 			 );
 		// выпадающее меню для пункта КАФЕ МЕТАН
-	$sub_4 = array(array('label'=>'Покушать', 'url'=>array('site/index')),
-				array('label'=>'Выпить', 'url'=>array('site/index')),
-				array('label'=>'Спеть', 'url'=>array('site/index')),
-				array('label'=>'Потанцевать', 'url'=>array('site/index')),
+	$sub_4 = array(array('label'=>'Покушать', 'url'=>array('/page')),
+				array('label'=>'Выпить', 'url'=>array('/page')),
+				array('label'=>'Спеть', 'url'=>array('/page')),
+				array('label'=>'Потанцевать', 'url'=>array('/page')),
 			);
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -90,12 +90,12 @@
                     		  	'submenuOptions'=>array('id'=>'sub_1', 'class'=>'sub_menu'),
 								'items'=>$sub_1,
                     	),
-                    	array('label'=>'Услуги', 'url'=>array('/site/page/uslugi'),
+                    	array('label'=>'Услуги', 'url'=>array('/page?uslugi'),
 							  'itemOptions'=>array('id'=>'m_2'),
                     		  'submenuOptions'=>array('id'=>'sub_2', 'class'=>'sub_menu'),
 							  'items'=>$sub_2,
                     	),
-                    	array('label'=>'Магазин "Метан"', 'url'=>array('site/page/metanstore'),
+                    	array('label'=>'Магазин "Метан"', 'url'=>array('/page?metanstore'),
 							  'itemOptions'=>array('id'=>'m_3'),
 							  'submenuOptions'=>array('id'=>'sub_3', 'class'=>'sub_menu'),
 							//  'items'=>$sub_3,
@@ -106,6 +106,6 @@
 							  'itemOptions'=>array('id'=>'m_4'),
 						 	  //'items'=>$sub_4,
 						),
-       					array('label'=>'АГЗС','url'=>array('/site/page/agzs')),
-       					array('label'=>'Вопрос-ответ',   'url'=>array('site/page/quest')),
+       					array('label'=>'АГЗС','url'=>array('/page?agzs')),
+       					array('label'=>'Вопрос-ответ',   'url'=>array('/page/quest')),
     )));

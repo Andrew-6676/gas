@@ -41,7 +41,7 @@ $(document).ready(function(){
                 $('#to_top').fadeOut();
             }
                 // если прокрутили вниз на 100 и более пикселей от низа
-            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-100) {
+            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-150) {
                 $("#to_bottom").fadeOut();
             } else {
                 $("#to_bottom").fadeIn();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
         // при изменениии высоты документа во время просмотра
     OnResizeElement(document, function(el){
-            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-100) {
+            if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-150) {
                 $("#to_bottom").fadeOut();
             } else {
                 $("#to_bottom").fadeIn();

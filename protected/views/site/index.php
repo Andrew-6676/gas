@@ -12,13 +12,13 @@
 		<ul>
 
 			<li>
-				<a href="<?php echo Yii::app()->createUrl('site/page'); ?>">
+				<a href="<?php echo Yii::app()->createUrl('/page'); ?>">
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_11.png" alt="slide_11" title="Здесь могла быть ваша реклама" id="wows1_0"/>
 				</a>
 			</li>
 
 			<li>
-				<a href="<?php echo Yii::app()->createUrl('site/page'); ?>">
+				<a href="<?php echo Yii::app()->createUrl('/page'); ?>">
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_3.png" alt="slide_33" title="Заголовок фотографии" id="wows1_1"/>
 				</a>
 				Краткое описание. Небольшой текст. Любая текстовая информация. <br>
@@ -27,7 +27,7 @@
 			</li>
 
 			<li>
-				<a href="<?php echo Yii::app()->createUrl('site/page'); ?>">
+				<a href="<?php echo Yii::app()->createUrl('/page'); ?>">
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/top/slide_2.png" alt="slide_2" title="Заголовок" id="wows1_2"/>
 				</a>
 				Картинка является ссылкой - по клику по ней можно перейти на заданный адрес (например, другая страница сайта)<br>
@@ -83,7 +83,7 @@
 					<h3>Заголовок фотографии 1</h3>
 					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr1.png</span>
 					<p>Здесь можно разместить любой текст<br>А можно и не размещать.</p>
-					<a href="<?php echo Yii::app()->createUrl('site/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr1.png" alt="Orange Fish" /></a>
+					<a href="<?php echo Yii::app()->createUrl('/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr1.png" alt="Orange Fish" /></a>
 				</li>
 				<li>
 					<h3>Заголовок фотографии 2</h3>
@@ -92,28 +92,28 @@
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr2.jpg" alt="Sea Turtle" />
 				</li>
 				<li>
-					<h3><a href='<?php echo Yii::app()->createUrl('site/page'); ?>' target='_blank'>Заголовок может быть ссылкой</a></h3>
+					<h3><a href='<?php echo Yii::app()->createUrl('/page'); ?>' target='_blank'>Заголовок может быть ссылкой</a></h3>
 					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr3.jpg</span>
 					<p>сама картинка является ссылкой</p>
-					<a href="<?php echo Yii::app()->createUrl('site/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
+					<a href="<?php echo Yii::app()->createUrl('/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr3.jpg" alt="Red Coral" /></a>
 				</li>
 				<li>
-					<h3><a href='<?php echo Yii::app()->createUrl('site/page'); ?>' target='_blank'>Газ - это вам не шутки!</a></h3>
+					<h3><a href='<?php echo Yii::app()->createUrl('/page'); ?>' target='_blank'>Газ - это вам не шутки!</a></h3>
 					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr5.jpg</span>
 					<p>Не стоит открывать газ, и аытаться зажеь его спустя длительное время </p>
-					<a href="<?php echo Yii::app()->createUrl('site/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr5.jpg" alt="Babah" /></a>
+					<a href="<?php echo Yii::app()->createUrl('/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr5.jpg" alt="Babah" /></a>
 				</li>
 				<li>
 					<h3>Заголовок</h3>
 					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr4.jpg</span>
 					<p>текст</p>
-					<a href="<?php echo Yii::app()->createUrl('site/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr4.jpg" alt="Bla-bla-bla" /></a>
+					<a href="<?php echo Yii::app()->createUrl('/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr4.jpg" alt="Bla-bla-bla" /></a>
 				</li>
 				<li>
 					<h3>Плакат</h3>
 					<span><?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/ohr6.jpg</span>
 					<p></p>
-					<a href="<?php echo Yii::app()->createUrl('site/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr6.jpg" alt="Bla-bla-bla" /></a>
+					<a href="<?php echo Yii::app()->createUrl('/page'); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide/ohr/thumbs/ohr6.jpg" alt="Bla-bla-bla" /></a>
 				</li>
 			</ul>
 
@@ -164,19 +164,19 @@
 
 	<div class='r_content'>
 		<div class='l_menu'>
-			<a href='<?php echo Yii::app()->createUrl('site/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
 				<div class='item i1'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Нормативно-<br>правовые<br> акты</div>
 				</div>
 			</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page/gasprice'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page?gasprice'); ?>'>
 					<div class='item i2'>
 						<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 						<div>Цены на<br> газ</div>
 					</div>
 				</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page/mustknow'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page?mustknow'); ?>'>
 				<div class='item i3'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Это должен<br>знать<br>каждый</div>
@@ -184,13 +184,13 @@
 			</a>
 		</div>
 		<div class='r_menu'>
-			<a href='<?php echo Yii::app()->createUrl('site/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
 				<div class='item i1'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Полезная информация</div>
 				</div>
 			</a>
-			<a href='<?php echo Yii::app()->createUrl('site/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
 				<div class='item i2'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Вакансии</div>

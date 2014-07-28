@@ -1,0 +1,79 @@
+.q_wrapper {
+	padding: 10px;
+}
+.item {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.item:hover {
+	background: #fff;
+}
+.question {
+	width: 70%;
+	font-weight: bold;
+	/*margin-bottom: 10px;*/
+	cursor: pointer;
+	/*background: */
+}
+.question:hover {
+	text-decoration: underline;
+}
+.answer {
+	margin-top: 10px;
+	padding-left: 15px;
+	text-align: justify;
+	display: none;
+}
+.date {
+	float: right;
+	font-size: 0.7em;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 0px 3px;
+}
+/*----------------------------------------------------------------*/
+#question_form textarea {
+	width: 580px;
+	height: 160px;
+	border-radius: 3px;
+	padding: 3px;
+}
+#question_form input[type='text'] {
+	width: 390px;
+	border: 1px solid #9f9f9f;
+	border-radius: 3px;
+	padding: 1px 3px;
+}
+#question_form .row {
+	margin: 3px 0;
+}
+
+#captcha {
+	margin: 5px 0;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0, 0.5);
+}
+
+#captcha_button {
+	position: relative;
+	bottom: 25px;
+	margin-left: 5px;
+}
+input.error, textarea.error {
+	box-shadow: 0px 0px 3px 0px #f00;
+}
+.errorMessage {
+	display: inline-block;
+	padding-left: 10px;
+	color: #f00;
+
+}
+/*---------------------------------------------------------------------*/

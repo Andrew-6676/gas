@@ -1,13 +1,21 @@
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
-<!--[if lt IE9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 	<meta name="description" content="<?php echo $this->description; ?>" />
 	<meta name="keywords" content="<?php echo $this->keywords; ?>"/>
 	<meta charset="utf-8">
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<!--[if lt IE9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+ 		<script>
+  		var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
+  		for (var i = 0; i < e.length; i++) {
+    		document.createElement(e[i]);
+  		}
+ 		</script>
+<![endif]-->
 	<script src='/gas/js/jquery.js'></script>
 	<script src='/gas/js/main_menu.js'></script>
 	<script src='/gas/js/main.js'></script>

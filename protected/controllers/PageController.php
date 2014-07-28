@@ -1,16 +1,30 @@
 <?php
-class SiteController extends Controller
+class PageController extends Controller
 {
 
 	public function actions()
     {
         return array(
-            'index'=>'application.controllers.site.indexAction',
-           // 'page'=>'application.controllers.site.pageAction',
-            'login'=>'application.controllers.site.loginAction',
-            'logout'=>'application.controllers.site.logoutAction',
+                // сюда будут попадать по адресу /page/<страница>, такая страница создаётся программно
+            'quest'=>'application.controllers.page.questAction',
+            //'quest_form'=>'application.controllers.page.quest_formAction',
+            'strukt'=>'application.controllers.page.struktAction',
+                // галерея
+            'galery'=>'application.controllers.page.galeryAction',
+                // сюда будут попадать по адресу /page?<страница>, <страница> будет загружена из БД
+            'index'=>'application.controllers.page.indexAction',
+
+                // капча
+            'captcha'=>array(
+                        'class'=>'CaptchaExtendedAction',
+                        'mode' => 'math',    // режимы  math, mathverbal, default, logical, words
+                        'density' => '15',      // кол-во точек
+                        'lines'   => '7'        // линии
+            ),
         );
     }
+
+/*-------------------------------------------------------------------------------*/
 
 
 /* ------------------------- фильтры -------------------------*

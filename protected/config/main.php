@@ -25,19 +25,20 @@ return array(
 		'application.components.*',
 		//'application.models.*',
 		//'application.extensions.pdf.mpdf.mpdf',  //для печати в PDF
+		'application.extensions.captchaExtended.*',	//блатная капча
 	),
 
-	// 'modules'=>array(
-	// 	// uncomment the following to enable the Gii tool
+	'modules'=>array(
+		// uncomment the following to enable the Gii tool
 
-	// 	'gii'=>array(
-	// 		'class'=>'system.gii.GiiModule',
-	// 		'password'=>'flatron',
-	// 		// If removed, Gii defaults to localhost only. Edit carefully to taste.
-	// 		'ipFilters'=>array('127.0.0.1','::1'),
-	// 	),
+		'gii'=>array(
+			'class'=>'system.gii.GiiModule',
+			'password'=>'flatron',
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters'=>array('127.0.0.1','::1', '192.168.152.250'),
+		),
 
-	// ),
+	),
 
 	// application components -------------------------------------------------------------
 	'components'=>array(
@@ -59,22 +60,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		/*
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-			//'connectionString' => ('pgsql:host='.$host.';dbname='.$dbname,$user, $pass),
-		),
-		*/
-		// uncomment the following to use a MySQL database
-		/*
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-		),
-		*/
+
 		'db'=>require(dirname(__FILE__).'/db.php'),
 
 		'errorHandler'=>array(

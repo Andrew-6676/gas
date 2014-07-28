@@ -1,0 +1,97 @@
+.quest_caption {
+	margin-bottom: 5px;
+}
+.quest_caption:hover .del_quest{
+	display: block;
+}
+.quest_caption:hover .question_href {
+	margin-left: 5px;
+}
+/*------------------------*/
+.del_quest {
+	display: none;
+	float: left;
+	height: 18px;
+	width: 18px;
+	border: none;
+	background: url(../../images/del_krest.png) 0% 0% ;
+	cursor: pointer;
+}
+.del_quest:hover {
+	background-position: 100% 0%;
+}
+.no_hide .del_quest {
+	display: block;
+}
+.no_hide .question_href {
+	margin-left: 5px;
+}
+/*-------*/
+.question_href {
+	/*display: block;*/
+	color: black;
+	margin-left: 23px;
+}
+.question_href:hover {
+	color: blue;
+}
+/*----------------------------------------------------------------------*/
+.item {
+	display: none;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	/*-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;*/
+}
+.item:hover {
+	background: #fff;
+}
+.question {
+	width: 70%;
+	font-weight: bold;
+	/*margin-bottom: 10px;*/
+	cursor: pointer;
+	/*background: */
+}
+/*.question:hover {
+	text-decoration: underline;
+}*/
+.answer {
+	margin-top: 10px;
+	padding-left: 15px;
+	text-align: justify;
+	/*display: none;*/
+}
+.date {
+	float: right;
+	font-size: 0.7em;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 0px 3px;
+}
+/*---------------------------------------------------------------*/
+textarea {
+	border-radius: 3px;
+	padding: 3px;
+	background: #FFFFE5;
+}
+.question {
+	width: 100%;
+	margin: auto;
+}
+.question_textarea, .answer_textarea{
+	width: 99%;
+	margin: auto;
+}
+.question_textarea {
+	height: 40px;
+}
+.answer_textarea {
+	height: 150px;
+}

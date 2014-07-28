@@ -79,7 +79,7 @@ nav {text-align: left;}
 /*-------------------------------------------------------*/
 #main_menu>ul
 {
-        display: inline;
+        display: inline-block;
         float:left;
         vertical-align: middle;
         /*padding: 6px 20px 5px 20px;*/

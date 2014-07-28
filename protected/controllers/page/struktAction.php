@@ -1,6 +1,6 @@
 <?php
 
-class pageAction extends CAction /* GuestBookController */
+class struktAction extends CAction /* GuestBookController */
 {
 	private $css = '';
 	private $js = '';
@@ -9,33 +9,8 @@ class pageAction extends CAction /* GuestBookController */
 	{
 		//Utils::print_r(key($_GET));
 
-		$data ='';
-			// проверяем, запрашивается ли страница
-		if (sizeof($_GET)==0) {
-			$data = 'Страница-заглушка. Когда-нибудь здесь появится контент. Наберитесь терпения :)';
-		} else {
-				// ищем в базе запрашиваемую страницу
-			$connection = Yii::app()->db;
-			$sql_c = 'SELECT count(id) FROM `page` where name="'.key($_GET).'"';
-			$c = $connection->createCommand($sql_c)->queryScalar();
-				// если нашлось - загружаем из БД
-			if ($c > 0) {
-				$css = 'site/page.css';
-				$js = 'site/page.js';
-				$data = $this->getPageFromDB(key($_GET));
-			} else {	// если не нашлось - пытаемся выполнить функцию
-				$func = 'get'.key($_GET);
-					// если нужная функция существуует
-				if (method_exists('pageAction', $func)) {
-					$data = $this->$func();
-					// $css = 'site/'.key($_GET).'.css';
-					// $js = 'site/'.key($_GET).'.js';
-				} else {
-						// генерируем исключение, если нету запрашиваемой страницы
- 					throw new CHttpException(404);
-				}
-			}
-		}
+		$data = $this->getStrukt();
+
 			// рендерим страницу
 		$this->controller->render('page',
 								   array(
@@ -64,8 +39,8 @@ class pageAction extends CAction /* GuestBookController */
 	// </div>
 
 		$this->controller->breadcrumbs=array('Структура');
-		$this->css = 'site/strukt.css';
-		$this->js = 'site/strukt.js';
+		$this->css = 'page/strukt.css';
+		$this->js = 'page/strukt.js';
 
 		$data = '<h1>Организационная структура производственного управления “Витебскгаз”</h1>';
 
@@ -162,6 +137,47 @@ class pageAction extends CAction /* GuestBookController */
 		// $data .= 	'<textarea name=\'q_text\'></textarea>';
 		// $data .= 	'<button id=\'q_send\'></button>';
 		// $data .= '</div>	<!-- question_form -->';
+
+
+
+
+
+
+		$data .= '<div id=\'question_form\' class=\'border\'>';
+		$data .= 	'<span id=\'result\'></span>';
+
+		$model = new QuestionForm();
+		$form = $this->controller->beginWidget('CActiveForm');
+		$data .= '<div class=\'row\'>';
+    	$data .= 	$form->textArea($model,'question', array('placeholder'=>'Вопрос'));
+    	$data .= '</div>';
+    	$data .= '<div class=\'row\'>';
+		$data .= 	$form->textField($model,'email', array('placeholder'=>'email')) ;
+		$data .= '</div>';
+		$data .= '<div class=\'row\'>';
+		$data .= CHtml::ajaxSubmitButton('Отправить', Yii::app()->createURL('site/db/question'),
+							array(
+						        'type' => 'POST',
+						        'success'=>'js:function(data){
+						        		//alert("="+data.trim()+"=");
+						                if (data.trim()=="1"){
+						                        //document.location.search="site/index"
+						                		location.reload();
+						                }else{
+						                      $("#result").html(data);
+						                      $("#result").show();
+						                }
+						        }'
+						    ),
+					        array('class'=>'button')
+			        );
+
+		$this->controller->endWidget();
+		$data .= '</div>';
+		$data .= '</div>	<!-- login_form -->';
+
+
+
 
 		$connection = Yii::app()->db;
 		$sql = 'SELECT * FROM `quest` where visible order by sort, id';

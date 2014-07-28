@@ -1,5 +1,5 @@
 <?php
-	$this->addCSS('site/page.css');
+	$this->addCSS('page/page.css');
 	if ($css!='') {
 		$this->addCSS($css);
 	}
