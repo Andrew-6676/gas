@@ -3,7 +3,7 @@
 }
 .item {
 	padding: 10px;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 	border: 1px solid gray;
 	margin-bottom: 10px;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -36,7 +36,7 @@
 	font-size: 0.7em;
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 1px solid gray;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	padding: 0px 3px;
 }
 /*----------------------------------------------------------------*/
@@ -49,7 +49,7 @@
 #question_form input[type='text'] {
 	width: 390px;
 	border: 1px solid #9f9f9f;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	padding: 1px 3px;
 }
 #question_form .row {
@@ -58,7 +58,7 @@
 
 #captcha {
 	margin: 5px 0;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	box-shadow: 0px 0px 10px 1px rgba(0,0,0, 0.5);
 }
 

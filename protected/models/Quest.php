@@ -9,117 +9,116 @@
  * @property string $caption
  * @property string $question
  * @property string $answer
+ * @property string $a_date
  * @property integer $visible
  * @property string $email
  * @property string $fio
  * @property integer $sort
+ * @property integer $answered
  */
 class Quest extends CActiveRecord
 {
-    /**
-     * @return string the associated database table name
-     */
-    public function tableName()
-    {
-        return 'quest';
-    }
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'quest';
+	}
 
-    /**
-     * @return array validation rules for model attributes.
-     */
-    public function rules()
-    {
-        // NOTE: you should only define rules for those attributes that
-        // will receive user inputs.
-        return array(
-            array(' question, email, fio', 'required'),
-            array('visible, sort', 'numerical', 'integerOnly'=>true),
-            array('caption', 'length', 'max'=>255),
-            array('email, fio', 'length', 'max'=>100),
-            // The following rule is used by search().
-            // @todo Please remove those attributes that should not be searched.
-            array('id, q_date, caption, question, answer, visible, email, fio, sort', 'safe', 'on'=>'search'),
-        );
-    }
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('q_date, question, answer, email, fio, sort', 'required'),
+			array('visible, sort, answered', 'numerical', 'integerOnly'=>true),
+			array('caption', 'length', 'max'=>255),
+			array('email, fio', 'length', 'max'=>100),
+			array('a_date', 'safe'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, q_date, question, answer, a_date, visible, email, fio, sort, answered', 'safe', 'on'=>'search'),
+		);
+	}
 
-    /**
-     * @return array relational rules.
-     */
-    public function relations()
-    {
-        // NOTE: you may need to adjust the relation name and the related
-        // class name for the relations automatically generated below.
-        return array(
-        );
-    }
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+		);
+	}
 
-    /**
-     * @return array customized attribute labels (name=>label)
-     */
-    public function attributeLabels()
-    {
-        return array(
-            'id' => 'ID',
-            'q_date' => 'Q Date',
-            'caption' => 'Caption',
-            'question' => 'Question',
-            'answer' => 'Answer',
-            'visible' => 'Visible',
-            'email' => 'Email',
-            'fio' => 'Fio',
-            'sort' => 'Sort',
-        );
-    }
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'id' => 'ID',
+			'q_date' => 'Дата вопроса',
+			'caption' => 'Caption',
+			'question' => 'Вопрос',
+			'answer' => 'Ответ',
+			'a_date' => 'Дата ответа',
+			'visible' => 'Видимый',
+			'email' => 'Email',
+			'fio' => 'ФИО',
+			'sort' => 'Sort',
+			'answered' => 'Answered',
+		);
+	}
 
-    /**
-     * Retrieves a list of models based on the current search/filter conditions.
-     *
-     * Typical usecase:
-     * - Initialize the model fields with values from filter form.
-     * - Execute this method to get CActiveDataProvider instance which will filter
-     * models according to data in model fields.
-     * - Pass data provider to CGridView, CListView or any similar widget.
-     *
-     * @return CActiveDataProvider the data provider that can return the models
-     * based on the search/filter conditions.
-     */
-    public function search()
-    {
-        // @todo Please modify the following code to remove attributes that should not be searched.
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
-        $criteria=new CDbCriteria;
+		$criteria=new CDbCriteria;
 
-        $criteria->compare('id',$this->id);
-        $criteria->compare('q_date',$this->q_date,true);
-        $criteria->compare('caption',$this->caption,true);
-        $criteria->compare('question',$this->question,true);
-        $criteria->compare('answer',$this->answer,true);
-        $criteria->compare('visible',$this->visible);
-        $criteria->compare('email',$this->email,true);
-        $criteria->compare('fio',$this->fio,true);
-        $criteria->compare('sort',$this->sort);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('q_date',$this->q_date,true);
+		$criteria->compare('caption',$this->caption,true);
+		$criteria->compare('question',$this->question,true);
+		$criteria->compare('answer',$this->answer,true);
+		$criteria->compare('a_date',$this->a_date,true);
+		$criteria->compare('visible',$this->visible);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('fio',$this->fio,true);
+		$criteria->compare('sort',$this->sort);
+		$criteria->compare('answered',$this->answered);
 
-        return new CActiveDataProvider($this, array(
-            'criteria'=>$criteria,
-        ));
-    }
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 
-    /**
-     * Returns the static model of the specified AR class.
-     * Please note that you should have this exact method in all your CActiveRecord descendants!
-     * @param string $className active record class name.
-     * @return Quest the static model class
-     */
-    public static function model($className=__CLASS__)
-    {
-        return parent::model($className);
-    }
-
-
-    /*------------------------------------------------------------------------------ */
-
-    // protected function beforeSave() {
-        //parent::beforeSave();
-        //$this->q_date = date("Y-m-d H:i:s");
-    // }
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Quest the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
 }

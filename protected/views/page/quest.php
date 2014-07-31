@@ -55,7 +55,7 @@ if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
 							        		}
 							        }',
 							        'success'=>'js:function(data){
-							        		//alert("=>"+data+"<=");
+							        		alert("Вопрос удалён.");
 							        			// удалить со страницы вопрос
 							        		$(".quest_caption.'.$q->id.'").hide();
 							        		//$(".quest_caption.'.$q->id.'").remove();
@@ -76,18 +76,20 @@ if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
 			</div>
 			<div class='item <?php echo $q->id; ?>'>
 			 		<?php
+			 			$f_model->id = $q->id;
 			 			$f_model->question = $q->question;
 			 			$f_model->answer = $q->answer;
 			 			$f_model->visible = $q->visible;
 			 			$f_model->sort = $q->sort;
 			 			$f_model->answered = $q->answered;
 
+
 			 			$this->renderPartial(
 			 				'_quest_form_admin',
 			 				array(
 			 					'id'=>$q->id,
 			 					'f_model'=>$f_model,
-			 					//'data'=>$q,
+			 					'data'=>$q,
 			 					//'i'=>$i,
 			 				)
 			 			);

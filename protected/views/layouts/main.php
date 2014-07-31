@@ -33,8 +33,8 @@
 <body>
 	<!-- <div id='body'> -->
 		<header id="header">
-	 		<div class="left_ear">		</div>
-			<div class="right_ear">		</div>
+	 		<div class="left_ear"></div>
+			<div class="right_ear"></div>
 
 			<div class='left_logo'>
 			</div>
@@ -55,10 +55,47 @@
 						//подключаем главное меню
 					include('main_menu.php');
 
-						// если пользователь авторизован
 					if (!Yii::app()->user->isGuest):
 					?>
 						<div class='login_href login'></div>
+					<?php
+					else:
+					?>
+						<div class='login_href'></div>
+					<?php
+					endif;
+					?>
+				</nav>  <!-- #main menu  -->
+			</div>
+
+
+
+
+
+
+
+			<div id='breadcrumbs'>
+				<?php
+					$this->widget('zii.widgets.CBreadcrumbs',
+									array(
+										'homeLink' => CHtml::link('Главная', Yii::app()->homeUrl),
+										'separator' => '<b> » </b>',
+										'links'=>$this->breadcrumbs,
+									)
+					);
+					//echo Utils::GetUserlIp();
+				?>
+
+			</div>		<!-- breadcrumbs -->
+		</header>
+
+
+
+<?php
+						// если пользователь авторизован
+					if (!Yii::app()->user->isGuest):
+					?>
+						<!-- <div class='login_href login'></div> -->
 						<div id='login_form' class='logout'>
 						<?php
 							echo 'Вы вошли как ';
@@ -91,7 +128,7 @@
 						// если НЕ авторизован
 					else:
 					?>
-						<div class='login_href'></div>
+						<!-- <div class='login_href'></div> -->
 						<div id='login_form'>
 							<span id='result'></span>
 							<form action='<?php echo Yii::app()->createURL('site/login') ?>' method='POST'>
@@ -125,22 +162,6 @@
 						        ?>
 						</div>	<!-- login_form -->
 					<?php endif; ?>
-				</nav>  <!-- #main menu  -->
-			</div>
-			<div id='breadcrumbs'>
-				<?php
-					$this->widget('zii.widgets.CBreadcrumbs',
-									array(
-										'homeLink' => CHtml::link('Главная', Yii::app()->homeUrl),
-										'separator' => '<b> » </b>',
-										'links'=>$this->breadcrumbs,
-									)
-					);
-					//echo Utils::GetUserlIp();
-				?>
-
-			</div>		<!-- breadcrumbs -->
-		</header>
 
 
 

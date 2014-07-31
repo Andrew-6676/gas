@@ -1,3 +1,31 @@
+/*@-o-keyframes anim_login{
+    0% {top: 35px; z-index: 100;}
+    40% {top: 165px; z-index: 1000;}
+    100% {top: 145px; z-index: 1000;}
+}*/
+/* анимация показать окно логина*/
+@-webkit-keyframes anim_login{
+    0% {top: 35px; z-index: 100;}
+    40% {top: 165px; z-index: 1000;}
+    100% {top: 145px; z-index: 1000;}
+}
+@keyframes anim_login{
+    0% {top: 35px;z-index: 100;}
+    40% {top: 165px; z-index: 1000;}
+    100% {top: 145px;z-index: 1000;}
+}
+/*  анимация спрятать окно логина*/
+@-webkit-keyframes anim_login_hide{
+    0% {top: 145px;z-index: 1000;}
+    60% {top: 165px; z-index: 1000;}
+    100% {top: 35px;z-index: 100;}
+}
+@keyframes anim_login_hide{
+    0% {top: 145px;z-index: 1000;}
+    60% {top: 165px; z-index: 1000;}
+    100% {top: 35px;z-index: 100;}
+}
+/*--------------------------------------------------*/
 #print_r {
     position: fixed;
     top: 0;
@@ -22,7 +50,7 @@ html {
     padding-right: 27px;
     /*overflow-y: scroll;*/
     /*background-color: #fff;*/
-    background: url(../images/back.png) fixed no-repeat;
+    background: url(../images/back.png) fixed repeat-y;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -41,6 +69,7 @@ body {
         min-width: 1120px;
 }
 body {
+    padding-top: 140px;
     background: url(../images/back_2.png);
     box-shadow: 0 0 10px 10px #D1D1D1;
     /*margin: 0 27px 0 27px;*/
@@ -48,6 +77,9 @@ body {
 }
 /**------------------------ HEADER -------------------*/
 #header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
     height: 140px;
     width: 100%;
     /*border: 1px green solid;*/
@@ -192,6 +224,7 @@ body {
 /**------------------------------------------------------------------------**/
 #to_top div, #to_bottom div {
     position: fixed;
+    z-index: 9999;
     right: 20px;
     width: 30px;
     height: 30px;
@@ -225,10 +258,13 @@ body {
 /**------------------------------------------------------------------------**/
 #login_form {
     display: none;
-    z-index: 100;
+   /*-webkit-animation: anim_login 1.5s 1;*/
+    /*animation: anim_login 1.5s 1;*/
+
+    z-index: 1001;
     position: absolute;
     right: 3px;
-    top: 43px;
+    top: 145px;
     border-left: 1px solid #E0F3FF;
     border-top: 1px solid #E0F3FF;
     border-right: 1px solid #7c7c7c;

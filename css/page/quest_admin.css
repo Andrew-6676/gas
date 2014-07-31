@@ -7,7 +7,16 @@
 .quest_caption:hover .question_href {
 	margin-left: 5px;
 }
-/*------------------------*/
+/*-------------------------------------*/
+.question_sort {
+	margin: 0 0 2px 50px;
+	width: 40px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	padding: 0 3px;
+}
+
+/*-------------------------------------*/
 .del_quest {
 	display: none;
 	float: left;
@@ -53,14 +62,17 @@
 }
 .question {
 	width: 70%;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	/*margin-bottom: 10px;*/
 	cursor: pointer;
 	/*background: */
 }
-/*.question:hover {
-	text-decoration: underline;
-}*/
+.question span  {
+	display: inline-block;
+	font-weight: normal;
+	/*margin-left: 40px;*/
+	float: right;
+}
 .answer {
 	margin-top: 10px;
 	padding-left: 15px;
@@ -94,4 +106,13 @@ textarea {
 }
 .answer_textarea {
 	height: 150px;
+}
+/*--------------------------------------------------------------------------------*/
+.row.right {
+	float: right;
+}
+.row.right [type='button'], .row.right [type='submit'] {
+	font-size: 1em;
+	margin-left: 5px;
+	padding: 1px 5px;
 }

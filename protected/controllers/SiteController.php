@@ -6,12 +6,11 @@ class SiteController extends Controller
     {
         return array(
             'index'=>'application.controllers.site.indexAction',
-           // 'page'=>'application.controllers.site.pageAction',
+            'mail'=>'application.controllers.site.mailAction',
             'login'=>'application.controllers.site.loginAction',
             'logout'=>'application.controllers.site.logoutAction',
         );
     }
-
 
 /* ------------------------- фильтры -------------------------*
 	 public function filters()

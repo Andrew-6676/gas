@@ -38,6 +38,7 @@
 /** ------------ MAIN MENU --------------------*/
 nav {text-align: left;}
 #main_menu {
+        z-index: 1000;
         /*font-family: gothic, sans-serif;*/
         /*font-family: 'Poiret One', gothic, sans-serif;*/
         font-family:  Verdana;

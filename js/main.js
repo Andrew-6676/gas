@@ -6,10 +6,19 @@ $(document).ready(function(){
         var f = $('#login_form');
         if (f.css('display') == 'none') {
             f.show();
+            // f.css('-o-animation', 'anim_login .8s 1');
+            f.css('-webkit-animation', 'anim_login .8s 1');
+            f.css('animation', 'anim_login .8s 1');
             $(this).addClass('open');
         } else {
-            f.hide();
+
             $(this).removeClass('open');
+            f.css('-webkit-animation', 'anim_login_hide .8s 1');
+            f.css('animation', 'anim_login_hide .8s 1');
+            //f.hide();
+            setTimeout(function(){f.hide()}, 700);
+            // f.css('-webkit-animation', 'none');
+            // f.css('animation', 'none');
         }
     })
         // спрятать форму авторизации по клику в не формы
@@ -18,9 +27,15 @@ $(document).ready(function(){
             return;
         }
 
-        $('#login_form').hide();
+        var f = $('#login_form');
+        //f.hide();
         $('.login_href').removeClass('open');
-
+        f.css('-webkit-animation', 'anim_login_hide .8s 1');
+        f.css('animation', 'anim_login_hide .8s 1');
+            //f.hide();
+        setTimeout(function(){f.hide()}, 700);
+       // f.css('-webkit-animation', 'none');
+       // f.css('animation', 'none');
         event.stopPropagation();
     });
 
@@ -40,7 +55,7 @@ $(document).ready(function(){
             } else {
                 $('#to_top').fadeOut();
             }
-                // если прокрутили вниз на 100 и более пикселей от низа
+                // если прокрутили вниз на 150 и более пикселей от низа
             if ($(window).scrollTop()+$(window).innerHeight()-$(document).innerHeight()>-150) {
                 $("#to_bottom").fadeOut();
             } else {

@@ -1,4 +1,4 @@
-<span id='result_'<?php echo $id?>></span>
+<span id='result_<?php echo $id?>'></span>
 <?php
 $form = $this->beginWidget('CActiveForm',
 					array(
@@ -7,8 +7,18 @@ $form = $this->beginWidget('CActiveForm',
 			);
 ?>
 <div class='question'>
+		<?php echo $form->hiddenField($f_model,'id'); ?>
 	<div class='row'>
 		<?php echo $form->label($f_model,'question').' #'.$id; ?>
+		<?php echo $form->numberField($f_model,'sort', array(
+    						'placeholder'=>$f_model->attributeLabels()['sort'],
+    						'class'=>'question_sort',
+    						'id'=>'question_sort_'.$id,
+    	)); ?>
+		<?php echo ('<span class="wr">
+							Автор: <b>'.$data->fio.'</b>;
+							Дата: <b>'.date('d-m-Y',strtotime($data->q_date)).'</b>
+					</span>'); ?>
 		<br>
     	<?php echo $form->textArea($f_model,'question', array(
     						'placeholder'=>$f_model->attributeLabels()['question'],
@@ -30,22 +40,30 @@ $form = $this->beginWidget('CActiveForm',
 	<div class='row'>
     	<?php echo $form->checkbox($f_model,'visible', array('placeholder'=>$f_model->attributeLabels()['answer'])); ?>
 		<?php echo $form->label($f_model,'visible'); ?>
+		<br>
+		<?php echo $form->checkbox($f_model,'answered', array('placeholder'=>$f_model->attributeLabels()['answered'])); ?>
+		<?php echo $form->label($f_model,'answered'); ?>
 	</div>
 	<div class='row right'>
+		<!-- <button class='save_quest'>Сохранить</button> -->
 		<?php
-				echo	CHtml::ajaxButton(
-						'',
+				echo	CHtml::ajaxSubmitButton(
+						'Сохранить',
 						Yii::app()->createURL('/page/quest'),
 						array(
 					        'type' => 'POST',
-					        'data' => array('save'=>array('id'=>$q->id)),
+					        // 'data' => array('save'=>array(
+					        // 							'id'=>$id,
+					        // 							'answer'=>'',
+					        // 		  )),
 					        'beforeSend' => 'js:function(){
-				        			if (!confirm("Сохранить вопрос #'.$q->id.'")) {
+				        			if (!confirm("Сохранить вопрос #'.$id.'")) {
 					        			return false;
 					        		}
 					        }',
 					        'success'=>'js:function(data){
 					        		//alert("=>"+data+"<=");
+					        		//$("#result_'.$id.'").html(data);
 					        }',
 					        'error' => 'js:function(data){
 					        		alert("error save");
@@ -53,6 +71,36 @@ $form = $this->beginWidget('CActiveForm',
 					    ),
 				        array('class'=>'save_quest')
 		        );
+				/*-------------------------*/
+				echo	CHtml::ajaxButton(
+						'Отправить на '.$data->email,
+						Yii::app()->createURL('/page/quest'),
+						array(
+					        'type' => 'POST',
+					        'data' => array('send'=>array(
+					        							'id'=>$id,
+					        							'email'=>$data->email,
+					        		  )),
+					        'beforeSend' => 'js:function(){
+					        		//alert("Не забыли сохранить перед отправкой?");
+				        			if (!confirm("Не забыли сохранить перед отправкой" #'.$id.'?")) {
+					        			return false;
+					        		}
+					        }',
+					        'success'=>'js:function(data){
+					        		//alert("=>"+data+"<=");
+					        		$("#result_'.$id.'").html(data);
+					        }',
+					        'error' => 'js:function(data){
+					        		alert("error send");
+					        }',
+					    ),
+				        array('class'=>'send_quest')
+		        );
+
+		    // echo '<pre>';
+		    // print_r(get_defined_vars());
+		    // echo '</pre>';
 		?>
 	</div>
 </div>

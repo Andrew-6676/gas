@@ -15,6 +15,29 @@ $(document).ready(function(){
 		}
 		return false;
 	})
+/*--------------------------------------------------------------------------------------*/
+
+	// $('.save_quest').click(function(){
+	// 	$.ajax({
+	// 		url:'/page/quest',
+	//         type: 'POST',
+	// 	    data: array('save'=>array('id'=>$id)),
+	// 	        'beforeSend' => 'js:function(){
+	//         			if (!confirm("Сохранить вопрос #'.$id.'")) {
+	// 	        			return false;
+	// 	        		}
+	// 	        }',
+	// 	        'success'=>'js:function(data){
+	// 	        		//alert("=>"+data+"<=");
+	// 	        }',
+	// 	        'error' => 'js:function(data){
+	// 	        		alert("error save");
+	// 	        }',
+	// 	    ),
+	//         array('class'=>'save_quest')
+	//         );
+	// 	})
+	// })
 
 
 })

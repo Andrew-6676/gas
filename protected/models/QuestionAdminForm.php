@@ -2,6 +2,7 @@
 
 class QuestionAdminForm extends CFormModel
 {
+    public $id;
     public $question;
     public $answer;
     public $visible = 0;
@@ -29,11 +30,12 @@ class QuestionAdminForm extends CFormModel
     public function attributeLabels()
     {
         return array(
+            'id' => 'id',
             'question' => 'Вопрос',
             'answer' => 'Ответ',
             'visible' => 'Показывать вопрос на странице',
             'sort' => 'Сортировка',
-
+            'answered' => 'На вопрос дан полный ответ',
         );
     }
 }

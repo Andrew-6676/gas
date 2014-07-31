@@ -15,19 +15,46 @@ class questAction extends CAction /* GuestBookController */
 			//echo '---dghad';
 			// $model = new QuestionForm;
 
-			if (isset($_POST['del'])) {
-				// echo '11111 del';
-				// Utils::print_r(key($_POST), false);
-				// var_dump($_POST);
+//			question_form
+			//print_r($_POST);
 
+			if (isset($_POST['del'])) {
 					// удалить вопрос из БД и вывести число удалённых хаписей
 				echo Quest::model()->deleteByPk($_POST['del']['id']);
-				// $q->delete();
-				// echo $q->q_date;
-				// exit;
 				Yii::app()->end();
 			}
+				/*---------------------------------------*/
+			if (isset($_POST['QuestionAdminForm'])) {
+					// Сохранить вопрос/ответ в БД
+				echo '<pre>';
+					//print_r($_POST['QuestionAdminForm']);
+					//$db_model = Quest::model()->findByPk($_POST['QuestionAdminForm']['id']);
+					//$db_model->attributes = $_POST['QuestionAdminForm'];
+					//$db_model->_attributes = $_POST['QuestionAdminForm'];
+					//$db_model->answer = 'sdfsdfsdfsd';
+					echo Quest::model()->updateByPk($_POST['QuestionAdminForm']['id'], $_POST['QuestionAdminForm']);
+					//print_r($db_model);
+					// if ($db_model->save()) {
+					// 	echo '111111111111';
+					// } else {
+					// 	echo '000000000000';
+					// }
+					echo '</pre>';
+				Yii::app()->end();
+			}
+				/*---------------------------------------*/
+			if (isset($_POST['send'])) {
+					// отправить почту пользователю
+					var_dump($_POST);
+					$message = 'test message';
+					mail("Andrew@vitebsk.oblgas.by", "the subject", $message, "From: webmaster@$SERVER_NAME", "-fwebmaster@$SERVER_NAME");
 
+				Yii::app()->end();
+			}
+				/*---------------------------------------*/
+				/*---------------------------------------*/
+				/*---------------------------------------*/
+				/*---------------------------------------*/
 			if(isset($_POST['QuestionForm'])) {
 					// засовываем в модель данные из формы
 			    $f_model->attributes = $_POST['QuestionForm'];
@@ -72,8 +99,8 @@ class questAction extends CAction /* GuestBookController */
 		$criteria->order ='sort, q_date desc';
 
 		if (Yii::app()->session['id_user']<0) {
-			$criteria->addCondition('visible=0');
-			$criteria->addCondition('answered=0');
+			//$criteria->addCondition('visible=0');
+			//$criteria->addCondition('answered=0');
 	    } else {
 			$criteria->addCondition('answered=1');
 			$criteria->addCondition('visible=1');

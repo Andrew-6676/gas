@@ -169,7 +169,7 @@
 	background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
 	background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
 	background-image: linear-gradient(to bottom,  #6DE2F2 0%, #FFFFFF 50%);
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	transition: 0.2s;
 }
 .man/*:hover*/ {
