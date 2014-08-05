@@ -50,7 +50,7 @@
 	);
 		// выпадающее меню для пункта УСЛУГИ
 	$sub_2 = array(
-				array('label'=>'Тарифы на природный и сжиженый газ.', 'url'=>array('/page?gasprice')),
+				array('label'=>'Тарифы на природный и сжиженный газ.', 'url'=>array('/page?gasprice')),
 				array('label'=>'Газификация одноквартирного жилого дома', 'url'=>array('/page?gazific'),
 					  'itemOptions'=>array('class'=>'has_child'),
 					  'submenuOptions'=>array('id'=>'sub_sub_2_1', 'class'=>'sub_sub_menu'),
