@@ -8,6 +8,8 @@ $form = $this->beginWidget('CActiveForm',
 ?>
 <div class='question'>
 		<?php echo $form->hiddenField($f_model,'id'); ?>
+		<?php $f_model->a_date = date('Y-m-d H:i:s',time()); ?>
+		<?php echo $form->hiddenField($f_model,'a_date'); ?>
 	<div class='row'>
 		<?php echo $form->label($f_model,'question').' #'.$id; ?>
 		<?php echo $form->numberField($f_model,'sort', array(
@@ -38,6 +40,14 @@ $form = $this->beginWidget('CActiveForm',
     	)); ?>
 	</div>
 	<div class='row'>
+		<?php echo $form->label($f_model,'respondent'); ?>
+    	<?php echo $form->textField($f_model,'respondent', array(
+    						'placeholder'=>$f_model->attributeLabels()['respondent'],
+    						'class'=>'respondent_text',
+    						'id'=>'answer_textarea_'.$id,
+    	)); ?>
+	</div>
+	<div class='row'>
     	<?php echo $form->checkbox($f_model,'visible', array('placeholder'=>$f_model->attributeLabels()['answer'])); ?>
 		<?php echo $form->label($f_model,'visible'); ?>
 		<br>
@@ -57,16 +67,16 @@ $form = $this->beginWidget('CActiveForm',
 					        // 							'answer'=>'',
 					        // 		  )),
 					        'beforeSend' => 'js:function(){
-				        			if (!confirm("Сохранить вопрос #'.$id.'")) {
-					        			return false;
-					        		}
+				        			// if (!confirm("Сохранить вопрос #'.$id.'?")) {
+					        		// 	return false;
+					        		// }
 					        }',
 					        'success'=>'js:function(data){
 					        		//alert("=>"+data+"<=");
-					        		//$("#result_'.$id.'").html(data);
+					        		$("#result_'.$id.'").html(data);
 					        }',
 					        'error' => 'js:function(data){
-					        		alert("error save");
+					        		alert("error save"+ data);
 					        }',
 					    ),
 				        array('class'=>'save_quest')
@@ -83,7 +93,7 @@ $form = $this->beginWidget('CActiveForm',
 					        		  )),
 					        'beforeSend' => 'js:function(){
 					        		//alert("Не забыли сохранить перед отправкой?");
-				        			if (!confirm("Не забыли сохранить перед отправкой" #'.$id.'?")) {
+				        			if (!confirm("Не забыли сохранить перед отправкой #'.$id.'?")) {
 					        			return false;
 					        		}
 					        }',
@@ -93,6 +103,7 @@ $form = $this->beginWidget('CActiveForm',
 					        }',
 					        'error' => 'js:function(data){
 					        		alert("error send");
+					        		//alert(data);
 					        }',
 					    ),
 				        array('class'=>'send_quest')

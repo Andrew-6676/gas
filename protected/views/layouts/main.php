@@ -109,8 +109,8 @@
 										        'success'=>'js:function(data){
 										        		//alert("="+data.trim()+"=");
 										                if (data.trim()=="1"){
-										                        //document.location.search="site/index"
-										                		location.reload();
+										                        document.location.search="site/index"
+										                		//location.reload();
 										                }else{
 										                      $("#result").html(data);
 										                      $("#result").show();

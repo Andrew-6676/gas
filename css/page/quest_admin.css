@@ -7,6 +7,13 @@
 .quest_caption:hover .question_href {
 	margin-left: 5px;
 }
+.quest_caption.answered>a {
+	color: #9c9c9c;
+}
+.quest_caption.answered:hover>a {
+	/*color: #575757;*/
+	color: #000;
+}
 /*-------------------------------------*/
 .question_sort {
 	margin: 0 0 2px 50px;
@@ -106,6 +113,9 @@ textarea {
 }
 .answer_textarea {
 	height: 150px;
+}
+.respondent_text {
+	width: 400px;
 }
 /*--------------------------------------------------------------------------------*/
 .row.right {

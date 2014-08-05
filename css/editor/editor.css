@@ -1,0 +1,19 @@
+.control_panel {
+	z-index: 9999999;
+	position: relative;
+	top: -10px;
+	width: 100%;
+	/*height: 20px;*/
+	border: 1px solid #c5c5c5;
+}
+
+.editor_wr {
+	margin-top: 0px;
+	border: 1px solid #c5c5c5;
+	padding: 15px;
+}
+
+.editor_wr textarea {
+	width: 100%;
+	height: 700px;
+}

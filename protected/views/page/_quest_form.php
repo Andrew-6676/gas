@@ -16,7 +16,10 @@
     		<?php echo $form->textArea($f_model,'question', array('placeholder'=>$f_model->attributeLabels()['question'])); ?>
 
    	 	</div>
-   	 <?php if (Yii::app()->user->isGuest): ?>
+   	<?php
+   		// если неаутентифицированный пользователь
+   	//if (Yii::app()->user->isGuest):
+   	?>
     	<div class='row'>
     		<?php echo $form->label($f_model,'name'); ?>
 			<br>
@@ -29,6 +32,10 @@
 			<?php echo $form->textField($f_model,'email', array('placeholder'=>$f_model->attributeLabels()['email'])); ?>
 			<?php echo $form->error($f_model,'email'); ?>
 		</div>
+	<?php //endif;
+			// проверяем в настройках отображение капчи
+		if ((Yii::app()->params['captcha']['guest'] && Yii::app()->user->isGuest) || (Yii::app()->params['captcha']['users'] && !Yii::app()->user->isGuest)):
+	?>
 		<div class='row'>
 			<?php echo $form->label($f_model,'captcha'); ?>
 			<br>
@@ -38,8 +45,9 @@
 		<div class='row'>
 			<?php $this->widget('CCaptcha', array('buttonLabel' => '[новый код]', 'id'=>'captcha')); ?>
 		</div>
-	<?php endif; ?>
-
+	<?php
+		endif;
+	?>
 	 	<div class='row'>
 		<?php
 			echo	CHtml::ajaxSubmitButton(

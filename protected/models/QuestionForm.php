@@ -16,7 +16,7 @@ class QuestionForm extends CFormModel
             array('question, email, name', 'required', 'message'=>'Поле не может быть пустым!'),
             array('question', 'minLength'),
             array('email', 'email', 'message'=>'Некорректный адрес электронной почты!'),
-            array('captcha', 'CaptchaExtendedValidator', 'allowEmpty'=>!Yii::app()->user->isGuest, 'message'=>'Неверно введён код с картинки!' ),
+            array('captcha', 'CaptchaExtendedValidator', /*'allowEmpty'=>!Yii::app()->user->isGuest,*/ 'message'=>'Неверно введён код с картинки!' ),
         );
     }
 

@@ -33,6 +33,13 @@ class loginAction extends CAction   /*---- SiteController ----*/
 			}
 		} else {
 			echo '(__.__)';
+			//print_r(Yii::app()->user);
+			// $this->controller->redirect(Yii::app()->user->returnUrl);
+			// if (Yii::app()->user->id<0) {
+			 	$this->controller->redirect(Yii::app()->createUrl('site/index'));
+			// } else {
+			// 	$this->controller->redirect(Yii::app()->user->returnUrl);
+			// }
 		}
 
 		exit;

@@ -46,7 +46,7 @@ return array(
 			// enable cookie-based authentication
 			//'allowAutoLogin'=>false,
 				//если не авторизован + фильтр на action - перенаправит сюда
-			//'loginUrl'=>array('site/info'),
+			'loginUrl'=>array('site/index'),
 			//'returnUrl'=>array('/guestbook'),
 		),
 		// uncomment the following to enable URLs in path-format
@@ -87,6 +87,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
+		'captcha'=>array('guest'=>true,'users'=>true),
 		// this is used in contact page
 		'adminEmail'=>'Andrew@vitebsk.oblgas.by',
 		'adminFIO' => 'Шавнёв А.Л.',

@@ -4,7 +4,7 @@
 			'Вопрос-ответ',
 		);
 	$this->addCss('page/page.css');
-
+		// для админа свои скрипты и стили, для осталных тоже свои
 	if (Yii::app()->session['id_user']<0) {
 		$this->addCss('page/quest_admin.css');
 		$this->addJs('page/quest_admin.js');
@@ -12,9 +12,6 @@
 		$this->addJs('page/quest.js');
 		$this->addCss('page/quest.css');
 	}
-
-
-
 ?>
 
 <div class='page'>
@@ -22,16 +19,17 @@
 
 <?php
 	// если НЕ АДМИН
-if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
+  if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
 	<div id='question_form' class='border'>
 		<span id='q_result'></span>
 		<?php
 			$this->renderPartial('_quest_form',array('f_model'=>$f_model));
 		?>
 	</div>	<!-- question_form -->
-<?php endif; ?>
-
-	<?php $i = 0; ?>
+<?php
+  endif;
+  $i = 0;
+ ?>
 	<div class='q_wrapper'>
 		<?php
 		//Utils::print_r($f_model,false);
@@ -41,7 +39,7 @@ if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
 		<?php
 			// если залогинен админ
 		if (Yii::app()->session['id_user']<0): ?>
-			<div class='quest_caption <?php echo $q->id; ?>'>
+			<div class='quest_caption <?php echo $q->id; if ($q->answered) {echo " answered";}?> '>
 				<?php
 						echo	CHtml::ajaxButton(
 								'',
@@ -50,14 +48,15 @@ if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
 							        'type' => 'POST',
 							        'data' => array('del'=>array('id'=>$q->id)),
 							        'beforeSend' => 'js:function(){
-						        			if (!confirm("Точно хотите безвозвратно удалить вопрос #'.$q->id.'")) {
+						        			if (!confirm("Точно хотите удалить вопрос #'.$q->id.'?")) {
 							        			return false;
 							        		}
 							        }',
 							        'success'=>'js:function(data){
-							        		alert("Вопрос удалён.");
+							        		$(".quest_caption.'.$q->id.'>a").css("color","red");
+							        		//alert("Вопрос удалён.");
 							        			// удалить со страницы вопрос
-							        		$(".quest_caption.'.$q->id.'").hide();
+							        		$(".quest_caption.'.$q->id.'").hide(600);
 							        		//$(".quest_caption.'.$q->id.'").remove();
 							        		$(".item.'.$q->id.'").hide();
 							        		//$(".item.'.$q->id.'").remove();

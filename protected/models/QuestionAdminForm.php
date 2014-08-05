@@ -8,6 +8,8 @@ class QuestionAdminForm extends CFormModel
     public $visible = 0;
     public $sort = 0;
     public $answered = 0;
+    public $respondent = '';
+    public $a_date;// = time();
 
 
     public function rules()
@@ -36,6 +38,7 @@ class QuestionAdminForm extends CFormModel
             'visible' => 'Показывать вопрос на странице',
             'sort' => 'Сортировка',
             'answered' => 'На вопрос дан полный ответ',
+            'respondent' => 'На вопрос отвечал',
         );
     }
 }

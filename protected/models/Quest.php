@@ -34,14 +34,14 @@ class Quest extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('q_date, question, answer, email, fio, sort', 'required'),
+			//array('question, answer, email, fio', 'required'),
 			array('visible, sort, answered', 'numerical', 'integerOnly'=>true),
 			array('caption', 'length', 'max'=>255),
 			array('email, fio', 'length', 'max'=>100),
-			array('a_date', 'safe'),
+			//array('a_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, q_date, question, answer, a_date, visible, email, fio, sort, answered', 'safe', 'on'=>'search'),
+			array('id, q_date, question, answer, , email, fio, sort, answered', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -121,4 +121,18 @@ class Quest extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/*----------------------------------------------------*/
+
+	// public function beforeUpdate() {
+	// 	//echo 'sdfsdf';
+	// 	if(parent::beforeUpdate()) {
+	//         $this->a_date = date('Y-m-d H:i:s',time());
+	// 		//echo 'qqqqqqqq';
+	// 	    return true;
+	// 	} else {
+	// 		Utils::print_r($this->gedtErrors());
+	// 	    return false;
+	// 	}
+	// }
 }
