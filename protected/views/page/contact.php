@@ -13,22 +13,23 @@ $this->addCss('page/contact.css');
 ?>
 
 <div class='page'>
-<h1>Контакты</h1>
+	<h1>Контакты</h1>
 
-<div class="border">
-	
-<?php
+	<div class="border">
 
-foreach($q_model as $values){
-	echo $values->otdel; echo " ";
-	echo $values->dolzn; echo " ";
-	echo $values->fio; echo " ";
-	echo $values->tel; echo " ";
-// echo $values->id.'<br>';
-}
+	<table>	
+		<?php
+		foreach($q_model as $values){
+			?>
+			<tr><td><?php=$values->otdel;?></td>
+				<td><?php=$values->dolzn;?></td>
+				<td><?php=$values->fio;?></td>
+				<td><?php=$values->tel;?></td>
+			</tr>
+		<?php }
+		?>
+	</table>
 
-?>
-
-</div>
+	</div>
 
 </div>
