@@ -17,10 +17,9 @@ $this->addCss('page/page.css');
 	<div class="border">
 
 	<?php
-		/*foreach($v_model as $values){
-			$values->text.'<br>';
-		}*/
-		print_r($v_model);
+		foreach($v_model as $values){
+			echo $values->v_date.'<br>';
+		}
 	?>
 
 	</div>
