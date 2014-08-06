@@ -4,6 +4,7 @@ $this->breadcrumbs = array(
 			'Вакансии',
 		);
 $this->addCss('page/page.css');
+$this->addCss('page/vakansii.css');
 
 /*print_r($q_model);*/
 
