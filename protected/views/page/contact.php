@@ -18,12 +18,6 @@ $this->addCss('page/contact.css');
 	<div class="border">
 
 	<table class="contact-table">	
-	<colgroup>
-		<col style="width:21%"></col>
-		<col style="width:40%;"></col>
-		<col style="width:29%"></col>
-		<col style="width:10%"></col>
-	</colgroup>
 	<thead>
 		<tr>
 			<td>Служба</td>
@@ -32,6 +26,12 @@ $this->addCss('page/contact.css');
 			<td>Телефон</td>
 		</tr>
 	</thead>
+	<colgroup>
+		<col style="width:21%"></col>
+		<col style="width:40%;"></col>
+		<col style="width:29%"></col>
+		<col style="width:10%"></col>
+	</colgroup>
 		<?php
 		foreach($q_model as $values){
 			?>
