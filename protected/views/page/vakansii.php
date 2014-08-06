@@ -17,9 +17,10 @@ $this->addCss('page/page.css');
 	<div class="border">
 
 	<?php
+	echo count($v_model);
 		foreach($v_model as $values){
-			echo $values->pay.'<br>';
 			echo $values->name.'<br>';
+			echo $values->pay.'<br>';
 			echo $values->text.'<br>';
 		}
 	?>
