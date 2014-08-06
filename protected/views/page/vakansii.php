@@ -16,11 +16,11 @@ $this->addCss('page/page.css');
 
 	<div class="border">
 
-	<!--?php
-		foreach($q_model as $values){
+	<?php
+		foreach($v_model as $values){
 			$values->name.'<br>';
 		}
-	?-->
+	?>
 
 	</div>
 
