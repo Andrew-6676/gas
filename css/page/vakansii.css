@@ -11,8 +11,11 @@
 	font-size: 13pt;
 	border-bottom: 1px solid #000;
 	border-radius: 5px;
-	padding-bottom: 5px;
+	padding: 10px;
 	margin-bottom: 20px;
+	background: rgba(242, 246, 255, 1);
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .job-title{
 	padding-bottom: 5px;
@@ -22,5 +25,7 @@
 	font-weight: bold;
 }
 .job:hover{
-	background: white;
+	background-color: rgb(218, 230, 255);
+    cursor: pointer;
+}
 }
