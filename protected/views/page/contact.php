@@ -24,6 +24,14 @@ $this->addCss('page/contact.css');
 		<col style="width:29%"></col>
 		<col style="width:10%"></col>
 	</colgroup>
+	<thead>
+		<tr>
+			<td>Служба</td>
+			<td>Должность</td>
+			<td>ФИО</td>
+			<td>Телефон</td>
+		</tr>
+	</thead>
 		<?php
 		foreach($q_model as $values){
 			?>
