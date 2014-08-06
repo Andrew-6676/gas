@@ -26,7 +26,7 @@ $this->addCss('page/contact.css');
 	</colgroup>
 	<thead>
 		<tr>
-			<td> </td>
+			<td>Служба</td>
 			<td>Должность</td>
 			<td>ФИО</td>
 			<td>Телефон</td>
