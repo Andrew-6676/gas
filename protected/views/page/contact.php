@@ -20,7 +20,11 @@ $this->addCss('page/contact.css');
 <?php
 
 foreach($q_model as $values){
-echo $values->id.'<br>';
+	echo $values->otdel; echo " ";
+	echo $values->dolzn; echo " ";
+	echo $values->fio; echo " ";
+	echo $values->tel; echo " ";
+// echo $values->id.'<br>';
 }
 
 ?>
