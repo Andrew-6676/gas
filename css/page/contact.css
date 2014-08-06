@@ -16,7 +16,7 @@
 	font-weight: bold;
 	background: #B0E6F8;
 }
-.contact-table tr:hover td{
+.contact-table tbody tr:hover td{
 	background: #DAE9EF;
 	cursor: pointer;
 }
