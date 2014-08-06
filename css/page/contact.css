@@ -20,3 +20,9 @@
 	background: #DAE9EF;
 	cursor: pointer;
 }
+.contact-table thead,.contact-table tfoot{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #D2D2D2;
+}

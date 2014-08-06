@@ -26,10 +26,10 @@ $this->addCss('page/contact.css');
 		</colgroup>
 		<thead>
 			<tr>
-				<th>Служба</th>
-				<th>Должность</th>
-				<th>ФИО</th>
-				<th>Телефон</th>
+				<td>Служба</td>
+				<td>Должность</td>
+				<td>ФИО</td>
+				<td>Телефон</td>
 			</tr>
 		</thead>
 			<?php
@@ -44,10 +44,10 @@ $this->addCss('page/contact.css');
 			?>
 		<tfoot>
 			<tr>
-				<th>Служба</th>
-				<th>Должность</th>
-				<th>ФИО</th>
-				<th>Телефон</th>
+				<td>Служба</td>
+				<td>Должность</td>
+				<td>ФИО</td>
+				<td>Телефон</td>
 			</tr>
 		</tfoot>
 	</table>
