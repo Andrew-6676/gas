@@ -23,14 +23,14 @@ $this->addCss('page/vakansii.css');
 					<div class="job">
 					<div class="job-title">
 						<div class="job-name">
-							Должность: <?php echo $values->name; ?>
+							<span class="job-field">Должность:</span> <?php echo $values->name; ?>
 						</div>
 						<div class="job-pay">
-							Заработная плата: <?php if($values->pay!=''){echo $values->pay;}?>
+							<span class="job-field">Заработная плата:</span> <?php if($values->pay!=''){echo $values->pay;}?>
 						</div>
 					</div>
 					<div class="job-description">
-						Описание: <?php echo $values->text; ?>
+						<span class="job-field">Описание:</span> <?php echo $values->text; ?>
 					</div>
 					</div>
 				<?php }

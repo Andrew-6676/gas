@@ -1,1 +1,8 @@
 /*view page vakansii*/
+.job-name,.job-pay{
+	display: inline-block;
+	width: 49%;
+}
+.job-field{
+	padding-right: 10px;
+}
