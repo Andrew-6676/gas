@@ -19,11 +19,19 @@ $this->addCss('page/contact.css');
 
 	<table class="contact-table">	
 	<colgroup>
-		<col style="width:250px"></col>
-		<col style="width:400px;"></col>
-		<col style="width:320px"></col>
-		<col style="width:100px"></col>
+		<col style="width:21%"></col>
+		<col style="width:40%;"></col>
+		<col style="width:29%"></col>
+		<col style="width:10%"></col>
 	</colgroup>
+	<thead>
+		<tr>
+			<td></td>
+			<td>Должность</td>
+			<td>ФИО</td>
+			<td>Телефон</td>
+		</tr>
+	</thead>
 		<?php
 		foreach($q_model as $values){
 			?>

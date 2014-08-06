@@ -2,6 +2,9 @@
 .contact-table td{
 	padding: 10px;
 	text-align: center;
+	border-spacing: 0px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .secondName{
@@ -13,4 +16,5 @@
 }
 .contact-table tr:hover td{
 	background: #DAE9EF;
+	cursor: pointer;
 }
