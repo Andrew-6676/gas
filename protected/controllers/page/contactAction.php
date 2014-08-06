@@ -5,12 +5,12 @@ class contactAction extends CAction /* pageController */
     public function run()
 	{
 
+		$q_model = Contact::model()->findAll();
+
 			// рендерим страницу
 		$this->controller->render('contact',
 								   array(
-								   		//'data'=>$data,
-								   		//'q_model'=>$q_model,
-								   		//'f_model'=>$f_model,
+								   		'q_model'=>$q_model
 								   )
 		);
 	}
