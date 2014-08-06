@@ -18,14 +18,6 @@ $this->addCss('page/contact.css');
 	<div class="border">
 
 	<table class="contact-table">	
-	<thead>
-		<tr>
-			<td>Служба</td>
-			<td>Должность</td>
-			<td>ФИО</td>
-			<td>Телефон</td>
-		</tr>
-	</thead>
 	<colgroup>
 		<col style="width:21%"></col>
 		<col style="width:40%;"></col>
