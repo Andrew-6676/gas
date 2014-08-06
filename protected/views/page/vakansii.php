@@ -12,13 +12,13 @@ $this->addCss('page/page.css');
 ?>
 
 <div class='page'>
-	<h1>Контакты</h1>
+	<h1>Вакансии</h1>
 
 	<div class="border">
 
 	<?php
 		foreach($v_model as $values){
-			$values->name.'<br>';
+			$values->text.'<br>';
 		}
 	?>
 
