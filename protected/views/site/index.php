@@ -164,7 +164,7 @@
 
 	<div class='r_content'>
 		<div class='l_menu'>
-			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page?pravo'); ?>'>
 				<div class='item i1'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Нормативно-<br>правовые<br> акты</div>
@@ -184,13 +184,13 @@
 			</a>
 		</div>
 		<div class='r_menu'>
-			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page?polza'); ?>'>
 				<div class='item i1'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Полезная информация</div>
 				</div>
 			</a>
-			<a href='<?php echo Yii::app()->createUrl('/page'); ?>'>
+			<a href='<?php echo Yii::app()->createUrl('/page/vakansii'); ?>'>
 				<div class='item i2'>
 					<span class='wr_animation_bg'><span class='animation_bg'></span></span>
 					<div>Вакансии</div>

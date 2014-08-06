@@ -10,11 +10,11 @@
 	);
 		// Главная - Структура
 	$sub_sub_1_2 = array(
-				array('label'=>'Терешковой', 'url'=>array('/page?bazi_teresh')),
-				array('label'=>'Новка', 'url'=>array('/page?bazi_novka')),
-				array('label'=>'Панковой', 'url'=>array('/page?bazi_pank')),
-				array('label'=>'Бровки', 'url'=>array('/page?bazi_brovki')),
-				array('label'=>'Мазолово', 'url'=>array('/page?bazi_mazolovo')),
+				array('label'=>'ул. Терешковой', 'url'=>array('/page?bazi_teresh')),
+				array('label'=>'ул. Бровки', 'url'=>array('/page?bazi_brovki')),
+				array('label'=>'ул. С.Панковой', 'url'=>array('/page?bazi_pank')),
+				array('label'=>'п. Новка', 'url'=>array('/page?bazi_novka')),
+				array('label'=>'п. Мазолово', 'url'=>array('/page?bazi_mazolovo')),
 	);
 
 

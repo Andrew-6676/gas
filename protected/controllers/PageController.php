@@ -13,6 +13,7 @@ class PageController extends Controller
             'galery'=>'application.controllers.page.galeryAction',
                 // контакты, берутся из БД
             'contact'=>'application.controllers.page.contactAction',
+            'vakansii'=>'application.controllers.page.vakansiiAction',
                 // сюда будут попадать по адресу /page?<страница>, <страница> будет загружена из БД
             'index'=>'application.controllers.page.indexAction',
 
