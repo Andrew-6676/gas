@@ -5,9 +5,11 @@
 }
 .job-field{
 	padding-right: 10px;
+	font-weight: bold;
 }
 .job{
 	padding-bottom: 15px;
+	font-size: 13pt;
 }
 .job-title{
 	padding-bottom: 5px;
