@@ -1,6 +1,6 @@
 <?php
 
-class struktAction extends CAction /* GuestBookController */
+class struktAction extends CAction /* pageController */
 {
 	private $css = '';
 	private $js = '';

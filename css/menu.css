@@ -141,6 +141,7 @@ nav {text-align: left;}
         transition: all .2s ease-in-out;
         border-radius: 0 5px 5px 5px;
 }
+    /* при наведении на пункт главного меню показать подменю */
 #main_menu>ul>li:hover>ul {
     opacity: 1;
     visibility: visible;
@@ -177,7 +178,7 @@ nav {text-align: left;}
     /*padding-left: 20px;*/
     background-color: #4d4d4d;
 }
-.sub_menu>li:hover>a {
+.sub_menu>li:hover>a, .sub_menu>li:hover>a>.strong {
     color: #fff;
 }
 
@@ -242,4 +243,10 @@ nav {text-align: left;}
 
 li {
     border-radius: 4px;
+}
+
+/*-------------------------------------------------------------------------*/
+.strong{
+    color: blue;
+    font-weight: bold;
 }

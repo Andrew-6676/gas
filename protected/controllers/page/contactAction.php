@@ -1,12 +1,12 @@
 <?php
 
-class galeryAction extends CAction /* pageController */
+class contactAction extends CAction /* pageController */
 {
     public function run()
 	{
 
 			// рендерим страницу
-		$this->controller->render('galery',
+		$this->controller->render('contact',
 								   array(
 								   		//'data'=>$data,
 								   		//'q_model'=>$q_model,

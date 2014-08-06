@@ -1,6 +1,6 @@
 <?php
 
-class indexAction extends CAction /* GuestBookController */
+class indexAction extends CAction /* pageController */
 {
 	private $css = '';
 	private $js = '';

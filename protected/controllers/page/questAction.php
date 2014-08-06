@@ -1,6 +1,6 @@
 <?php
 
-class questAction extends CAction /* GuestBookController */
+class questAction extends CAction /* pageController */
 {
     public function run()
 	{

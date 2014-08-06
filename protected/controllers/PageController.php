@@ -11,6 +11,8 @@ class PageController extends Controller
             'strukt'=>'application.controllers.page.struktAction',
                 // галерея
             'galery'=>'application.controllers.page.galeryAction',
+                // контакты, берутся из БД
+            'contact'=>'application.controllers.page.contactAction',
                 // сюда будут попадать по адресу /page?<страница>, <страница> будет загружена из БД
             'index'=>'application.controllers.page.indexAction',
 

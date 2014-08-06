@@ -30,7 +30,7 @@
 					  'submenuOptions'=>array('id'=>'sub_sub_1_2', 'class'=>'sub_sub_menu'),
 					  'items'=>$sub_sub_1_2,
 				),
-				array('label'=>'Контакты', 'url'=>array('/page?contact')),
+				array('label'=>'<span class="strong">Контакты</span>', 'url'=>array('/page/contact')),
 				array('label'=>'История', 'url'=>array('/page?history')),
 				array('label'=>'Галерея', 'url'=>array('/page/galery')),
 	);
@@ -85,6 +85,7 @@
 		// главное меню + вывод меню
 	$this->widget('zii.widgets.CMenu',array(
 				'htmlOptions'=>array('id'=>'m_menu'),
+				'encodeLabel'=>false,
                 'items'=>array(
                     	array('label'=>'Главная', 'url'=>array('/site/index'),
 							  	'itemOptions'=>array('id'=>'m_1'),
