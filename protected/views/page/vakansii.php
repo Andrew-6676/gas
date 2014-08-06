@@ -18,7 +18,7 @@ $this->addCss('page/page.css');
 
 	<?php
 		foreach($v_model as $values){
-			echo $values->v_date.'<br>';
+			echo $values->pay.'<br>';
 			echo $values->name.'<br>';
 			echo $values->text.'<br>';
 		}
