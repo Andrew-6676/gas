@@ -44,7 +44,10 @@
 
 					<div class='slogan'>БЕЗАВАРИЙНОЕ И БЕСПЕРЕБОЙНОЕ ОБЕСПЕЧЕНИЕ ГАЗОМ ПОТРЕБИТЕЛЕЙ</div>
 					<!-- <div class='search'> -->
-						<input id='search_input' type='text' placeholder='Поиск'>
+					<form name='search' method='GET' action='<?php echo Yii::app()->createUrl("/site/search") ;?>' >
+						<input name='str' id='search_input' type='text' placeholder='Поиск'>
+						<input type="submit" style='display:none'>
+					</form>
 					<!-- </div> -->
 				</div>
 			</div>    <!-- end logo_wrapper -->
@@ -67,11 +70,6 @@
 					?>
 				</nav>  <!-- #main menu  -->
 			</div>
-
-
-
-
-
 
 
 			<div id='breadcrumbs'>
