@@ -11,7 +11,6 @@
 	font-weight: bold;
 	background: #B0E6F8;
 }
-.contact-table tr:hover tr{
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+.contact-table tr:hover td{
+	background: #DAE9EF;
 }
