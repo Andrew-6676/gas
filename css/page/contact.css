@@ -2,11 +2,13 @@
 .contact-table td{
 	padding: 10px;
 	text-align: center;
+	background: yellow;
+}
+
+.secondName{
+	background: red;
 }
 .boss{
 	font-weight: bold;
 	background: blue;
-}
-.secondName{
-	background: red;
 }
