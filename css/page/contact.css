@@ -12,7 +12,7 @@
 	background: #B0E6F8;
 }
 .contact-table tr{
-	
+	border: 1px solid white;
 }
 .contact-table tr:hover{
 	border: 1px solid black;
