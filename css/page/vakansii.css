@@ -27,4 +27,8 @@
 	background-color: rgb(218, 230, 255);
     cursor: pointer;
 }
+.no-job{
+	padding: 50px;
+	font-size: 16pt;
+	text-align: center;
 }
