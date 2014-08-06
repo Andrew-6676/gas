@@ -9,3 +9,10 @@
 .job{
 	padding-bottom: 15px;
 }
+.job-title{
+	padding-bottom: 5px;
+}
+.job-title-text{
+	color: #0A86FF;
+	font-weight: bold;
+}
