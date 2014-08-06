@@ -21,10 +21,10 @@ $this->addCss('page/contact.css');
 		<?php
 		foreach($q_model as $values){
 			?>
-			<tr><td><?php=$values->otdel;?></td>
-				<td><?php=$values->dolzn;?></td>
-				<td><?php=$values->fio;?></td>
-				<td><?php=$values->tel;?></td>
+			<tr><td><?php echo $values->otdel;?></td>
+				<td><?php echo $values->dolzn;?></td>
+				<td><?php echo$values->fio;?></td>
+				<td><?php echo $values->tel;?></td>
 			</tr>
 		<?php }
 		?>
