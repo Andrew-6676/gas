@@ -1,10 +1,9 @@
 <?php
 $this->breadcrumbs = array(
 			//'Djghjc'=>array('site/page/'),
-			'Контакты',
+			'Вакансии',
 		);
 $this->addCss('page/page.css');
-$this->addCss('page/contact.css');
 
 /*print_r($q_model);*/
 
@@ -17,11 +16,11 @@ $this->addCss('page/contact.css');
 
 	<div class="border">
 
-	<?php
+	<!--?php
 		foreach($q_model as $values){
 			$values->name.'<br>';
 		}
-	?>
+	?-->
 
 	</div>
 
