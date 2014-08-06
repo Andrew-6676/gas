@@ -1,4 +1,12 @@
 /*view page contact */
 .contact-table td{
 	padding: 0 10px;
+	text-align: center;
+}
+.boss{
+	font-weight: bold;
+	background: blue;
+}
+.secondName{
+	background: red;
 }

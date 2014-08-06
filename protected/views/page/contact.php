@@ -27,10 +27,10 @@ $this->addCss('page/contact.css');
 		<?php
 		foreach($q_model as $values){
 			?>
-			<tr><td><?php echo $values->otdel;?></td>
-				<td><?php echo $values->dolzn;?></td>
-				<td><?php echo$values->fio;?></td>
-				<td><?php echo $values->tel;?></td>
+			<tr><td <? if($values->sort==0){echo "class=\"boss\"";}?>><?php echo $values->otdel;?></td>
+				<td <? if($values->sort==0){echo "class=\"boss\"";}?>><?php echo $values->dolzn;?></td>
+				<td class="secondName" <? if($values->sort==0){echo "class=\"boss\"";}?>><?php echo$values->fio;?></td>
+				<td <? if($values->sort==0){echo "class=\"boss\"";}?>><?php echo $values->tel;?></td>
 			</tr>
 		<?php }
 		?>
