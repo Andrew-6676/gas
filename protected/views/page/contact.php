@@ -17,7 +17,7 @@ $this->addCss('page/contact.css');
 
 	<div class="border">
 
-	<table>	
+	<table class="contact-table">	
 	<colgroup>
 		<col style="width:250px"></col>
 		<col style="width:400px;"></col>
