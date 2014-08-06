@@ -18,6 +18,12 @@ $this->addCss('page/contact.css');
 	<div class="border">
 
 	<table>	
+	<colgroup>
+		<col style="width:100px"></col>
+		<col></col>
+		<col></col>
+		<col></col>
+	</colgroup>
 		<?php
 		foreach($q_model as $values){
 			?>
