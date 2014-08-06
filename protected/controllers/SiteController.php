@@ -8,6 +8,7 @@ class SiteController extends Controller
             'index'=>'application.controllers.site.indexAction',
             'mail'=>'application.controllers.site.mailAction',
             'login'=>'application.controllers.site.loginAction',
+            'search'=>'application.controllers.site.searchAction',
             'logout'=>'application.controllers.site.logoutAction',
         );
     }

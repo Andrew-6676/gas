@@ -16,11 +16,11 @@
 if (Yii::app()->user->id < 0):
 ?>
 
-<?php if (key($_GET)!=''): ?>
-	<div class='edit_button'>
-			<a href='<?php echo Yii::app()->createURL('editor/index/page').'/'.key($_GET); ?>' id='edit'>Изменить</a>
-	</div>
-<?php endif; ?>
+	<?php if (key($_GET)!=''): ?>
+		<div class='edit_button'>
+				<a href='<?php echo Yii::app()->createURL('editor/index/page').'/'.key($_GET); ?>' id='edit'>Изменить</a>
+		</div>
+	<?php endif; ?>
 
 <?php endif; ?>
 

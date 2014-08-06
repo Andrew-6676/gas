@@ -1,6 +1,6 @@
 <?php
 
-class mailAction extends CAction /* GuestBookController */
+class mailAction extends CAction /* SiteController */
 {
 
     public function run()

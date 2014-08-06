@@ -1,6 +1,6 @@
 <?php
 
-class IndexAction extends CAction /* GuestBookController */
+class IndexAction extends CAction /* SiteController */
 {
 
     public function run()
