@@ -88,6 +88,8 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		'captcha'=>array('guest'=>true,'users'=>true),
+		'galery_syspath' => '/var/www/gas/public/galery/',
+		'galery_httppath' => '/public/galery/',
 		// this is used in contact page
 		'adminEmail'=>'Andrew@vitebsk.oblgas.by',
 		'adminFIO' => 'Шавнёв А.Л.',

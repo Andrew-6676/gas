@@ -10,6 +10,7 @@
 		<?php
 			$mess = preg_replace('/<user>/i', Yii::app()->user->name, $this->mess[$error['code']]);
 			echo $mess;
+			//echo Yii::app()->request->urlReferrer;
 		?>
 	</div>
 </div>

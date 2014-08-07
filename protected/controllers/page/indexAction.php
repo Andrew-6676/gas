@@ -25,6 +25,7 @@ class indexAction extends CAction /* pageController */
 				$data = $this->getPageFromDB(key($_GET));
 			} else {	// если не нашлось - пытаемся выполнить функцию
 				$data = '(_._)';
+				throw new CHttpException(404, key($_GET));
 			}
 		}
 			// рендерим страницу
