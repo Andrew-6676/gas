@@ -6,11 +6,11 @@
 	$this->addCss('page/page.css');
 	$this->addCss('site/search.css');
 
-	Utils::print_r($search_results,false);
+	//Utils::print_r($search_results,false);
 
 ?>
  <div class='page'>
-	<?php if (!$search_results['err']): ?>
+	<?php if (!$search_results['err']or!$search_results['pages']): ?>
 		<h1>Результаты поиска</h1>
 		<h3>(искомая строка <span><?php echo trim($search_results['search_text']);?></span>)</h3>
 
