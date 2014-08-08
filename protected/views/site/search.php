@@ -6,9 +6,9 @@
 	$this->addCss('page/page.css');
 	$this->addCss('site/search.css');
 
-	//print_r($search_results);
+	Utils::print_r($search_results,false);
 ?>
-<div class='page'>
+<!-- <div class='page'>
 	<?php if (!$search_results['err']): ?>
 		<h1>Результаты поиска</h1>
 		<h3>(искомая строка <span><?php echo trim($search_results['search_text']);?></span>)</h3>
@@ -36,3 +36,4 @@
 			</h1>
 	<?php endif; ?>
 </div>
+ -->

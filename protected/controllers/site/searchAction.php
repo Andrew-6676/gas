@@ -5,13 +5,22 @@ class SearchAction extends CAction /* SiteController */
 
     public function run($str='')
 	{
-		if (trim($str=='')) {
+		$search_r=Search::model()->findAll('active=1');
+		$search_results=array();
+		foreach ($search_r as $value) {
+			$search_results[]=$value->table;
+		}
+
+
+
+		if (trim($str)=='')) {
 			$search_results = array(
 				'err'=>'неправильная строка для поиска!',
 			);
 
 		} else {
-			$search_results = array(
+			
+			/*$search_results = array(
 				'err'=>false,
 				'search_text'=>$str,
 				'pages'=>array(
@@ -36,7 +45,7 @@ class SearchAction extends CAction /* SiteController */
 								'href'=>'/page/vakansii',
 								'text'=>'Должность: Менеджер по продажам автозапчастей  Заработная плата: 3 500 000 – 8 000 000 Описание: Требования...'),
 				)
-			);
+			);*/
 		}
 
 		$this->controller->render('search', array('search_results'=>$search_results));
