@@ -42,17 +42,13 @@ class SearchAction extends CAction /* SiteController */
 
 		}
 
-		if(!$search_results['pages']){
-			$search_results = array(
-				'err'=>'поиск результата не дал!',
-			);
-		}
-		if (trim($str)=='') {
-			$search_results = array(
-				'err'=>'неправильная строка для поиска!',
-			);
 
+		if (trim($str)=='') {
+			$search_results['err']='неправильная строка для поиска!';
 		} 
+		if(!$search_results['pages']){
+			$search_results['err']='поиск результата не дал!';
+		}
 
 		/*
 		else {
