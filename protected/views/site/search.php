@@ -8,7 +8,7 @@
 
 	Utils::print_r($search_results,false);
 
-/*
+?>
  <div class='page'>
 	<?php if (!$search_results['err']): ?>
 		<h1>Результаты поиска</h1>
@@ -37,4 +37,3 @@
 			</h1>
 	<?php endif; ?>
 </div>
-*/
