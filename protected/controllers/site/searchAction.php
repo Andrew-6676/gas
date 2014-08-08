@@ -13,7 +13,7 @@ class SearchAction extends CAction /* SiteController */
 
 
 
-		if (trim($str)=='')) {
+		if (trim($str)=='') {
 			$search_results = array(
 				'err'=>'неправильная строка для поиска!',
 			);
