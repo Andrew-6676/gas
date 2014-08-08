@@ -47,9 +47,16 @@ class SearchAction extends CAction /* SiteController */
 				'err'=>'неправильная строка для поиска!',
 			);
 
-		} else {
+		} 
+		if(count($search_results['pages'])==0){
+			$search_results = array(
+				'err'=>'поиск результата не дал!',
+			);
+		}
+		/*
+		else {
 			
-			/*$search_results = array(
+			$search_results = array(
 				'err'=>false,
 				'search_text'=>$str,
 				'pages'=>array(
@@ -74,8 +81,8 @@ class SearchAction extends CAction /* SiteController */
 								'href'=>'/page/vakansii',
 								'text'=>'Должность: Менеджер по продажам автозапчастей  Заработная плата: 3 500 000 – 8 000 000 Описание: Требования...'),
 				)
-			);*/
-		}
+			);
+		}*/
 
 		$this->controller->render('search', array('search_results'=>$search_results));
 	}
