@@ -4,12 +4,37 @@ class SearchAction extends CAction /* SiteController */
 {
 
     public function run($str='')
-	{
+	{	
+		$connection = Yii::app()->db;
 		$search_r=Search::model()->findAll('active=1');
 		$search_results=array();
 		$search_results['err']=false;
-		foreach ($search_r as $value) {
-			$search_results[]=$value->table;
+		$search_results['search_text']=trim($str);
+		$search_results['pages']=array();
+
+		foreach ($search_r as $page) {
+			//$search_results[]=$page->table;
+			$fields_search=explode(';', $page->fields);
+
+			$str_field='';
+			foreach ($fields_search as $fields){
+				if(trim($str_field)==''){
+					$str_field="`".$fields."` LIKE '%".trim($str)."%' ";
+				}else{
+					$str_field.=" or `".$fields."` LIKE '%".trim($str)."%' ";
+				}
+			}
+
+			$sql="SELECT * FROM `".$page->table."` WHERE ($str_field)";
+				//"SELECT *  FROM `page` WHERE `name` LIKE 'metanstore' AND (`html` LIKE '%".trim($str)."%' or 'keywords' like '%".trim($str)."%' or 'description' like '%".trim($trim)."%')"
+			$res = $connection->createCommand($sql)->queryAll();
+
+			if($res){
+					$search_results['pages'][]=array('pagename'=>$res['name_ru'],'href'=>'/page'+$res['url'],'text'=>'');
+			}
+
+
+
 		}
 
 
