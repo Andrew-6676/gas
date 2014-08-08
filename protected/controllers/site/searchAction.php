@@ -7,6 +7,7 @@ class SearchAction extends CAction /* SiteController */
 	{
 		$search_r=Search::model()->findAll('active=1');
 		$search_results=array();
+		$search_results['err']=false;
 		foreach ($search_r as $value) {
 			$search_results[]=$value->table;
 		}
