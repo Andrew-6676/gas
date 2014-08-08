@@ -9,16 +9,16 @@ class SearchAction extends CAction /* SiteController */
 		
 		$search_results=array();
 		$search_results['err']=false;
-		$search_results['search_text']=trim($str);
+		$search_results['search_text']=trim($str);/*строка для поиска*/
 		$search_results['pages']=array();
-		$search_r=Search::model()->findAll('active=1');
+		$search_r=Search::model()->findAll('active=1');/*поиск по указанным таблицам*/
 
-		foreach ($search_r as $page) {
+		foreach ($search_r as $page) {/*перебираем все таблицы*/
 			//$search_results[]=$page->table;
-			$fields_search=explode(';', $page->fields);
+			$fields_search=explode(';', $page->fields);/*разбиваем поля на массив, чтобы искать по всем полям*/
 
 			$str_field='';
-			foreach ($fields_search as $fields){
+			foreach ($fields_search as $fields){/*формируем строку для поиска по всем полям*/
 				if(trim($str_field)==''){
 					$str_field="`".$fields."` LIKE '%".trim($str)."%' ";
 				}else{
@@ -28,9 +28,9 @@ class SearchAction extends CAction /* SiteController */
 
 			$sql="SELECT * FROM `".$page->table."` WHERE ($str_field)";
 				//"SELECT *  FROM `page` WHERE `name` LIKE 'metanstore' AND (`html` LIKE '%".trim($str)."%' or 'keywords' like '%".trim($str)."%' or 'description' like '%".trim($trim)."%')"
-			$res = $connection->createCommand($sql)->query();
+			$res = $connection->createCommand($sql)->query();/*поиск*/
 
-			if($res){
+			if($res){/*возвращаем результат, если он есть*/
 				foreach ($res as $res_search) {
 					$search_results['pages'][]=array('pagename'=>$res_search['name_ru'],'href'=>'/page'.$res_search['url'],'text'=>'');
 				}
@@ -46,7 +46,7 @@ class SearchAction extends CAction /* SiteController */
 		if (trim($str)=='') {
 			$search_results['err']='неправильная строка для поиска!';
 		} 
-		if(!$search_results['pages']){
+		if(!$search_results['pages']){/*если во время поиска ничего не появилось*/
 			$search_results['err']='поиск результата не дал!';
 		}
 
