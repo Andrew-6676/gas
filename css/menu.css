@@ -38,7 +38,7 @@
 /** ------------ MAIN MENU --------------------*/
 nav {text-align: left;}
 #main_menu {
-        z-index: 1000;
+        z-index: 1000000;
         /*font-family: gothic, sans-serif;*/
         /*font-family: 'Poiret One', gothic, sans-serif;*/
         font-family:  Verdana;
@@ -119,7 +119,7 @@ nav {text-align: left;}
 }
 /*-----------------------sub menu----------------***/
 .sub_menu {
-        z-index: 888;
+        z-index: 1000;
         margin: 20px;
         /*padding-top: 60px;*/
         /*display: block;*/
@@ -199,7 +199,7 @@ nav {text-align: left;}
         /*display: block;*/
         margin-left: 200px;
         /*margin: 0 -3px;*/
-        list-style: disc inside none;
+        list-style: square inside none;
         padding: 5px 10px 5px 10px;
         /*display: none;*/
         opacity: 0;
@@ -218,6 +218,7 @@ nav {text-align: left;}
 }
 
 .sub_sub_menu>li {
+    /*list-style-type: square;*/
     white-space: nowrap;
     padding: 0 20px 0 10px;
 }
