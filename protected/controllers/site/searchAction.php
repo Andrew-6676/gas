@@ -6,11 +6,12 @@ class SearchAction extends CAction /* SiteController */
     public function run($str='')
 	{	
 		$connection = Yii::app()->db;
-		$search_r=Search::model()->findAll('active=1');
+		
 		$search_results=array();
 		$search_results['err']=false;
 		$search_results['search_text']=trim($str);
 		$search_results['pages']=array();
+		$search_r=Search::model()->findAll('active=1');
 
 		foreach ($search_r as $page) {
 			//$search_results[]=$page->table;
