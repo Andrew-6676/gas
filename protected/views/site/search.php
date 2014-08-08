@@ -10,7 +10,7 @@
 
 ?>
  <div class='page'>
-	<?php if (!$search_results['err']or!$search_results['pages']): ?>
+	<?php if (!$search_results['err']): ?>
 		<h1>Результаты поиска</h1>
 		<h3>(искомая строка <span><?php echo trim($search_results['search_text']);?></span>)</h3>
 
