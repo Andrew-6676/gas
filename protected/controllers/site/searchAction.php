@@ -30,7 +30,7 @@ class SearchAction extends CAction /* SiteController */
 			$res = $connection->createCommand($sql)->query();
 
 			if($res){
-				foreach ($variable as $res_search) {
+				foreach ($res as $res_search) {
 					$search_results['pages'][]=array('pagename'=>$res_search['name_ru'],'href'=>'/page'.$res_search['url'],'text'=>'');
 				}
 
