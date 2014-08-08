@@ -48,7 +48,7 @@ class SearchAction extends CAction /* SiteController */
 			);
 
 		} 
-		if(count($search_results['pages'])==0){
+		if(sizeof($search_results['pages'])==0){
 			$search_results = array(
 				'err'=>'поиск результата не дал!',
 			);
