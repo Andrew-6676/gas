@@ -12,7 +12,12 @@ class SearchAction extends CAction /* SiteController */
 		$search_results['search_text']=trim($str);
 		$search_results['pages']=array();
 		$search_r=Search::model()->findAll('active=1');
-
+		if(!$search_results['pages']){
+			$search_results = array(
+				'err'=>'поиск результата не дал!',
+			);
+		}
+		
 		foreach ($search_r as $page) {
 			//$search_results[]=$page->table;
 			$fields_search=explode(';', $page->fields);
