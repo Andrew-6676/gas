@@ -27,7 +27,7 @@ class SearchAction extends CAction /* SiteController */
 
 			$sql="SELECT * FROM `".$page->table."` WHERE ($str_field)";
 				//"SELECT *  FROM `page` WHERE `name` LIKE 'metanstore' AND (`html` LIKE '%".trim($str)."%' or 'keywords' like '%".trim($str)."%' or 'description' like '%".trim($trim)."%')"
-			$res = $connection->createCommand($sql)->queryAll();
+			$res = $connection->createCommand($sql)->query();
 
 			if($res){
 					$search_results['pages'][]=array('pagename'=>$res['name_ru'],'href'=>'/page'+$res['url'],'text'=>'');
