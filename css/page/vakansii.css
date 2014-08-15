@@ -1,12 +1,4 @@
 /*view page vakansii*/
-.job-name,.job-pay{
-	display: inline-block;
-	width: 49%;
-}
-.job-field{
-	padding-right: 10px;
-	font-weight: bold;
-}
 .job{
 	font-size: 13pt;
 	border-radius: 5px;
@@ -16,6 +8,28 @@
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+.job-field{
+
+}
+.job-caption{
+	display: inline-block;
+	width: 250px;
+	font-weight: bold;
+	vertical-align: top;
+}
+.job-info{
+	vertical-align: top;
+}
+/*
+.job-name,.job-pay{
+	display: inline-block;
+	width: 49%;
+}
+.job-field{
+	padding-right: 10px;
+	font-weight: bold;
+}
+
 .job-title{
 	padding-bottom: 5px;
 }
@@ -26,7 +40,7 @@
 .job:hover{
 	background-color: rgb(218, 230, 255);
     cursor: pointer;
-}
+}*/
 .no-job{
 	padding: 50px;
 	font-size: 16pt;
