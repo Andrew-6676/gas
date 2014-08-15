@@ -54,7 +54,7 @@ $this->addCss('page/vakansii.css');
 							<div class="job-caption">Опыт работы</div>
 							<div class="job-info"> <?php echo $values->experience; ?></div>
 						</div><?}?>
-						<?php if($values->pay!=''){?><div class="pay">
+						<?php if($values->pay!=''){?><div class="job-field">
 							<div class="job-caption">Заработная плата</div>
 							<div class="job-info"> <?php echo $values->pay; ?></div>
 						</div><?}?>

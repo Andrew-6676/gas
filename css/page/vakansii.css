@@ -4,9 +4,12 @@
 	border-radius: 5px;
 	padding: 10px;
 	margin-bottom: 20px;
-	/*background: rgba(242, 246, 255, 1);*/
+	background: rgba(237, 251, 255, 1);
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+.job:hover{
+	background: #DAE9EF;
 }
 .job-field{
 	padding-bottom: 10px;
@@ -22,27 +25,6 @@
 	vertical-align: top;
 	width: 920px;
 }
-/*
-.job-name,.job-pay{
-	display: inline-block;
-	width: 49%;
-}
-.job-field{
-	padding-right: 10px;
-	font-weight: bold;
-}
-
-.job-title{
-	padding-bottom: 5px;
-}
-.job-title-text{
-	color: #0A86FF;
-	font-weight: bold;
-}
-.job:hover{
-	background-color: rgb(218, 230, 255);
-    cursor: pointer;
-}*/
 .no-job{
 	padding: 50px;
 	font-size: 16pt;
