@@ -34,18 +34,17 @@ $this->addCss('page/vakansii.css');
 					</div>
 					</div-->
 					<div class="job">
-						<div class="job-name"><?php echo $values->name; ?></div>
-						<?php if($values->education!=''){?><div class="education"><?php echo $values->education; ?></div><?}?>
-						<?php if($values->conditions!=''){?><div class="conditions"><?php echo $values->conditions; ?></div><?}?>
-						<?php if($values->duties!=''){?><div class="duties"><?php echo $values->duties; ?></div><?}?>
-						<?php if($values->experience!=''){?><div class="experience"><?php echo $values->experience; ?></div><?}?>
-						<?php if($values->pay!=''){?><div class="pay"><?php echo $values->pay; ?></div><?}?>
-						<?php if($values->employment!=''){?><div class="employment"><?php echo $values->employment; ?></div><?}?>
-						<?php if($values->more!=''){?><div class="more"><?php echo $values->more; ?></div><?}?>
-						<?php if($values->contactname!=''){?><div class="contactname"><?php echo $values->contactname; ?></div><?}?>
-						<?php if($values->contactphone!=''){?><div class="contactphone"><?php echo $values->contactphone; ?></div><?}?>
-						<?php if($values->contactname!=''){?><div class="contactname"><?php echo $values->contactname; ?></div><?}?>
-						<?php if($values->contactmail!=''){?><div class="contactmail"><?php echo $values->contactmail; ?></div><?}?>
+						<div class="job-name">Вакансия: <?php echo $values->name; ?></div>
+						<?php if($values->education!=''){?><div class="education">Образование: <?php echo $values->education; ?></div><?}?>
+						<?php if($values->conditions!=''){?><div class="conditions">Условия работы: <?php echo $values->conditions; ?></div><?}?>
+						<?php if($values->duties!=''){?><div class="duties">Обязанности: <?php echo $values->duties; ?></div><?}?>
+						<?php if($values->experience!=''){?><div class="experience">Опыт работы: <?php echo $values->experience; ?></div><?}?>
+						<?php if($values->pay!=''){?><div class="pay">Заработная плата: <?php echo $values->pay; ?></div><?}?>
+						<?php if($values->employment!=''){?><div class="employment">Занятость: <?php echo $values->employment; ?></div><?}?>
+						<?php if($values->more!=''){?><div class="more">Другая информация: <?php echo $values->more; ?></div><?}?>
+						<?php if($values->contactname!=''){?><div class="contactname">Контактное лицо: <?php echo $values->contactname; ?></div><?}?>
+						<?php if($values->contactphone!=''){?><div class="contactphone">Телефон: <?php echo $values->contactphone; ?></div><?}?>
+						<?php if($values->contactmail!=''){?><div class="contactmail">e-mail: <?php echo $values->contactmail; ?></div><?}?>
 					</div>
 				<?php }
 		}else{
