@@ -28,7 +28,7 @@ class Vakansii extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('v_date, name, text', 'required'),
+			array('v_date, name', 'required'),
 			array('visible', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>100),
 			// The following rule is used by search().
