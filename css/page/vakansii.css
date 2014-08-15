@@ -9,7 +9,7 @@
 	margin-bottom: 5px;
 }
 .job-field{
-
+	padding-bottom: 10px;
 }
 .job-caption{
 	display: inline-block;
@@ -20,6 +20,7 @@
 .job-info{
 	display: inline-block;
 	vertical-align: top;
+	width: 920px;
 }
 /*
 .job-name,.job-pay{
