@@ -33,6 +33,20 @@ $this->addCss('page/vakansii.css');
 						<span class="job-field">Описание:</span> <?php echo $values->text; ?>
 					</div>
 					</div-->
+					<div class="job">
+						<div class="job-name"><?php echo $values->name; ?></div>
+						<?php if($values->education!=''){?><div class="education"><?php echo $values->education; ?></div><?}?>
+						<?php if($values->conditions!=''){?><div class="conditions"><?php echo $values->conditions; ?></div><?}?>
+						<?php if($values->duties!=''){?><div class="duties"><?php echo $values->duties; ?></div><?}?>
+						<?php if($values->experience!=''){?><div class="experience"><?php echo $values->experience; ?></div><?}?>
+						<?php if($values->pay!=''){?><div class="pay"><?php echo $values->pay; ?></div><?}?>
+						<?php if($values->employment!=''){?><div class="employment"><?php echo $values->employment; ?></div><?}?>
+						<?php if($values->more!=''){?><div class="more"><?php echo $values->more; ?></div><?}?>
+						<?php if($values->contactname!=''){?><div class="contactname"><?php echo $values->contactname; ?></div><?}?>
+						<?php if($values->contactphone!=''){?><div class="contactphone"><?php echo $values->contactphone; ?></div><?}?>
+						<?php if($values->contactname!=''){?><div class="contactname"><?php echo $values->contactname; ?></div><?}?>
+						<?php if($values->contactmail!=''){?><div class="contactmail"><?php echo $values->contactmail; ?></div><?}?>
+					</div>
 				<?php }
 		}else{
 		?>
