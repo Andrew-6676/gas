@@ -20,7 +20,7 @@ $this->addCss('page/vakansii.css');
 		if(count($v_model)>=1){
 				foreach($v_model as $values){
 					?>
-					<div class="job">
+					<!--div class="job">
 					<div class="job-title">
 						<div class="job-name">
 							<span class="job-field">Должность:</span><span class="job-title-text"> <?php echo $values->name; ?></span>
@@ -32,7 +32,7 @@ $this->addCss('page/vakansii.css');
 					<div class="job-description">
 						<span class="job-field">Описание:</span> <?php echo $values->text; ?>
 					</div>
-					</div>
+					</div-->
 				<?php }
 		}else{
 		?>
