@@ -7,7 +7,6 @@
  * @property integer $id
  * @property string $v_date
  * @property string $name
- * @property string $text
  * @property integer $visible
  */
 class Vakansii extends CActiveRecord
