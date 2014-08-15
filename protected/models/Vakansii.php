@@ -33,7 +33,7 @@ class Vakansii extends CActiveRecord
 			array('name', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, v_date, name, text, visible', 'safe', 'on'=>'search'),
+			array('id, v_date, name, visible', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,7 +57,6 @@ class Vakansii extends CActiveRecord
 			'id' => 'ID',
 			'v_date' => 'V Date',
 			'name' => 'Name',
-			'text' => 'Text',
 			'visible' => 'Visible',
 		);
 	}
@@ -83,7 +82,7 @@ class Vakansii extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('v_date',$this->v_date,true);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('text',$this->text,true);
+		/*$criteria->compare('text',$this->text,true);*/
 		$criteria->compare('visible',$this->visible);
 
 		return new CActiveDataProvider($this, array(
