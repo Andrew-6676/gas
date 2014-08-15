@@ -13,7 +13,7 @@ $this->addCss('page/vakansii.css');
 ?>
 
 <div class='page'>
-	<h1>Вакансии</h1>
+	<h1>Вакансии 2</h1>
 
 	<div class="border">
 		<?php
