@@ -1,6 +1,6 @@
 <?php
 
-class IndexAction extends CAction /* GuestBookController */
+class IndexAction extends CAction /* EditorController */
 {
 
     public function run($page='')
@@ -8,12 +8,14 @@ class IndexAction extends CAction /* GuestBookController */
 
 		if (Yii::app()->request->isAjaxRequest) {
 			// if (isset($_POST[''])) {
-
+			// $result = true;
 			// }
 
 			// Utils::print_r(	key($_POST));
-			// $page = Page::model()->
-			$result = Page::model()->updateByPk();
+			$page_model = Page::model()->find('name="tmp"');
+			//Utils::print_r($page_model);
+			$page_model->html = $_POST['text'];
+			$result = $page_model->update();
 			if($result)	{
 				echo '<span style="color: blue">Страница успешно сохранена!</span> <small><i>'.date('H:i:s',time()).'</i></small>';
 			} else {
@@ -22,6 +24,10 @@ class IndexAction extends CAction /* GuestBookController */
 
 			Yii::app()->end();
 		}
+
+
+/*---------------------------------------*/
+
 		// if ($page != '') {
 			$data = Page::model()->find('name=:page', array(':page'=>$page));
 		// } else {

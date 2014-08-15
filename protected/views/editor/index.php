@@ -14,7 +14,7 @@
 							array(
 						        'type' => 'POST',
 						        // 'data' => array('text'=>'sfasdfasdfasdfasdf'),
-						        'data' => 'js:{"text":$("#editor").text()}',
+						        'data' => 'js:{"text":$("iframe").contents().find("body").html()}',
 						        'success'=>'js:function(data){
 						        		//alert(data);
 						        	$("#result").html(data);
@@ -24,7 +24,10 @@
 						        		//alert("Ошибка сохранения! Программеру в бубен!");
 
 						        	}
-						        }'
+						        }',
+						        'error' => 'js:function(data){
+						        	alert(JSON.stringify(data));
+						        }',
 						    ),
 					        array('class'=>'button')
 			        );
@@ -38,7 +41,7 @@
 
 <div class='editor_wr'>
 	<?php if ($data) { ?>
-		<textarea id='editor' class="ckeditor" name="editor1"><?php echo $data->html; ?></textarea>
+		<textarea id='editor' class="editor" name="editor"><?php echo $data->html; ?></textarea>
 	<?php } else {
 		echo 'Ошибка';
 
@@ -55,3 +58,5 @@
 
 
 </div>
+
+<script type='text/javascript'>CKEDITOR.replace( 'editor' );</script>
