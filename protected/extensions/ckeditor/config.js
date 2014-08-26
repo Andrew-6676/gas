@@ -47,7 +47,7 @@ CKEDITOR.editorConfig = function( config ) {
 	//config.filebrowserUploadUrl = '../../../editor/upload';
 
 		// настройка просмотра и загрузки файлов с помощью KCFinder
-	var kc_path = 'http://192.168.152.250';
+	var kc_path = window.location.hostname;
 
 	config.filebrowserBrowseUrl 		= kc_path+'/kcfinder/browse.php?type=files';
   	config.filebrowserImageBrowseUrl	= kc_path+'/kcfinder/browse.php?type=images';
