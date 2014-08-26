@@ -4,17 +4,16 @@
 ?>
 
 <div class='control_panel'>
-	control_panel
-	<button>Предпросмотр</button>
-	<button>Сохранить</button>
+	<span>Панель управления</span>
+	<!-- button>Предпросмотр</button -->
 	<?php
 		echo	CHtml::ajaxButton(
-							'Отправить',
+							'Сохранить',
 							Yii::app()->createURL('/editor/index'),
 							array(
 						        'type' => 'POST',
 						        // 'data' => array('text'=>'sfasdfasdfasdfasdf'),
-						        'data' => 'js:{"text":$("iframe").contents().find("body").html()}',
+						        'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
 						        'success'=>'js:function(data){
 						        		//alert(data);
 						        	$("#result").html(data);
@@ -33,8 +32,9 @@
 			        );
 	?>
 	<button>Удалить</button>
-	<button>Открыть в новой вкладке</button>
+	<!-- button>Открыть в новой вкладке</button -->
 	<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
+	<button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button>
 </div>
 
 <div id='result'></div>

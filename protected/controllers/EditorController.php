@@ -6,7 +6,7 @@ class EditorController extends Controller
     {
         return array(
             'index'=>'application.controllers.editor.indexAction',
-            // 'mail'=>'application.controllers.site.mailAction',
+            'upload'=>'application.controllers.editor.uploadAction',
             // 'login'=>'application.controllers.site.loginAction',
             // 'logout'=>'application.controllers.site.logoutAction',
         );

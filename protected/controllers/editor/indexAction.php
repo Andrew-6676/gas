@@ -12,13 +12,17 @@ class IndexAction extends CAction /* EditorController */
 			// }
 
 			// Utils::print_r(	key($_POST));
-			$page_model = Page::model()->find('name="tmp"');
-			//Utils::print_r($page_model);
+				// загружаем в модель нужную страницу - $_POST['aj_page']
+			$page_model = Page::model()->find('name="'.$_POST['aj_page'].'"');
+			//Utils::print_r($page_model, false);
+				// вносим новый текст
 			$page_model->html = $_POST['text'];
+				// обновляем запись в БД
 			$result = $page_model->update();
+				// если без ошибок, то синииее сообщение
 			if($result)	{
 				echo '<span style="color: blue">Страница успешно сохранена!</span> <small><i>'.date('H:i:s',time()).'</i></small>';
-			} else {
+			} else {	// иначе - красное
 				echo '<span style="color: red">Ошибка сохранения!</span> <small><i>'.date('H:i:s',time()).'</i></small>';
 			}
 

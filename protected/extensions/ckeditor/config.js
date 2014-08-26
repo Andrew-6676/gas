@@ -27,4 +27,52 @@ CKEDITOR.editorConfig = function( config ) {
 		// не рабоает почему -то
 	//config.extraCss = 'body{background:#F0F;text-align:left;font-size:0.8em;}';
 
+
+
+	config.colorButton_enableMore = true,
+  	config.bodyId = 'content',
+	// config.forceSimpleAmpersand = false,
+	// config.fontSize_defaultLabel = '12px',
+	// config.font_defaultLabel = 'Arial',
+	// config.emailProtection = 'encode',
+	// config.contentsLangDirection = 'ltr',
+	config.toolbarLocation = 'top',
+	config.browserContextMenuOnCtrl = false,
+	config.image_previewText = CKEDITOR.tools.repeat('Vitebskgas is the capital of other gas', 50 )
+
+		// включает "показывать блоки" при загрузке редактора
+	config.startupOutlineBlocks = true;
+
+		// путь к контроллеру/экшену который грузит файлы на сервер
+	//config.filebrowserUploadUrl = '../../../editor/upload';
+
+		// настройка просмотра и загрузки файлов с помощью KCFinder
+	var kc_path = 'http://192.168.152.250';
+
+	config.filebrowserBrowseUrl 		= kc_path+'/kcfinder/browse.php?type=files';
+  	config.filebrowserImageBrowseUrl	= kc_path+'/kcfinder/browse.php?type=images';
+  	config.filebrowserFlashBrowseUrl	= kc_path+'/kcfinder/browse.php?type=flash';
+  	config.filebrowserUploadUrl 		= kc_path+'/kcfinder/upload.php?type=files';
+  	config.filebrowserImageUploadUrl 	= kc_path+'/kcfinder/upload.php?type=images';
+  	config.filebrowserFlashUploadUrl	= kc_path+'/kcfinder/upload.php?type=flash';
+
 };
+
+/*------------------------------------------------------------*/
+
+CKEDITOR.on( 'instanceReady', function( ev ) {
+	ev.editor.dataProcessor.writer.selfClosingEnd = '>';
+});
+
+/*------------------------------------------------------------*/
+
+CKEDITOR.on( 'instanceReady', function( ev ) {
+    // Output paragraphs as <p>Text</p>.
+    ev.editor.dataProcessor.writer.setRules( '*', {
+      indent: false,
+      breakBeforeOpen: true,
+      breakAfterOpen: false,
+      breakBeforeClose: false,
+      breakAfterClose: true
+    });
+ });

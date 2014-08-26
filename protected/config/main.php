@@ -87,6 +87,8 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
+		'uploadDir' => Yii::getPathOfAlias('webroot.public'),
+		'uploadURL' => 'http://'.$_SERVER['SERVER_NAME'].'/gas/public',
 		'captcha'=>array('guest'=>true,'users'=>true),
 		'galery_syspath' => '/var/www/gas/public/galery/',
 		'galery_httppath' => '/public/galery/',

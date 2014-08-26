@@ -1,2 +1,6 @@
+js/fliplightbox/demos/*
+js/fliplightbox/*.txt
 protected/config/db*
+protected/runtime/*
 public*
+assets/*

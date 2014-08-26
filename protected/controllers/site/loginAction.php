@@ -24,6 +24,13 @@ class loginAction extends CAction   /*---- SiteController ----*/
 			    	//Yii::app()->session['id_user'] = '';
 			    		// выводим 1, чтобы обновилась страница
 			    	echo '1';
+
+			    	$_SESSION['KCFINDER'] = array();
+					$_SESSION['KCFINDER']['disabled'] = false;
+					$_SESSION['KCFINDER']['uploadURL'] = Yii::app()->params['uploadURL'];
+    				$_SESSION['KCFINDER']['uploadDir'] = Yii::app()->params['uploadDir'];
+
+
 			    } else {
 			    		// если пароль/логин нге правильный - сообщение об ошибке
 			    	echo $model->getError('pass');

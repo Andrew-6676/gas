@@ -1,3 +1,30 @@
+/*--------- общее для всех страниц ---------*/
+.parent {
+     font-weight: bold;
+     font-size: 1.1em;
+   }
+  .child {
+     background: #fff;
+     margin-left: 30px;
+     margin-bottom: 30px;
+     padding: 10px;
+     border: 1px solid silver;
+
+   }
+   .table1 td {
+     border: 1px solid gray;
+     padding:7px;
+     width: 50%;
+   }
+   .table2 {
+      margin-left: 30px;
+      font-style: italic;
+      font-weight: bold;
+   }
+   h2 {
+      cursor: pointer;
+   }
+/*-------------------------------------------------------------------*/
 .edit_button {
     display: none;
     border: 1px solid #595959;

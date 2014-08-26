@@ -1,19 +1,45 @@
 .control_panel {
-	z-index: 900;
+	/*z-index: 1020;*/
 	position: relative;
-	top: -10px;
+	top: -20px;
 	width: 100%;
 	/*height: 20px;*/
-	border: 1px solid #c5c5c5;
+	/*border: 1px solid #c5c5c5;*/
+	background: #ff0;
+	padding: 3px 0;
+}
+.control_panel span {
+	margin-right: 10px;
+	background: #51A4FF;
+	color: #FFF;
+	height: 22px;
+	display: inline-block;
+	font-weight: bold;
+	padding: 2px 5px 0 5px;
 }
 
 .editor_wr {
 	margin-top: 0px;
-	border: 1px solid #c5c5c5;
-	padding: 15px;
+	/*border: 1px solid #c5c5c5;*/
+	margin: 10px;
+	box-shadow: 0 0 30px 0 rgba(0,0,0, 0.7);
 }
 
-.editor_wr textarea {
+/*.editor_wr textarea {
 	width: 100%;
 	height: 700px;
+}*/
+
+#close_button {
+	width: 20px;
+	height: 20px;
+	margin: 3px;
+	float: right;
+	background: url(../../images/del_krest.png) 0% 50% #fff no-repeat;
+	border: 1px solid #8D8888;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#close_button:hover {
+	background: url(../../images/del_krest.png) 100% 50%;
 }

@@ -42,7 +42,7 @@
 			<div class='logo_wrapper'>
 				<div class='top_logo'>
 
-					<div class='slogan'>БЕЗАВАРИЙНОЕ И БЕСПЕРЕБОЙНОЕ ОБЕСПЕЧЕНИЕ ГАЗОМ ПОТРЕБИТЕЛЕЙ</div>
+					<div class='slogan'>БЕЗАВАРИЙНОЕ И БЕСПЕРЕБОЙНОЕ ОБЕСПЕЧЕНИЕ ГАЗОМ ПОТРЕБИТЕЛЕЙ<?php echo ''; ?></div>
 					<!-- <div class='search'> -->
 					<form name='search' method='GET' action='<?php echo Yii::app()->createUrl("/site/search") ;?>' >
 						<input name='str' id='search_input' type='text' placeholder='Поиск'>
