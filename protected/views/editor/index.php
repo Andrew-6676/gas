@@ -3,7 +3,6 @@
 	$this->addJs('editor/editor.js');
 	$this->addJs('../protected/extensions/ckeditor/ckeditor.js');
 ?>
-
 <div class='control_panel'>
 	<span>Панель управления</span>
 	<!-- button>Предпросмотр</button -->
@@ -12,11 +11,14 @@
 							'Сохранить',
 							Yii::app()->createURL('/editor/index'),
 							array(
+								'async' => 'false',
 						        'type' => 'POST',
-						        // 'data' => array('text'=>'sfasdfasdfasdfasdf'),
-						        'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
+						        //'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
+						        'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
+						        //'beforeSend' => 'js:function(){console.log("before_aj");CKEupdate()}',
 						        'success'=>'js:function(data){
-						        		//alert(data);
+						        		//alert("3");
+						        		//console.log("ajax_resp")
 						        	$("#result").html(data);
 						        	if (data==1) {
 
@@ -29,14 +31,14 @@
 						        	alert(JSON.stringify(data));
 						        }',
 						    ),
-					        array('class'=>'button')
+					        array('class'=>'button', 'id'=>'save_btn')
 			        );
 	?>
-	<!-- button>Удалить</button -->
+	<!-- button id='upd_btn'>Удалить</button -->
 	<!-- button>Открыть в новой вкладке</button -->
 	<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
 	<button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button>
-</div>
+</div>	<!--  control_panel -->
 
 <div id='result'></div>
 
@@ -53,11 +55,6 @@
 	// echo $page;
 	// Utils::print_r($data, false);
 ?>
-</div>
-
-<div class='prewiew_wr'>
-
-
-</div>
+</div>  <!-- editor_wr -->
 
 <script type='text/javascript'>CKEDITOR.replace( 'editor' );</script>

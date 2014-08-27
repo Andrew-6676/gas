@@ -22,7 +22,11 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#f00';
 		// Выключаем подсказки названия тэга в строке состояния редактора
 	// config.removePlugins = 'elementspath';
-	config.removePlugins = 'smiley, maximize, preview, spellchecker, about, save, newpage, print, templates, scayt, flash, horizontalrule, iframe, pagebreak, blockquote';
+
+ 	//config.toolbar = 'Full';
+	config.removePlugins = 'save, smiley, maximize, preview, spellchecker, about, newpage, print, templates, scayt, flash, horizontalrule, pagebreak, blockquote';
+		// добавляем плугин
+	config.extraPlugins = 'mediaembed';
 
 		// кодирование кавычек
 	config.entities = false;
@@ -32,7 +36,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 
 	config.colorButton_enableMore = true,
-  	config.bodyId = 'content',
+  	config.bodyId = 'e_content',
 	// config.forceSimpleAmpersand = false,
 	// config.fontSize_defaultLabel = '12px',
 	// config.font_defaultLabel = 'Arial',
@@ -40,7 +44,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.contentsLangDirection = 'ltr',
 	config.toolbarLocation = 'top',
 	config.browserContextMenuOnCtrl = false,
-	config.image_previewText = CKEDITOR.tools.repeat('Vitebskgas is the capital of other gas', 50 )
+	//config.image_previewText = CKEDITOR.tools.repeat('Vitebskgas is the capital of other gas', 50 )
 
 		// включает "показывать блоки" при загрузке редактора
 	config.startupOutlineBlocks = true;
@@ -85,3 +89,5 @@ CKEDITOR.on( 'change', function( ev ) {
 	alert('ch');
 
 });
+
+/*----------------------------------------------------------*/

@@ -103,7 +103,8 @@
 							echo implode(',',$user->getGroups()).']';
 
 							if (Yii::app()->session['id_user'] < 0) {
-								echo '<br>'.CHtml::link('Админка', array('admin/index'));
+								echo '<br>'.CHtml::link('Админка сайта', array('admin/index'));
+								echo '<br>'.CHtml::link('PhpMyAdmin', array('../phpmyadmin'), array('target'=>'_blank'));
 							}
 
 							echo CHtml::ajaxSubmitButton('Выход', Yii::app()->createURL('site/logout'),
