@@ -1,5 +1,6 @@
 <?php
 	$this->addCss('editor/editor.css');
+	$this->addJs('editor/editor.js');
 	$this->addJs('../protected/extensions/ckeditor/ckeditor.js');
 ?>
 

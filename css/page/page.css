@@ -1,11 +1,11 @@
 /*--------- общее для всех страниц ---------*/
-.parent {
+.parent, h2 {
      font-weight: bold;
-     font-size: 1.1em;
+     font-size: 1.2em;
    }
   .child {
      background: #fff;
-     margin-left: 30px;
+     /*margin-left: 30px;*/
      margin-bottom: 30px;
      padding: 10px;
      border: 1px solid silver;
