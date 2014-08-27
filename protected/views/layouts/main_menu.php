@@ -59,7 +59,7 @@
 				array('label'=>'Газификация промышленных и с/х потребителей', 'url'=>array('/page?sh')),
 				array('label'=>'Строительство газопроводов', 'url'=>array('/page?gazoprovod')),
 				array('label'=>'Монтаж (перемонтаж, ремонт) газового оборудования', 'url'=>array('/page?montaz')),
-				array('label'=>'Техниеское обслуживание газового оборудования', 'url'=>array('/page?to_gas')),
+				array('label'=>'Техническое обслуживание газового оборудования', 'url'=>array('/page?to_gas')),
 				array('label'=>'Установка приборов учёта расхода газа', 'url'=>array('/page?pribor_uchet')),
 				array('label'=>'Установка газового оборудования на а/м', 'url'=>array('/page?am_gas')),
 				array('label'=>'Диагностика а/м', 'url'=>array('/page?am_diagnostika')),

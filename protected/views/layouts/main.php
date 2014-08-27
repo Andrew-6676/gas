@@ -97,10 +97,15 @@
 						<div id='login_form' class='logout'>
 						<?php
 							echo 'Вы вошли как ';
-							echo '<span class="name">'.Yii::app()->user->name.'</span> [id=';
+							echo '<span class="name">'.Yii::app()->user->name.'</span><br> [id=';
 								$user = User::model()->findByPk(Yii::app()->session['id_user']);
 							echo Yii::app()->session['id_user'].', gr=';
 							echo implode(',',$user->getGroups()).']';
+
+							if (Yii::app()->session['id_user'] < 0) {
+								echo '<br>'.CHtml::link('Админка', array('admin/index'));
+							}
+
 							echo CHtml::ajaxSubmitButton('Выход', Yii::app()->createURL('site/logout'),
 											array(
 										        'type' => 'POST',

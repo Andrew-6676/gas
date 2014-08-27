@@ -70,6 +70,8 @@ ul, ol {
 }
 h1 {
     text-align: center;
-    color: #f00;
+    color: #fff;
+    padding: 5px;
+    background: #6389EB;
     margin-bottom: 15px;
 }

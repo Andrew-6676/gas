@@ -22,6 +22,8 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#f00';
 		// Выключаем подсказки названия тэга в строке состояния редактора
 	// config.removePlugins = 'elementspath';
+	config.removePlugins = 'smiley, maximize, preview, spellchecker, about, save, newpage, print, templates, scayt, flash, horizontalrule, iframe, pagebreak, blockquote';
+
 		// кодирование кавычек
 	config.entities = false;
 		// не рабоает почему -то
@@ -76,3 +78,10 @@ CKEDITOR.on( 'instanceReady', function( ev ) {
       breakAfterClose: true
     });
  });
+
+/*-----------------------------------------------------------*/
+
+CKEDITOR.on( 'change', function( ev ) {
+	alert('ch');
+
+});

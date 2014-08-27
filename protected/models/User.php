@@ -51,7 +51,7 @@ class User extends CActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'userGroups' => array(self::HAS_MANY, 'UserGroup', 'id_user'),
+            'groups' => array(self::HAS_MANY, 'UserGroup', 'id_user'),
         );
     }
 
@@ -114,7 +114,7 @@ class User extends CActiveRecord
 /*------------------------------------------------------------------------------------------------*/
     public function getGroups() {
         $gr_arr = array('0');
-        $gr = $this->userGroups;
+        $gr = $this->groups;
         foreach ($gr as $val) {
             $gr_arr[] = $val->id_group;
         }

@@ -4,9 +4,9 @@ class SearchAction extends CAction /* SiteController */
 {
 
     public function run($str='')
-	{	
+	{
 		$connection = Yii::app()->db;
-		
+
 		$search_results=array();
 		$search_results['err']=false;
 		$search_results['search_text']=trim($str);/*строка для поиска*/
@@ -32,10 +32,10 @@ class SearchAction extends CAction /* SiteController */
 
 			if($res){/*возвращаем результат, если он есть*/
 				foreach ($res as $res_search) {
-					$search_results['pages'][]=array('pagename'=>$res_search['name_ru'],'href'=>'/page'.$res_search['url'],'text'=>'');
+					$search_results['pages'][]=array('pagename'=>$res_search['name_ru'],'href'=>'/page?'.$res_search['name'],'text'=>'');
 				}
 
-					
+
 			}
 
 
@@ -45,14 +45,14 @@ class SearchAction extends CAction /* SiteController */
 
 		if (trim($str)=='') {
 			$search_results['err']='неправильная строка для поиска!';
-		} 
+		}
 		if(!$search_results['pages']){/*если во время поиска ничего не появилось*/
 			$search_results['err']='поиск результата не дал!';
 		}
 
 		/*
 		else {
-			
+
 			$search_results = array(
 				'err'=>false,
 				'search_text'=>$str,

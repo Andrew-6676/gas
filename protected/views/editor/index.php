@@ -31,7 +31,7 @@
 					        array('class'=>'button')
 			        );
 	?>
-	<button>Удалить</button>
+	<!-- button>Удалить</button -->
 	<!-- button>Открыть в новой вкладке</button -->
 	<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
 	<button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button>

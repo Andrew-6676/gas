@@ -44,6 +44,7 @@ class UserGroup extends CActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'idUser' => array(self::BELONGS_TO, 'User', 'id_user'),
+            'idGroup' => array(self::BELONGS_TO, 'Group', 'id_group'),
         );
     }
 
