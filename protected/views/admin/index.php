@@ -6,13 +6,27 @@
 
  	$users = User::model()->findAll();
 ?>
+<div class='page'>
 
 <h1>
 Админка
 </h1>
 
+<center><h2>Группы</h2></center>
 <div class='border'>
-	<center><h2>Пользователи и группы</h2></center>
+
+<?php
+	$groups = Group::model()->findAll();
+	foreach ($groups as $group) {
+		echo '<b>'.$group->name.'</b> ('.$group->descr.')<br>' ;
+	}
+	echo '<br>+<a href="#">Добавить группу</a>';
+?>
+
+</div>		<!-- border -->
+
+<center><h2>Пользователи и группы</h2></center>
+<div class='border'>
 
 	<?php
 
@@ -23,10 +37,9 @@
 		// Utils::print_r($user->groups, false);
 
 		foreach ($user->groups as $group) {
-			echo '&nbsp&nbsp&nbsp&nbsp&nbsp '.$group->idGroup->name.' ('.$group->idGroup->descr.')';
+			echo '&nbsp&nbsp&nbsp&nbsp&nbsp <u>'.$group->idGroup->name.'</u> ('.$group->idGroup->descr.')';
 			echo '<br>';
 		}
-		echo '<br>';
 		echo '&nbsp&nbsp&nbsp&nbsp&nbsp+ <a href="#">включить в новую группу</a>';
 		echo '<br>';
 		echo '<br>';
@@ -35,20 +48,21 @@
 
 	?>
 
-</div>
+</div>		<!-- border -->
 
+
+<center><h2>Сменить логин/пароль</h2></center>
 <div class='border'>
-<center><h2>Группы</h2></center>
+	<input placeholder='Логин' value='<?php echo Yii::app()->user->name; ?>'>
+	<br><br>
+	<input placeholder='Текущий пароль'>
+	<br>
+	<input placeholder='Новый пароль'>
+	<br>
+	<input placeholder='Новый пароль повтор'>
+	<br>
+	<button>Сохранить</button>
+</div>		<!-- border -->
 
-<?php
-	$groups = Group::model()->findAll();
-	foreach ($groups as $group) {
-		echo '<b>'.$group->name.'</b> ('.$group->descr.')<br>' ;
-	}
-	echo '<br>+<a href="#">Добавить группу</a>';
-?>
 
-</div>
-
-<div class='border'>
-</div>
+</div>		<!-- page -->

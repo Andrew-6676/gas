@@ -85,9 +85,8 @@ CKEDITOR.on( 'instanceReady', function( ev ) {
 
 /*-----------------------------------------------------------*/
 
-CKEDITOR.on( 'change', function( ev ) {
-	alert('ch');
-
+CKEDITOR.on('change', function(event) {
+    alert('ckvalue');
 });
 
 /*----------------------------------------------------------*/

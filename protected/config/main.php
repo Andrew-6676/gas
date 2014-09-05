@@ -26,6 +26,7 @@ return array(
 		//'application.models.*',
 		//'application.extensions.pdf.mpdf.mpdf',  //для печати в PDF
 		'application.extensions.captchaExtended.*',	//блатная капча
+		//'application.extensions.EAjaxUpload.*',	//загрузка файлов ajax
 	),
 
 	'modules'=>array(

@@ -292,13 +292,15 @@ body {
     /*margin-top: 5px;*/
 }
 #login_form span {
-    font-size: 0.8em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
 }
 #login_form span a {
-    color: #888;
+    /*color: #888;*/
 }
 #login_form span a:hover {
-    color: #00f;
+    /*color: #00f;*/
 }
 
 #login_form #result {

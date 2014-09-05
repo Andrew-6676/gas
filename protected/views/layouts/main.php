@@ -98,11 +98,10 @@
 						<?php
 							echo 'Вы вошли как ';
 							echo '<span class="name">'.Yii::app()->user->name.'</span><br> [id=';
-								$user = User::model()->findByPk(Yii::app()->session['id_user']);
-							echo Yii::app()->session['id_user'].', gr=';
-							echo implode(',',$user->getGroups()).']';
+							echo Yii::app()->user->id.',';
+							echo 'gr='.implode(',',Yii::app()->user->roles).']';
 
-							if (Yii::app()->session['id_user'] < 0) {
+							if (Yii::app()->user->id < 0) {
 								echo '<br>'.CHtml::link('Админка сайта', array('admin/index'));
 								echo '<br>'.CHtml::link('PhpMyAdmin', array('../phpmyadmin'), array('target'=>'_blank'));
 							}
@@ -123,8 +122,6 @@
 										    ),
 									        array('class'=>'button')
 							        );
-							// 	//	echo "id_user = <b>".intval(Yii::app()->user->id)."</b>=>";
-							// 	//	echo User::model()->findByPk(Yii::app()->session['id_user'])->fname.'<br>';
 						?>
 						</div>
 
@@ -144,7 +141,7 @@
 								    	echo $form->textField($model,'login', array('placeholder'=>'Логин'));
 										echo $form->passwordField($model,'pass', array('placeholder'=>'Пароль')) ;
 							    ?>
-									<span><a href='<?php echo Yii::app()->createURL('site/register') ?>' >[Регистрация]</a></span>
+									<!-- span><a href='<?php echo Yii::app()->createURL('site/register') ?>' >[Регистрация]</a></span -->
 								<?php
 									echo CHtml::ajaxSubmitButton('Вход', Yii::app()->createURL('site/login'),
 											array(
@@ -171,7 +168,10 @@
 
 
 		<div class='content'>
-			<?php echo $content; ?>
+			<?php
+				// Utils::print_r(Yii::app()->user->roles,false);
+				echo $content;
+			?>
 		</div>	<!-- content -->
 
 		<footer id="footer">

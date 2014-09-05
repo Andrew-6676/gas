@@ -5,7 +5,7 @@
 		);
 	$this->addCss('page/page.css');
 		// для админа свои скрипты и стили, для осталных тоже свои
-	if (Yii::app()->session['id_user']<0) {
+	if (Yii::app()->user->id<0) {
 		$this->addCss('page/quest_admin.css');
 		$this->addJs('page/quest_admin.js');
 	} else {
@@ -19,7 +19,7 @@
 
 <?php
 	// если НЕ АДМИН
-  if (Yii::app()->session['id_user']>0 || Yii::app()->user->isGuest): ?>
+  if (Yii::app()->user->id>0 || Yii::app()->user->isGuest): ?>
 	<div id='question_form' class='border'>
 		<span id='q_result'></span>
 		<?php
@@ -37,8 +37,8 @@
 			$i++;
 		?>
 		<?php
-			// если залогинен админ
-		if (Yii::app()->session['id_user']<0): ?>
+			// если админ
+		if (Yii::app()->user->id<0): ?>
 			<div class='quest_caption <?php echo $q->id; if ($q->answered) {echo " answered";}?> '>
 				<?php
 						echo	CHtml::ajaxButton(

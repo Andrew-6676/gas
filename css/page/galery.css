@@ -1,0 +1,33 @@
+#admin_box {
+	/*width: 100%;*/
+	/*height: 100px;*/
+	padding: 10px;
+	background: #ff0;
+}
+/*-----------------------------*/
+#galery_box a{
+	position: relative;
+	text-decoration: none;
+}
+
+#galery_box img {
+	margin-bottom: 10px;
+	box-shadow: 0 0 15px 0px rgba(0,0,0, 0.5);
+	border: 2px solid #fff;
+}
+#galery_box img:hover {
+	border-color: #f00;
+}
+
+.del_btn {
+	height: 20px;
+/*	width: 20px;
+	top: -20px;
+	left: 150px;*/
+}
+
+.upload_button {
+	margin-top: 15px;
+	font-size: 1.3em;
+	padding: 2px 5px;
+}

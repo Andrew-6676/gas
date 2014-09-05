@@ -1,5 +1,15 @@
 <?php
-		// подменю для пункта подменю ГЛАВНАЯ>ПРОИЗВОДИСТВЕННЫЕ БАЗЫ
+		// меню с главной страницы АБОНЕНТАМ
+	$index_page_menu = array (
+				array('label'=>'Нормативно-правовые акты', 'url'=>array('/page?pravo')),
+				array('label'=>'Полезная инфорация', 'url'=>array('/page?polza')),
+				array('label'=>'Вакансии', 'url'=>array('/page?vakansii')),
+				array('label'=>'Это должен знать каждый', 'url'=>array('/page?mustknow')),
+				array('label'=>'Цены на газ', 'url'=>array('/page?gasprice')),
+				array('label'=>'Заказ баллона', 'url'=>'http://e.gas.by'),
+	);
+
+		// Главная - Структура
 	$sub_sub_1_1 = array(
 				array('label'=>'Руководство', 'url'=>array('/page')),
 				array('label'=>'Приёмная', 'url'=>array('/page')),
@@ -8,7 +18,7 @@
 				array('label'=>'Бухгалтерия', 'url'=>array('/page')),
 				array('label'=>'Экономисты', 'url'=>array('/page')),
 	);
-		// Главная - Структура
+		// подменю для пункта подменю ГЛАВНАЯ > ПРОИЗВОДИСТВЕННЫЕ БАЗЫ
 	$sub_sub_1_2 = array(
 				array('label'=>'ул. Терешковой', 'url'=>array('/page?bazi_teresh')),
 				array('label'=>'ул. Бровки', 'url'=>array('/page?bazi_brovki')),

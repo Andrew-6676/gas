@@ -1,16 +1,29 @@
+var _modified = false;
 $(document).ready(function() {
 		// перносим данные из CKEditor в textarea, из которого потом текст попадёт в БД
-	$('#save_btn').click(function(){
-		//alert('1');
-		//console.log('save');
-		CKEupdate();
-	})
+	// $('#save_btn').click(function(){
+
+	// })
+
+	for (var i in CKEDITOR.instances) {
+        CKEDITOR.instances[i].on('change', function(){
+        	_modified = true;
+        	$("#save_btn").removeAttr("disabled");
+        });
+    }
+
+    $('#descr, #keywords').keyup(function(){
+        _modified = true;
+        $("#save_btn").removeAttr("disabled");
+    })
 })
 
 
 $(window).on('beforeunload', function() {
 //	function CKupdate() {
-    return 'Все изменения сохранены? Можно покинуть сраницу?';
+	if (_modified) {
+    	return 'Не сохранены изменения!';
+    }
 });
 
 function CKEupdate() {

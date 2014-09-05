@@ -5,7 +5,7 @@ class questAction extends CAction /* pageController */
     public function run()
 	{
 			// создаём форму для админа или простого пользователя
-		if (Yii::app()->session['id_user']<0) {
+		if (Yii::app()->user->id<0) {
 			$f_model = new QuestionAdminForm();
 		} else {
 			$f_model = new QuestionForm();
@@ -108,7 +108,8 @@ class questAction extends CAction /* pageController */
 					}
 
 				Yii::app()->end();
-			}
+			}		//  if (isset($_POST['send'])) {
+
 				/*---------------------------------------*/
 				/*---------------------------------------*/
 				/*---------------------------------------*/
@@ -147,18 +148,18 @@ class questAction extends CAction /* pageController */
 
 				//exit;
 				Yii::app()->end();
-			}
+			}			// end Пользователь отправляет вопрос
 
 			throw new CHttpException(500, 'quest');
 
 			//exit;
 			Yii::app()->end();
-		}
+		}		// end if Ajax
 
 		$criteria = new CDbCriteria;
 		$criteria->order ='sort, q_date desc';
 
-		if (Yii::app()->session['id_user']<0) {
+		if (Yii::app()->user->id<0) {
 			//$criteria->addCondition('visible=0');
 			$criteria->addCondition('deleted=0');
 			//$criteria->addCondition('answered=0');

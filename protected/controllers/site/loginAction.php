@@ -19,14 +19,12 @@ class loginAction extends CAction   /*---- SiteController ----*/
 			    if ($model->validate()) {
 			    		// если всё правильно - аутентифицируем польователя
 			    	Yii::app()->user->login($model->_identity);
-			    		// нужные переменные в сессию
-			    	Yii::app()->session['id_user'] = $model->_identity->getId();
-			    	//Yii::app()->session['id_user'] = '';
 			    		// выводим 1, чтобы обновилась страница
 			    	echo '1';
-
+			    		// настройки для CKEditor
 			    	$_SESSION['KCFINDER'] = array();
 					$_SESSION['KCFINDER']['disabled'] = false;
+						// пути берутся из конфига сайта
 					$_SESSION['KCFINDER']['uploadURL'] = Yii::app()->params['uploadURL'];
     				$_SESSION['KCFINDER']['uploadDir'] = Yii::app()->params['uploadDir'];
 
@@ -51,14 +49,7 @@ class loginAction extends CAction   /*---- SiteController ----*/
 
 		exit;
 
-  //       /*-----------------------------Переменные в сессию-----------------------------------------*/
-  //               //$st = User::model()->findByAttributes(array('id'=>Yii::app()->user->id));
-  //               $st = User::model()->findByPk(Yii::app()->user->id);
-		// 			// записываем id магазина в сессию
-  //               Yii::app()->session['id_store'] = $st->id_store;
-  //               	// записываем id пользователя в сессию
-  //               Yii::app()->session['id_user'] = $st->id;
-		// /*-----------------------------------------------------------------------------------------*/
+  		// /*-----------------------------------------------------------------------------------------*/
 	}
 
 }

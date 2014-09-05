@@ -2,9 +2,10 @@
 	/*border: 1px solid black;*/
 }
 .page h1 {
-	color: #f00;
+	color: #fff;
 	text-align: center;
-	padding: 1px 30px 30px 30px;
+	padding: 1px 30px 0px 30px;
+	margin-bottom: 15px;
 }
 /*------------------------------------------------------------*/
 .div-table {

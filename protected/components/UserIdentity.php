@@ -21,6 +21,11 @@ class UserIdentity extends CUserIdentity
         else
         {		// если всё правильно ввёл пользователь
             $this->_id = $record->id;
+                // образец как можно:
+            //$this->setState('test', $record->id);  потом Yii::app()->user-test;
+                // заполняем все нужные поля для пользователя
+            $this->setState('roles', $record->getGroups());
+
             $this->_active = $record->active;
             $this->errorCode = self::ERROR_NONE;
         }

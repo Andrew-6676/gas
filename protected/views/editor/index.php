@@ -4,22 +4,46 @@
 	$this->addJs('../protected/extensions/ckeditor/ckeditor.js');
 ?>
 <div class='control_panel'>
-	<span>Панель управления</span>
-	<!-- button>Предпросмотр</button -->
-	<?php
-		echo	CHtml::ajaxButton(
+
+	<table>
+		<colgroup>
+			<col class='c1'></col>
+			<col class='c2'></col>
+			<col class='c3'></col>
+			<col class='c4'></col>
+		</colgroup>
+		<tr>
+			<td rowspan='3'>Панель управления</td>
+			<td><label for='keywords'>Ключевые слова</label></td>
+			<td><input value='<?php  echo $data->keywords; ?>' type="text" name='keywords' id='keywords' placeholder='Ключевые слова через запятую' title='Ключевые слова через запятую'></td>
+			<td><button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button></td>
+		</tr>
+		<tr>
+			<td><label for='descr'>Описание</label></td>
+			<td><textarea type="text" name='descr' id='descr' placeholder='Описание, чётко отражающее содержимое страницы' title='Описание, чётко отражающее содержимое страницы'><?php echo $data->description; ?></textarea></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+
+				<?php
+					echo	CHtml::ajaxButton(
 							'Сохранить',
 							Yii::app()->createURL('/editor/index'),
 							array(
 								'async' => 'false',
 						        'type' => 'POST',
-						        //'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
-						        'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
+						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
+						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
+						        'data' => 'js:{"aj_page":"'.$page.'","text":CKEDITOR.instances.editor.getData(),"keywords":$("#keywords").val(), "descr":$("#descr").val()}',
 						        //'beforeSend' => 'js:function(){console.log("before_aj");CKEupdate()}',
 						        'success'=>'js:function(data){
 						        		//alert("3");
-						        		//console.log("ajax_resp")
+						        		//console.log("data")
 						        	$("#result").html(data);
+						        	$("#save_btn").attr("disabled", "disabled");
+						        	_modified = false;
 						        	if (data==1) {
 
 						        	} else {
@@ -31,13 +55,15 @@
 						        	alert(JSON.stringify(data));
 						        }',
 						    ),
-					        array('class'=>'button', 'id'=>'save_btn')
+					        array('class'=>'button', 'id'=>'save_btn', 'disabled'=>'disabled')
 			        );
-	?>
-	<!-- button id='upd_btn'>Удалить</button -->
-	<!-- button>Открыть в новой вкладке</button -->
-	<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
-	<button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button>
+				?>
+				<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+
 </div>	<!--  control_panel -->
 
 <div id='result'></div>

@@ -11,12 +11,14 @@ class IndexAction extends CAction /* EditorController */
 			// $result = true;
 			// }
 
-			// Utils::print_r(	key($_POST));
+			//Utils::print_r($_POST, false);
 				// загружаем в модель нужную страницу - $_POST['aj_page']
 			$page_model = Page::model()->find('name="'.$_POST['aj_page'].'"');
 			//Utils::print_r($page_model, false);
 				// вносим новый текст
 			$page_model->html = $_POST['text'];
+			$page_model->keywords = $_POST['keywords'];
+			$page_model->description = $_POST['descr'];
 				// обновляем запись в БД
 			$result = $page_model->update();
 				// если без ошибок, то синииее сообщение
