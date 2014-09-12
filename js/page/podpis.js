@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var images = $('.content img');
 
 	images.each(function(i){
-		if ($(this).attr('alt')!=undefined) {
+		if ($(this).attr('alt')!=undefined && $(this).attr('alt')!='') {
 			//alert($(this).height());
 			$(this).after('<div class="podpis">'+$(this).attr('alt')+'</div>');
 			var div = $('.podpis').last();
