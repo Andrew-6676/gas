@@ -20,8 +20,8 @@ class indexAction extends CAction /* pageController */
 			$c = $connection->createCommand($sql_c)->queryScalar();
 				// если нашлось - загружаем из БД
 			if ($c > 0) {
-				$css = 'site/page.css';
-				$js = 'site/page.js';
+				$css = 'page/page.css';
+				$js = 'page/podpis.js';
 				$data = $this->getPageFromDB(key($_GET));
 			} else {	// если не нашлось - пытаемся выполнить функцию
 				$data = '(_._)';

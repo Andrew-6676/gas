@@ -1,5 +1,6 @@
 <?php
 	$this->addCSS('page/page.css');
+	$this->addJS('page/podpis.js');
 	if ($css!='') {
 		$this->addCSS($css);
 	}

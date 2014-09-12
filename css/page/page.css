@@ -1,3 +1,15 @@
+.podpis{
+   position: absolute;
+   /*top: 530px;
+   left: 50px;*/
+   border: 1px solid rgb(194, 194, 194);
+  /* width: 300px;*/
+   border-top: none;
+   text-align: center;
+   padding: 6px 0 0 0;
+   color: #A4A4D3;
+   text-indent: 0px;
+}
 /*--------- общее для всех страниц ---------*/
 .parent, h2 {
      font-weight: bold;

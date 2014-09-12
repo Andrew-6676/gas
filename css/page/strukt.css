@@ -79,6 +79,10 @@
 	background-position: 100% -150px;
 }
 
+
+.line:last-child>td {
+	/*padding-top: 30px;*/
+}
 /*--------------------Первая линия (директор) --------------------------------------------------*/
 .first_line {
 	border-bottom: 2px solid black;
@@ -109,7 +113,7 @@
 	width: 100%;
 	border-collapse: collapse;
 }
-.second_line  {
+.second_line {
 	background: url(../../images/strukt/ver_line.png) no-repeat 0% 100%,
 			    url(../../images/strukt/ver_line.png) no-repeat 100% 100%,
 			    url(../../images/strukt/ver_line.png) no-repeat 50% -1000%;
