@@ -1,6 +1,6 @@
 .c1 {
 	width: 150px;
-	background: #51A4FF;
+	/*background: #51A4FF;*/
 	color: #FFF;
 	font-weight: bold;
 }
@@ -15,7 +15,7 @@
 .control_panel table {
 	width: 100%;
 }
-#descr, #keywords {
+#descr, #keywords, #name, #name_ru {
 	width: 100%;
 }
 #descr {

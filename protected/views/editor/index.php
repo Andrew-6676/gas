@@ -13,10 +13,20 @@
 			<col class='c4'></col>
 		</colgroup>
 		<tr>
-			<td rowspan='3'>Панель управления</td>
+			<td rowspan='5'>&nbsp</td>
+			<td><label for='name_ru'>Заголовок</label></td>
+			<td><input value='<?php  echo $data->name_ru; ?>' type="text" name='name_ru' id='name_ru' placeholder='Заголовок страницы' title='Заголовок страицы'></td>
+			<td><button title='Закончить редактирование, перейти к просмотру' id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button></td>
+		</tr>
+		<tr>
+			<td><label for='name'>Имя страницы</label></td>
+			<td><input value='<?php  echo $data->name; ?>' type="text" name='name' id='name' placeholder='Машинное имя страницы - только латиница!' title='Машинное имя страницы - только латиница!' <?php if ($data->id) echo 'disabled="disabled"';?>></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td><label for='keywords'>Ключевые слова</label></td>
 			<td><input value='<?php  echo $data->keywords; ?>' type="text" name='keywords' id='keywords' placeholder='Ключевые слова через запятую' title='Ключевые слова через запятую'></td>
-			<td><button id='close_button' onclick="location.href='<?php echo Yii::app()->createUrl('/page?'.$page); ?>'"></button></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td><label for='descr'>Описание</label></td>
@@ -36,7 +46,14 @@
 						        'type' => 'POST',
 						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
 						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
-						        'data' => 'js:{"aj_page":"'.$page.'","text":CKEDITOR.instances.editor.getData(),"keywords":$("#keywords").val(), "descr":$("#descr").val()}',
+						        'data' => 'js:{
+						        	"aj_page":"'.$page.'",
+						        	"text":CKEDITOR.instances.editor.getData(),
+						        	"keywords":$("#keywords").val(),
+						        	"descr":$("#descr").val(),
+						        	"name":$("#name").val(),
+						        	"name_ru":$("#name_ru").val()
+						        }',
 						        //'beforeSend' => 'js:function(){console.log("before_aj");CKEupdate()}',
 						        'success'=>'js:function(data){
 						        		//alert("3");
@@ -67,7 +84,9 @@
 </div>	<!--  control_panel -->
 
 <div id='result'></div>
-
+<?php
+	//Utils::print_r($data->id, false);
+?>
 <div class='editor_wr'>
 	<?php if ($data) { ?>
 		<textarea id='editor' class="editor" name="editor"><?php echo $data->html; ?></textarea>

@@ -102,6 +102,7 @@
 							echo 'gr='.implode(',',Yii::app()->user->roles).']';
 
 							if (Yii::app()->user->id < 0) {
+								echo '<br>'.CHtml::link('+Добавить страницу', array('editor/index/new/page'));
 								echo '<br>'.CHtml::link('Админка сайта', array('admin/index'));
 								echo '<br>'.CHtml::link('PhpMyAdmin', array('../phpmyadmin'), array('target'=>'_blank'));
 							}
