@@ -49,6 +49,7 @@ class struktAction extends CAction /* pageController */
 		$sql = 'SELECT * FROM `strukt` order by sort';
 		$res = $connection->createCommand($sql)->queryAll();
 
+		//echo count($res);
 		//$data = '<pre>' ;
 		//$data .= print_r($res[0], true);
 		//$data .= '</pre>---------------<br>' ;
@@ -61,6 +62,7 @@ class struktAction extends CAction /* pageController */
 			$j++;
 			$colspan = '';
 			$class_td = '';
+			$last_line = 0;
 
 				// если первый выводимый человек - его в отдельную строку (директор)
 			if ($j == 0) {
@@ -76,14 +78,26 @@ class struktAction extends CAction /* pageController */
 			if ($j > 7) {
 				$class = ' line';
 			}
+
+				// предпоследняя строка 
+			if (count($res)-$j-7 < 0) {
+				$class=' prelast_line line';
+			}
+				// если последняя строка не полная
+			if (count($res)-$j-3 < 0) {
+				$class=' last_line';
+				$last_line++;
+			}
+
 				// начинаем новую строку таблицы, если выводимый номер кратен 4
 			if (($j%4) == 0) {
 				$data .='<tr class="div-row'.$class.'">';
 				//$class_td = ' left';
 			}
 				// если начало второй строки - вставляем в неё подтаблицу
-			if ($j == 4) {
-				$data .=  '<td colspan="4"><table class="sub_table"><tr>';
+			if ($j == 4 || ((count($res)-$j < 0) && $last_line==1) && ($j%4) == 0) {
+				$data .=  '<td colspan="4"><table class="sub_table"><tr class="div_row'.$class.'">';
+				//echo '###';				
 			}
 
 			$data .= 		'<td class="div-cell'.$class_td.'" '.$colspan.'>';
@@ -95,7 +109,7 @@ class struktAction extends CAction /* pageController */
 			$data .= 		'</td>';	// end div-cell
 
 				// закрываем подтаблицу во второй строке
-			if ($j == 6) {
+			if ($j == 6 ) {
 				$data .=  '</tr></table></td>';
 			}
 
