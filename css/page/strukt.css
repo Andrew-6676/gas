@@ -255,8 +255,8 @@
 
 .last_line .man {
 	margin-top: 30px;
-	height: 150px;
-	width: 280px;
+/*	height: 150px;
+	width: 280px;*/
 }
 .last_line .div-cell:nth-child(2):before {
 	/*background: url(../../images/strukt/hor_line_long.png) no-repeat;*/
