@@ -74,6 +74,7 @@ class indexAction extends CAction /* pageController */
 			$this->controller->breadcrumbs = $bc;
 
 			$data = '<style>'.$res['css'].'</style>';
+			$data .= '<h1>'.$res['name_ru'].'</h1>';
 			$data .= $res['html'];
 			return $data;
 		} else {
