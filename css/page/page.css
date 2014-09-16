@@ -6,10 +6,13 @@
   /* width: 300px;*/
    border-top: none;
    text-align: center;
-   padding: 6px 0 0 0;
+   padding: 0px 0 0 0;
    color: #000;
    background: #fff;
    text-indent: 0px;
+   font-size: 0.8em;
+   border-radius: 2px;
+
 }
 /*--------- общее для всех страниц ---------*/
 .parent, h2 {
@@ -45,7 +48,8 @@
     padding: 5px;
     background: #000;
     position: absolute;
-    left: 30px;
+    right: 15px;
+    /*top: 5px;*/
     box-shadow: -5px -5px 10px 0px rgba(0,0,0,0.5);
 
 }

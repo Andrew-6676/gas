@@ -12,9 +12,9 @@
  <div class='page'>
 	<?php if (!$search_results['err']): ?>
 		<h1>Результаты поиска</h1>
-		<h3>(искомая строка <span><?php echo trim($search_results['search_text']);?></span>)</h3>
 
 		<div class='border'>
+		<h3>(искомая строка <span><?php echo trim($search_results['search_text']);?></span>)</h3>
 		<?php
 			$i = 1;
 			foreach ($search_results['pages'] as $page) { ?>
