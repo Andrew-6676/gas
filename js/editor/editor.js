@@ -12,7 +12,7 @@ $(document).ready(function() {
         });
     }
 
-    $('#descr, #keywords, #name_ru').keyup(function(){
+    $('#descr, #keywords, #name_ru, #name').keyup(function(){
         _modified = true;
         $("#save_btn").removeAttr("disabled");
     })

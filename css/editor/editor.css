@@ -18,6 +18,9 @@
 #descr, #keywords, #name, #name_ru {
 	width: 100%;
 }
+label[for="name"], #name {
+	color: red;
+}
 #descr {
 	height: 50px;
 }

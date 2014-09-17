@@ -16,7 +16,7 @@ class indexAction extends CAction /* pageController */
 		} else {
 				// ищем в базе запрашиваемую страницу
 			$connection = Yii::app()->db;
-			$sql_c = 'SELECT count(id) FROM `page` where name="'.key($_GET).'"';
+			$sql_c = 'SELECT count(id) FROM `page` where name="'.key($_GET).'" and deleted=0';
 			$c = $connection->createCommand($sql_c)->queryScalar();
 				// если нашлось - загружаем из БД
 			if ($c > 0) {

@@ -2,7 +2,7 @@
 	$this->addCss('page/page.css');
 	$this->addCss('admin/index.css');
 
- 	$this->addJs('admin/index.js');
+ 	$this->addJs('admin/admin.js');
 
  	$users = User::model()->findAll();
 ?>
@@ -11,7 +11,7 @@
 <h1>
 Админка
 </h1>
-	
+
 	<div class='admin_menu'>
 		<a href="#roles">Группы</a><br>
 		<a href="#users">Пользователи</a><br>
@@ -19,7 +19,7 @@
 		<a href="#pages">Страницы</a><br>
 		<a href="#menu">Меню</a><br>
 	</div>
-		
+
 <br>
 <br>
 
@@ -80,7 +80,7 @@
 <div class='border'>
 
 	<table class='pages'>
-		<br>+<a href="#">Добавить страницу</a><br><br>
+		<br>+<a href="<?php echo Yii::app()->createUrl('editor/index/new/page') ;?>">Добавить страницу</a><br><br>
 		<?php
 			$criteria = new CDbCriteria;
      		$criteria->order ='edit_date desc';
@@ -94,7 +94,7 @@
 					echo '<td><button>Удалить</button></td>';
 				echo '</tr>';
 			}
-			
+
 		?>
 	</table>
 </div>		<!-- border -->
@@ -103,6 +103,6 @@
 <div class='border'>
 
 
-</div>	
+</div>
 
 </div>		<!-- page -->

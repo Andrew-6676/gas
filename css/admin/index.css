@@ -1,0 +1,7 @@
+table.pages td{
+	background: rgba(170, 170, 170, 0.3);
+	padding: 1px 3px;
+}
+table.pages tr:hover {
+	background: rgba(0, 255, 0, 1);
+}

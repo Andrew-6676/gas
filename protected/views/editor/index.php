@@ -47,6 +47,7 @@
 						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
 						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
 						        'data' => 'js:{
+						        	"action": "save",
 						        	"aj_page":"'.$page.'",
 						        	"text":CKEDITOR.instances.editor.getData(),
 						        	"keywords":$("#keywords").val(),
@@ -60,6 +61,7 @@
 						        		//console.log("data")
 						        	$("#result").html(data);
 						        	$("#save_btn").attr("disabled", "disabled");
+						        	$("#name").attr("disabled", "disabled");
 						        	_modified = false;
 						        	if (data==1) {
 
@@ -75,6 +77,39 @@
 					        array('class'=>'button', 'id'=>'save_btn', 'disabled'=>'disabled')
 			        );
 				?>
+				<?php
+					echo	CHtml::ajaxButton(
+							'Удалить',
+							Yii::app()->createURL('/editor/index'),
+							array(
+								'async' => 'false',
+						        'type' => 'POST',
+						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("iframe").contents().find("body").html()}',
+						        // 'data' => 'js:{"aj_page":"'.$page.'","text":$("#editor").val()}',
+						        'data' => 'js:{
+						        	"action":"delete",
+						        	"aj_page":"'.$page.'",
+						        	"name":$("#name").val(),
+						        }',
+						        //'beforeSend' => 'js:function(){console.log("before_aj");CKEupdate()}',
+						        'success'=>'js:function(data){
+						        		//alert("3");
+						        		//console.log("data")
+						        	if (data==1) {
+
+						        	} else {
+						        		//alert("Ошибка удаления! Программеру в бубен!");
+
+						        	}
+						        }',
+						        'error' => 'js:function(data){
+						        	alert(JSON.stringify(data));
+						        }',
+						    ),
+					        array('class'=>'button', 'id'=>'del_btn')
+			        );
+				?>
+
 				<a target='_blank' href='<?php echo Yii::app()->createUrl("/page?".$page); ?>'>Открыть в новой вкладке</a>
 			</td>
 			<td></td>
