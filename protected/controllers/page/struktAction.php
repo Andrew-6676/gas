@@ -79,7 +79,7 @@ class struktAction extends CAction /* pageController */
 				$class = ' line';
 			}
 
-				// предпоследняя строка 
+				// предпоследняя строка
 			if (count($res)-$j-7 < 0) {
 				$class=' prelast_line line';
 			}
@@ -97,14 +97,14 @@ class struktAction extends CAction /* pageController */
 				// если начало второй строки - вставляем в неё подтаблицу
 			if ($j == 4 || ((count($res)-$j < 0) && $last_line==1) && ($j%4) == 0) {
 				$data .=  '<td colspan="4"><table class="sub_table"><tr class="div_row'.$class.'">';
-				//echo '###';				
+				//echo '###';
 			}
 
 			$data .= 		'<td class="div-cell'.$class_td.'" '.$colspan.'>';
 			$data .= 			'<div class="man">';
 			$data .= 				'<img src="'.Yii::app()->request->baseUrl.'/images'.$man['img'].'">';
 			$data .= 				'<div class="post">'.$man['post'].'</div>';
-			$data .= 				'<div class="fio">'.preg_replace('/ /','<br>',$man['fio']).'</div>';
+			$data .= 				'<div class="fio" title="'.$man['prim'].'">'.preg_replace('/ /','<br>',$man['fio']).'</div>';
 			$data .= 			'</div>';	// end div-man
 			$data .= 		'</td>';	// end div-cell
 
