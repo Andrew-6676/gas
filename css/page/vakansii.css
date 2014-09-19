@@ -23,7 +23,7 @@
 .job-info{
 	display: inline-block;
 	vertical-align: top;
-	width: 920px;
+	max-width: 920px;
 }
 .no-job{
 	padding: 50px;

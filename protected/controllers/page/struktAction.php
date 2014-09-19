@@ -50,9 +50,9 @@ class struktAction extends CAction /* pageController */
 		$res = $connection->createCommand($sql)->queryAll();
 
 		//echo count($res);
-		//$data = '<pre>' ;
-		//$data .= print_r($res[0], true);
-		//$data .= '</pre>---------------<br>' ;
+		// $data = '<pre>' ;
+		// $data .= print_r($res[0], true);
+		// $data .= '</pre>---------------<br>' ;
 
 		$i = 1; $j = -1;
 		$data .= "<table class='div-table'>";
