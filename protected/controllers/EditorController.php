@@ -26,7 +26,7 @@ public function accessRules()
         		// правила просматриваются по порядку до первого совпадения
         	array('allow',
                 'actions'=>array('index'),  	// только пользователь "admin" получит доступ
-                'users'=>array('admin'),		// остальным выдаст ошибку
+                'users'=>array('admin, andrew'),		// остальным выдаст ошибку
             ),
             array('deny',
                 'actions'=>array('index'),		// запреить всем доступ к "index"
