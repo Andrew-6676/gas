@@ -20,19 +20,6 @@ $this->addCss('page/vakansii.css');
 		if(count($v_model)>=1){
 				foreach($v_model as $values){
 					?>
-					<!--div class="job">
-					<div class="job-title">
-						<div class="job-name">
-							<span class="job-field">Должность:</span><span class="job-title-text"> <?php echo $values->name; ?></span>
-						</div>
-						<div class="job-pay">
-							<span class="job-field"><?php if($values->pay!=''){?>Заработная плата:</span> <span class="job-title-text"><?php echo $values->pay;?></span><?}?>
-						</div>
-					</div>
-					<div class="job-description">
-						<span class="job-field">Описание:</span> <?php echo $values->text; ?>
-					</div>
-					</div-->
 					<div class="job">
 						<div class="job-field">
 							<div class="job-caption">Вакансия</div>
@@ -41,43 +28,43 @@ $this->addCss('page/vakansii.css');
 						<?php if($values->education!=''){?><div class="job-field">
 							<div class="job-caption">Образование</div>
 							<div class="job-info"> <?php echo $values->education; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->conditions!=''){?><div class="job-field">
 							<div class="job-caption">Условия работы</div>
 							<div class="job-info"><?php echo $values->conditions; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->duties!=''){?><div class="job-field">
 							<div class="job-caption">Обязанности</div>
 							<div class="job-info"> <?php echo $values->duties; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->experience!=''){?><div class="job-field">
 							<div class="job-caption">Опыт работы</div>
 							<div class="job-info"> <?php echo $values->experience; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->pay!=''){?><div class="job-field">
 							<div class="job-caption">Заработная плата</div>
 							<div class="job-info"> <?php echo $values->pay; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->employment!=''){?><div class="job-field">
 							<div class="job-caption">Занятость</div>
 							<div class="job-info"> <?php echo $values->employment; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->more!=''){?><div class="job-field">
 							<div class="job-caption">Дополнительная информация</div>
 							<div class="job-info"> <?php echo $values->more; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->contactname!=''){?><div class="job-field">
 							<div class="job-caption">Контактное лицо</div>
 							<div class="job-info"> <?php echo $values->contactname; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->contactphone!=''){?><div class="job-field">
 							<div class="job-caption">Телефон</div>
 							<div class="job-info"> <?php echo $values->contactphone; ?></div>
-						</div><?}?>
+						</div><?php }?>
 						<?php if($values->contactmail!=''){?><div class="job-field">
 							<div class="job-caption">e-mail</div>
 							<div class="job-info"> <?php echo $values->contactmail; ?></div>
-						</div><?}?>
+						</div><?php }?>
 					</div>
 				<?php }
 		}else{
