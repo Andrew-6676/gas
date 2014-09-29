@@ -1,0 +1,303 @@
+.page {
+	/*border: 1px solid black;*/
+}
+.page h1 {
+	color: #fff;
+	text-align: center;
+	padding: 1px 30px 0px 30px;
+	margin-bottom: 15px;
+}
+/*------------------------------------------------------------*/
+.div-table {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+.div-row {
+	display: table-row;
+}
+.div-cell {
+	display: table-cell;
+	overflow: hidden;
+}
+/*---------------------Стрелки на схеме----------------------------------------------------------*/
+
+.line .div-cell:nth-child(odd) .man:before {
+	content: ' ';
+	position: absolute;
+	left: -104px;
+	float: left;
+	display: inline-block;
+	background: url(../../images/strukt/left_arr_long.png) no-repeat 100% 50%;
+	width: 100px;
+	height: 100%;
+
+	/*background: yellow;*/
+}
+.line .div-cell:nth-child(even) .man:after {
+	content: ' ';
+	position: absolute;
+	right: -104px;
+	top: 0;
+	float: right;
+	display: inline-block;
+	background: url(../../images/strukt/right_arr_long.png) no-repeat 0% 50%;
+	width: 100px;
+	height: 100%;
+
+	/*background: yellow;*/
+}
+
+/*--------первая и последняя колонки ---------*/
+.line .div-cell:nth-child(1), .line .div-cell:nth-child(4) {
+	/*background: green;*/
+	background: url(../../images/strukt/ver_line.png) no-repeat;
+	/*border-right: 2px solid black;*/
+}
+.line .div-cell:nth-child(2), .line .div-cell:nth-child(3) {
+	/*background: green;*/
+	background: url(../../images/strukt/ver_line_thin.png) no-repeat;
+	/*border-right: 2px solid black;*/
+}
+/*------ чётные и нечётные колонки ----*/
+.line .div-cell:nth-child(odd) {
+	/*background: lime;*/
+	background-position: 0% 0%;
+}
+.line .div-cell:nth-child(even) {
+	/*background: lime;*/
+	background-position: 100% 0%;
+}
+/*----- нижний левый угол --*/
+.line:last-child>.div-cell:nth-child(1), .line:last-child>.div-cell:nth-child(13) {
+	/*background: blue;*/
+	background-position: 0% -150px;  /* 140/20 - 220*/
+}
+/*----- нижний правый угол ----*/
+.line:last-child>.div-cell:nth-child(12), .line:last-child>.div-cell:nth-child(4) {
+	/*background: red;*/
+	background-position: 100% -150px;
+}
+
+
+.line:last-child>td {
+	/*padding-top: 30px;*/
+}
+/*--------------------Первая линия (директор) --------------------------------------------------*/
+.first_line {
+	border-bottom: 2px solid black;
+	background: url(../../images/strukt/ver_arr_long.png) no-repeat 50% 100%;
+}
+
+.first_line .man {
+	height: 180px;
+	width: 380px;
+}
+.first_line .man img {
+	height: 150px;
+}
+.first_line .post {
+	height: 30px;
+	font-size: 2em;
+
+}
+.first_line .fio {
+	left: 140px;
+	width: 230px;
+	padding-top: 25px;
+	font-size: 1.7em;
+	text-align: center;
+}
+/*-----------------Вторая линия---------------------------------------------------------------*/
+.sub_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.second_line>td {
+	background: url(../../images/strukt/ver_line.png) no-repeat 0% 100%,
+			    url(../../images/strukt/ver_line.png) no-repeat 100% 100%,
+			    url(../../images/strukt/ver_line.png) no-repeat 50% -1000%;
+	/*order-left: 2px solid black;*/
+	/*border-right: 2px solid black;*/
+}
+.second_line .sub_table td {
+	background: none;
+}
+.second_line .man:before {
+	content: ' ';
+	display: block;
+	/*background: yellow;*/
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: -154px;
+	background: url(../../images/strukt/ver_arr_long.png) no-repeat 50% 100%;
+}
+
+.second_line .man {
+	margin-top: 30px;
+	height: 150px;
+	width: 280px;
+}
+.second_line .man img {
+	height: 110px;
+}
+.second_line .post {
+	height: 30px;
+	font-size: 1em;
+
+}
+.second_line .fio {
+	left: 110px;
+	width: 140px;
+	padding-top: 20px;
+	font-size: 1.2em;
+}
+/*---------------------Все остальные начальники---------------*/
+.man {
+	font-family: Liberation Serif;
+	position: relative;
+	width: 220px;
+	height: 140px;
+	margin: auto;
+	margin-bottom: 30px;
+	border: 1px solid gray;
+	/*background-color: #6DE2F2;*/
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #FFFFFF),
+		color-stop(0.5, #FFFFFF),
+		color-stop(1, #6DE2F2)
+	);
+	background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFFFFF 50%, #6DE2F2 100%);
+	background-image: linear-gradient(to bottom,  #6DE2F2 0%, #FFFFFF 50%);
+	/*border-radius: 3px;*/
+	transition: 0.2s;
+}
+.man/*:hover*/ {
+	box-shadow: 1px 1px 10px -3px #555;
+}
+.man img {
+	z-index: 1;
+	height: 90px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.line .man img:hover, .last_line .man img:hover {
+	height: 170px;
+	bottom: -30px;
+
+}
+.first_line .man img:hover {
+	height: 210px;
+	bottom: -30px;
+}
+.second_line .man img:hover {
+	height: 180px;
+	bottom: -30px;
+}
+.man img:hover {
+	z-index: 99;
+	box-shadow: 0px 0px 10px 5px gray;
+}
+.post {
+	position: relative;
+	z-index: 6;
+	text-align: center;
+	height: 30px;
+	font-size: 0.9em;
+	margin-top: 5px;
+	/*font-weight: bold;*/
+
+}
+.fio {
+	position: relative;
+	left: 80px;
+	width: 140px;
+	/*height: 90px;*/
+	text-align: left;
+	padding-top: 35px;
+	font-weight: bold;
+}
+
+/*-----------------предпоследняя линия-------------------------------------------*/
+.prelast_line  .div-cell:nth-child(1){
+	background-position: 0% -149px;
+}
+.prelast_line  .div-cell:nth-child(4){
+	background-position: 100% -149px;
+}
+/*-----------------последняя линия---------------------------------------------------------------*/
+.last_line .div-cell {
+	position: relative;
+}
+.last_line .sub_table {
+	/*margin-top: 2px;*/
+}
+.last_line .man:before {
+	content: ' ';
+	display: block;
+	/*background: yellow;*/
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: -154px;
+	background: url(../../images/strukt/ver_arr_long.png) no-repeat 50% 100%;
+}
+
+.last_line .man {
+	margin-top: 30px;
+/*	height: 150px;
+	width: 280px;*/
+}
+.last_line .div-cell:nth-child(2):before {
+	/*background: url(../../images/strukt/hor_line_long.png) no-repeat;*/
+	/*border-top: 2px solid black;*/
+	content: ' ';
+	display: block;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	width: 500px;
+}
+.last_line .div-cell:first-child:before {
+	content: ' ';
+	display: block;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	width: 500px;
+	left: 50%;
+	/*background: url(../../images/strukt/hor_line_long.png) no-repeat 189px 0%;*/
+}
+.last_line .div-cell:last-child:before {
+	/*background: url(../../images/strukt/hor_line_long.png) no-repeat -211px 0%;*/
+	content: ' ';
+	display: block;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	width: 500px;
+	right: 50%;
+}
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
