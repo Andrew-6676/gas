@@ -108,8 +108,12 @@ class struktAction extends CAction /* pageController */
 			$data .= 			'</div>';	// end div-man
 			$data .= 		'</td>';	// end div-cell
 
-				// закрываем подтаблицу во второй строке
-			if ($j == 6 ) {
+				// закрываем подтаблицу во второй строке и в последней
+			// if ($j == 6 ) {
+			// 	$data .=  '</tr></table></td>';
+			// }
+
+			if ($j == 6 || ((count($res)-$j == -3) ) ) {
 				$data .=  '</tr></table></td>';
 			}
 

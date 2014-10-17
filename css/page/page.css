@@ -1,25 +1,28 @@
+.img_wr {
+  position: relative;
+  display: inline-block
+}
 .podpis{
    position: absolute;
    /*top: 530px;
    left: 50px;*/
-   border: 1px solid rgb(194, 194, 194);
+   border: 1px solid rgb(94, 91, 91);
   /* width: 300px;*/
-   border-top: none;
+   /*border-top: none;*/
    text-align: center;
    padding: 0px 0 0 0;
    color: #000;
-   background: #fff;
+   background: #C0BFBF;
    text-indent: 0px;
    font-size: 0.8em;
    border-radius: 2px;
-
 }
 /*--------- общее для всех страниц ---------*/
 .parent, h2 {
      font-weight: bold;
      font-size: 1.2em;
    }
-  .child {
+.child {
      background: #fff;
      /*margin-left: 30px;*/
      margin-bottom: 30px;
@@ -27,19 +30,22 @@
      border: 1px solid silver;
 
    }
+.table1, .table2 {
+    width: 100%;
+}
    .table1 td {
      border: 1px solid gray;
      padding:7px;
      width: 50%;
    }
-   .table2 {
+.table2 {
       margin-left: 30px;
       font-style: italic;
       font-weight: bold;
    }
-   h2 {
-      cursor: pointer;
-   }
+h2 {
+    cursor: pointer;
+}
 /*-------------------------------------------------------------------*/
 .edit_button {
     display: none;
